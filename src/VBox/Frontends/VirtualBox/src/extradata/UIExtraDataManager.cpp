@@ -72,6 +72,50 @@
 # include <QXmlStreamReader>
 #endif
 
+/* Auxiliary functions */
+/* The function applies minimal modifications to the 'rect' so that it was fully inside the 'target'.
+ * If the rect is partially outside of the target it is moved into it.
+ * The size is changed only when the rect is larger than the target.
+*/
+static void moveRectInto(QRect& rect, const QRect& target)
+{
+    /* Process horizontal coordinates */
+    if (rect.width() >= target.width())
+    {
+        /* The rect is too large => reduce it and set horizontal position equal to the target's */
+        rect.setLeft(target.left());
+        rect.setRight(target.right());
+    }
+    else if (rect.left() < target.left())
+    {
+        /* Left edge is outside => move the rect to the target's left edge */
+        rect.moveLeft(target.left());
+    }
+    else if (rect.right() > target.right())
+    {
+        /* Right edge is outside => move the rect to the target's right edge */
+        rect.moveRight(target.right());
+    }
+
+    /* Process vertical coordinates */
+    if (rect.height() >= target.height())
+    {
+        /* The rect is too large => reduce it and set vertical position equal to the target's */
+        rect.setTop(target.top());
+        rect.setBottom(target.bottom());
+    }
+    else if (rect.top() < target.top())
+    {
+        /* Top edge is outside => move the rect to the target's top edge */
+        rect.moveTop(target.top());
+    }
+    else if (rect.bottom() > target.bottom())
+    {
+        /* Bottom edge is outside => move the rect to the target's bottom edge */
+        rect.moveBottom(target.bottom());
+    }
+}
+
 
 /* Namespaces: */
 using namespace UIExtraDataDefs;
@@ -2320,8 +2364,8 @@ QRect UIExtraDataManager::selectorWindowGeometry(QWidget *pWidget)
     /* In Windows Qt fails to reposition out of screen window properly, so moving to centre: */
 #ifdef Q_WS_WIN
     /* Make sure resulting geometry is within current bounds: */
-    if (fOk && geometry.intersects(availableGeometry))
-        geometry.moveCenter(availableGeometry.center());
+    if (fOk && !availableGeometry.contains(geometry))
+        moveRectInto(geometry, availableGeometry);
 #endif /* Q_WS_WIN */
 
     /* As final fallback, move default-geometry to available-geometry' center: */
@@ -3532,8 +3576,8 @@ QRect UIExtraDataManager::informationWindowGeometry(QWidget *pWidget, QWidget *p
     /* In Windows Qt fails to reposition out of screen window properly, so moving to centre: */
 #ifdef Q_WS_WIN
     /* Make sure resulting geometry is within current bounds: */
-    if (fOk && geometry.intersects(availableGeometry))
-        geometry.moveCenter(availableGeometry.center());
+    if (fOk && !availableGeometry.contains(geometry))
+        moveRectInto(geometry, availableGeometry);
 #endif /* Q_WS_WIN */
 
     /* As a fallback, move default-geometry to pParentWidget' geometry center: */
@@ -3649,8 +3693,8 @@ QRect UIExtraDataManager::extraDataManagerGeometry(QWidget *pWidget)
     /* In Windows Qt fails to reposition out of screen window properly, so moving to centre: */
 #ifdef Q_WS_WIN
     /* Make sure resulting geometry is within current bounds: */
-    if (fOk && geometry.intersects(availableGeometry))
-        geometry.moveCenter(availableGeometry.center());
+    if (fOk && !availableGeometry.contains(geometry))
+        moveRectInto(geometry, availableGeometry);
 #endif /* Q_WS_WIN */
 
     /* As final fallback, move default-geometry to available-geometry' center: */
@@ -3766,8 +3810,8 @@ QRect UIExtraDataManager::logWindowGeometry(QWidget *pWidget, const QRect &defau
                                           vboxGlobal().availableGeometry();
 
     /* Make sure resulting geometry is within current bounds: */
-    if (!availableGeometry.contains(geometry, true))
-        geometry.moveCenter(defaultGeometry.center());
+    if (!availableGeometry.contains(geometry, false))
+        moveRectInto(geometry, availableGeometry);
 #endif /* Q_WS_WIN */
 
     /* Return result: */
