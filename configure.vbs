@@ -1059,7 +1059,7 @@ sub CheckForVisualCPP(strOptVC, strOptVCCommon, blnOptVCExpressEdition)
    if (strPathVCCommon <> "") Then
       EnvAppend "PATH", ";" & strPathVCCommon & "/IDE"
    end if
-   if Shell(DosSlashes(strPathVC & "/bin/cl.exe"), True) <> 0 then
+   if Shell(DosSlashes(strPathVC & "/bin/cl.exe") & " /?", True) <> 0 then
       MsgError "Executing '" & strClExe & "' (which we believe to be the Visual C++ compiler driver) failed."
       exit sub
    end if
