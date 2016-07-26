@@ -1060,7 +1060,7 @@ sub CheckForVisualCPP(strOptVC, strOptVCCommon, blnOptVCExpressEdition)
    if (strPathVCCommon <> "") Then
       EnvAppend "PATH", ";" & strPathVCCommon & "/IDE"
    end if
-   if Shell(DosSlashes(strPathVC & "/bin/cl.exe"), True) <> 0 then
+   if Shell(DosSlashes(strPathVC & "/bin/cl.exe") & " /?", True) <> 0 then
       MsgError "Executing '" & strClExe & "' (which we believe to be the Visual C++ compiler driver) failed."
       exit sub
    end if
@@ -1910,7 +1910,7 @@ sub CheckForSsl(strOptSsl)
    end if
 
    if strPathSsl = "" Then
-      str = Which("ssleay32.lib")
+      str = Which("libssl.lib")
       if str <> "" Then
          str = PathParent(PathStripFilename(str))
          if CheckForSslSub(str) then strPathSsl = str
@@ -1936,8 +1936,8 @@ sub CheckForSsl(strOptSsl)
 
    strPathSsl = UnixSlashes(PathAbs(strPathSsl))
    CfgPrint "SDK_VBOX_OPENSSL_INCS := " & strPathSsl & "/include"
-   CfgPrint "SDK_VBOX_OPENSSL_LIBS := " & strPathSsl & "/lib/ssleay32.lib" & " " & strPathSsl & "/lib/libeay32.lib"
-   CfgPrint "SDK_VBOX_BLD_OPENSSL_LIBS := " & strPathSsl & "/lib/ssleay32.lib" & " " & strPathSsl & "/lib/libeay32.lib"
+   CfgPrint "SDK_VBOX_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+   CfgPrint "SDK_VBOX_BLD_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
 
    PrintResult "openssl", strPathSsl
 end sub
@@ -1949,10 +1949,10 @@ function CheckForSslSub(strPathSsl)
    CheckForSslSub = False
    LogPrint "trying: strPathSsl=" & strPathSsl
    if   LogFileExists(strPathSsl, "include/openssl/md5.h") _
-    And LogFindFile(strPathSsl, "bin/ssleay32.dll") <> "" _
-    And LogFindFile(strPathSsl, "lib/ssleay32.lib") <> "" _
-    And LogFindFile(strPathSsl, "bin/libeay32.dll") <> "" _
-    And LogFindFile(strPathSsl, "lib/libeay32.lib") <> "" _
+    And LogFindFile(strPathSsl, "bin/libssl*.dll") <> "" _
+    And LogFindFile(strPathSsl, "lib/libssl.lib") <> "" _
+    And LogFindFile(strPathSsl, "bin/libcrypto*.dll") <> "" _
+    And LogFindFile(strPathSsl, "lib/libcrypto.lib") <> "" _
       then
          CheckForSslSub = True
       end if
@@ -2012,7 +2012,6 @@ function CheckForCurlSub(strPathCurl)
    CheckForCurlSub = False
    LogPrint "trying: strPathCurl=" & strPathCurl
    if   LogFileExists(strPathCurl, "include/curl/curl.h") _
-    And LogFindFile(strPathCurl, "libcurl.dll") <> "" _
     And LogFindFile(strPathCurl, "libcurl.lib") <> "" _
       then
          CheckForCurlSub = True
