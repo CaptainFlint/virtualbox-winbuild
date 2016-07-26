@@ -120,7 +120,8 @@ VBoxRemPrimary_SOURCES         = \
 	target-i386/translate.c
 VBoxRemPrimary_SOURCES.debug  += \
 	Sun/testmath.c
-VBoxRemPrimary_SOURCES.win = $(VBoxREMImp_0_OUTDIR)/VBoxREMRes.o
+VBoxRemPrimary_SOURCES.win =
+VBoxRemPrimary_SOURCES.win.amd64 = $(VBoxREMImp_0_OUTDIR)/VBoxREMRes.o
 VBoxRemPrimary_SOURCES.win.x86 = $(VBoxREMImp_0_OUTDIR)/VBoxREMWin.def
 ifdef VBOX_USE_MINGWW64
  if 0 # exporting all helps when windbg pops up on crashes
