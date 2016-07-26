@@ -204,6 +204,7 @@
     X509_VERIFY_PARAM_free
     X509_VERIFY_PARAM_new
     X509_VERIFY_PARAM_set_flags
+    X509_STORE_set_flags
     X509V3_conf_free
 
     ; tstRTBigNum.cpp

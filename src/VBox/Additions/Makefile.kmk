@@ -265,21 +265,6 @@ ifdef VBOX_WITH_ADDITIONS_ISO.win.x86
 	cert/VBoxCertUtil.exe=$(VBOX_PATH_ADDITIONS.win.x86)/VBoxCertUtil.exe
 endif # win.x86
 
-if defined(VBOX_WITH_ADDITIONS_ISO.win.amd64) || defined(VBOX_WITH_ADDITIONS_ISO.win.x86)
- ifndef VBOX_SIGNING_MODE
-  GUESTADDITIONS_FILESPEC.win =
- else if "$(VBOX_WITH_CORP_CODE_SIGNING)" == "all" || (!defined(VBOX_CERTIFICATE_SHA2_SUBJECT_NAME) && !defined(VBOX_WITH_CORP_CODE_SIGNING))
-  GUESTADDITIONS_FILESPEC.win = cert/vbox.cer=$(VBOX_PATH_ADDITIONS.win)/vbox.cer
- else
-  GUESTADDITIONS_FILESPEC.win = \
-  	cert/vbox-sha1.cer=$(VBOX_PATH_ADDITIONS.win)/vbox-sha1.cer \
-  	cert/vbox-sha256.cer=$(VBOX_PATH_ADDITIONS.win)/vbox-sha256.cer
-  if defined(VBOX_CERTIFICATE_SHA2_SUBJECT_NAME) && defined(VBOX_WITH_CORP_CODE_SIGNING)
-   GUESTADDITIONS_FILESPEC.win += cert/vbox-sha256-r3.cer=$(VBOX_PATH_ADDITIONS.win)/vbox-sha256-r3.cer
-  endif
- endif
-endif
-
 # haiku
 ifdef VBOX_WITH_ADDITIONS_ISO.haiku.x86
  VBOX_PATH_ADDITIONS.haiku.x86 = $(PATH_OUT_BASE)/haiku.x86/$(KBUILD_TYPE)/bin/additions
@@ -308,26 +293,8 @@ GUESTADDITIONS_FILESPEC_ALL = \
 # Build the Guest Additions ISO image.
 #
 ifndef VBOX_WITHOUT_ADDITIONS_ISO
-$(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso: \
-		$(filter-out %=deleteme=,$(subst =,=deleteme= , $(GUESTADDITIONS_FILESPEC_ALL))) \
-		$(VBOX_SVN_REV_KMK) \
-		$(VBOX_PATH_ADDITIONS_SRC)/Makefile.kmk \
-		| $(if-expr defined(VBOX_USE_RTISOMAKER),$(VBOX_RTISOMAKER),)
-	$(call MSG_TOOL,RTIsoMaker,,$@)
-	$(QUIET)$(MKDIR) -p $(@D)
-	$(VBOX_RTISOMAKER) \
-		--output $@ \
-		--iso-level 3 \
-		--rock-ridge \
-		--joliet \
-		--rational-attribs \
-               --random-order-verification 2048 \
-		$(addprefix /,$(GUESTADDITIONS_FILESPEC_ALL)) \
-               $(foreach spec, $(filter %.run %.sh,$(GUESTADDITIONS_FILESPEC_ALL)) \
-			, --chmod a+x:/$(substr $(spec), 1, $(expr $(pos =,$(spec)) - 1))) \
-		--volume-id="VBOXADDITIONS_$(VBOX_VERSION_STRING_RAW)_$(VBOX_SVN_REV)" \
-               --name-setup=joliet \
-		--volume-id="VBox_GAs_$(VBOX_VERSION_STRING_RAW)"
+$(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso:
+	$(VBOX_RETRY) $(TOOL_CURL_FETCH) http://download.virtualbox.org/virtualbox/$(VBOX_VERSION_STRING_RAW)/VBoxGuestAdditions_$(VBOX_VERSION_STRING_RAW).iso -o $@
 
 $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.zip: $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso
 	$(call MSG_L1,Zipping image $@)
