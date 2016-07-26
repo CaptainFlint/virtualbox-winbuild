@@ -1091,7 +1091,7 @@ sub CheckForVisualCPP(strOptVC, strOptVCCommon, blnOptVCExpressEdition)
    if (strPathVCCommon <> "") Then
       EnvAppend "PATH", ";" & strPathVCCommon & "/IDE"
    end if
-   if Shell(DosSlashes(strPathVC & "/bin/cl.exe"), True) <> 0 then
+   if Shell(DosSlashes(strPathVC & "/bin/cl.exe") & " /?", True) <> 0 then
       MsgError "Executing '" & strClExe & "' (which we believe to be the Visual C++ compiler driver) failed."
       exit sub
    end if
@@ -1981,7 +1981,6 @@ function CheckForCurlSub(strPathCurl)
    CheckForCurlSub = False
    LogPrint "trying: strPathCurl=" & strPathCurl
    if   LogFileExists(strPathCurl, "include/curl/curl.h") _
-    And LogFindFile(strPathCurl, "libcurl.dll") <> "" _
     And LogFindFile(strPathCurl, "libcurl.lib") <> "" _
       then
          CheckForCurlSub = True
@@ -2064,7 +2063,7 @@ function CheckForPython(strPathPython)
    LogPrint "trying: strPathPython=" & strPathPython
 
    if LogFileExists(strPathPython, "python.exe") then
-      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "\python.exe"
+      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "/python.exe"
       CheckForPython = True
    end if
 
