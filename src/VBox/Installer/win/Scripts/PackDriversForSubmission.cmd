@@ -151,15 +151,15 @@ goto end_failed
 rem validate specified options
 if not exist "%_MY_OPT_BINDIR%"     goto error_bindir_does_not_exist
 
-if "%_MY_OPT_WITH_PDB" == "0"       goto no_pdbdir_validation
+if "%_MY_OPT_WITH_PDB%" == "0"       goto no_pdbdir_validation
 if ".%_MY_OPT_PDBDIR%" == "."       set _MY_OPT_PDBDIR=%_MY_OPT_BINDIR%\..\stage\debug\bin
 if not exist "%_MY_OPT_PDBDIR%"     goto error_pdbdir_does_not_exist
 :no_pdbdir_validation
 
-if "%_MY_OPT_WITH_EXTPACK" == "0"   goto no_extpack_validation
+if "%_MY_OPT_WITH_EXTPACK%" == "0"   goto no_extpack_validation
 if ".%_MY_OPT_EXTPACK%" == "."      set _MY_OPT_EXTPACK=%_MY_OPT_BINDIR%\Oracle_VM_VirtualBox_Extension_Pack.vbox-extpack
 if not exist "%_MY_OPT_EXTPACK%"    goto error_extpack_does_not_exist
-:no_extack_validation
+:no_extpack_validation
 
 if ".%_MY_OPT_OUTPUT%" == "."       set _MY_OPT_OUTPUT=VBoxDrivers-@VBOX_VERSION_STRING@r@VBOX_SVN_REV@-%_MY_OPT_ARCH%.cab
 if exist "%_MY_OPT_OUTPUT%"         goto error_output_exists
@@ -176,7 +176,7 @@ rem Note! Modify the path a little to ensure windows utilities are used before
 rem       cygwin ones, and that we can use stuff from bin\tools if we like.
 rem
 set PATH=%SystemRoot%\System32;%PATH%;%_MY_OPT_BINDIR%
-if "%_MY_OPT_WITH_EXTPACK" == "0"   goto no_extpack_unpack
+if "%_MY_OPT_WITH_EXTPACK%" == "0"   goto no_extpack_unpack
 set _MY_EXTPACK_DIR=%_MY_OPT_BINDIR%\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack
 if not exist "%_MY_OPT_BINDIR%\ExtensionPacks"  ( mkdir "%_MY_OPT_BINDIR%\ExtensionPacks" || goto end_failed )
 if not exist "%_MY_EXTPACK_DIR%"                ( mkdir "%_MY_EXTPACK_DIR%" || goto end_failed )
@@ -233,7 +233,7 @@ if "%_MY_OPT_WITH_PDB%" == "1" echo %_MY_OPT_PDBDIR%\VMMR0.pdb VMMR0.pdb>>      
 echo %_MY_OPT_BINDIR%\VBoxDDR0.r0 VBoxDDR0.r0>>                                         "%_MY_OPT_DDF_FILE%"
 if "%_MY_OPT_WITH_PDB%" == "1" echo %_MY_OPT_PDBDIR%\VBoxDDR0.pdb VBoxDDR0.pdb>>        "%_MY_OPT_DDF_FILE%"
 
-if "%_MY_OPT_WITH_EXTPACK" == "0"   goto no_extpack_ddf
+if "%_MY_OPT_WITH_EXTPACK%" == "0"   goto no_extpack_ddf
 echo .Set DestinationDir=VBoxExtPackPuel>>                                              "%_MY_OPT_DDF_FILE%"
 echo .\VBoxExtPackPuel.inf VBoxExtPackPuel.inf>>                                        "%_MY_OPT_DDF_FILE%"
 echo %_MY_EXTPACK_DIR%\win.%_MY_OPT_ARCH%\VBoxEhciR0.r0 VBoxEhciR0.r0>>                 "%_MY_OPT_DDF_FILE%"
