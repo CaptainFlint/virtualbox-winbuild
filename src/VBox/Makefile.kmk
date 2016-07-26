@@ -90,6 +90,11 @@ else
  ifdef VBOX_WITH_ADDITIONS
   include $(PATH_SUB_CURRENT)/Additions/Makefile.kmk
  endif
+ ifndef VBOX_WITHOUT_ADDITIONS_ISO
+  $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso:
+	$(QUIET)$(MKDIR) -p $(@D)
+	$(VBOX_RETRY) $(TOOL_CURL_FETCH) http://download.virtualbox.org/virtualbox/$(VBOX_VERSION_STRING_RAW)/VBoxGuestAdditions_$(VBOX_VERSION_STRING_RAW).iso -o $@
+ endif
  ifdef VBOX_WITH_VALIDATIONKIT
   include $(PATH_SUB_CURRENT)/ValidationKit/Makefile.kmk
  endif
