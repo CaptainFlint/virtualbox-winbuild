@@ -3452,6 +3452,12 @@ if defined(VBOX_SIGNING_MODE) && "$(KBUILD_TARGET)" == "win"
 	$(evalcall VBOX_RE_SIGN_DLL_INTERNAL_FN,$1,$2,$3)\
 	,)$($(1)_0_OUTDIR)/$(3)$(notdir $2)
 
+if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE)
+	VBOX_INTEGRITY_CHECK := /IntegrityCheck
+else
+	VBOX_INTEGRITY_CHECK := /IntegrityCheck:NO
+endif
+
 define VBOX_RE_SIGN_DLL_INTERNAL_FN
 local n = $(3)$(notdir $2)
 ifndef $(1)_VBOX_RE_SIGNED_$(n)
@@ -3462,7 +3468,7 @@ ifndef $(1)_VBOX_RE_SIGNED_$(n)
 	$(call MSG_TOOL,SIGNTOOL,,$<,$@)
 	$(RM) -f -- "$@"
 	$(CP) -- "$<" "$@"
-	$(VBOX_VCC_EDITBIN) /LargeAddressAware /DynamicBase /NxCompat /Release /IntegrityCheck \
+	$(VBOX_VCC_EDITBIN) /LargeAddressAware /DynamicBase /NxCompat /Release $(VBOX_INTEGRITY_CHECK) \
 		/Version:$(VBOX_VERSION_MAJOR)0$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD) \
 		"$@"
 	$(call VBOX_SIGN_IMAGE_FN,$@)
@@ -3813,7 +3819,7 @@ ifdef VBOX_WITH_RAW_MODE
   	-Driver -Subsystem:NATIVE -Incremental:NO -Align:64 -MapInfo:Exports -NoD $(VBOX_VCC_LD_WERR) -Release -Debug -Opt:Ref -Opt:Icf \
   	-Version:$(VBOX_VERSION_MAJOR)0$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD) \
   	-Stub:$(PATH_ROOT)/src/VBox/HostDrivers/Support/win/winstub.com
-  ifdef VBOX_SIGNING_MODE
+  if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE)
    TEMPLATE_VBoxRc_LDFLAGS          += -IntegrityCheck
   endif
   TEMPLATE_VBoxRc_LIBS               = \
@@ -3952,7 +3958,7 @@ TEMPLATE_VBoxR0_LDFLAGS             = -Ignore:4197 \
  ifdef VBOX_WITH_DTRACE_R0
 TEMPLATE_VBoxR0_LDFLAGS            += -Merge:VTGPrLc.Data=VTGPrLc.Begin -Merge:VTGPrLc.End=VTGPrLc.Begin -Merge:VTGPrLc.Begin=VTGObj
  endif
- ifdef VBOX_SIGNING_MODE
+ if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE)
   TEMPLATE_VBoxR0_LDFLAGS          += -IntegrityCheck
  endif
 TEMPLATE_VBoxR0_LIBS                = \
@@ -4071,7 +4077,7 @@ ifeq ($(KBUILD_TARGET),win)
  ifdef VBOX_WITH_DTRACE_R0DRV
   TEMPLATE_VBOXR0DRV_LDFLAGS          += -Merge:VTGPrLc.Data=VTGPrLc.Begin -Merge:VTGPrLc.End=VTGPrLc.Begin -Merge:VTGPrLc.Begin=VTGObj
  endif
- ifdef VBOX_SIGNING_MODE
+ if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE)
   TEMPLATE_VBOXR0DRV_LDFLAGS          += -IntegrityCheck
  endif
  TEMPLATE_VBOXR0DRV_ORDERDEPS          = $(VBOX_SIGN_DRIVER_ORDERDEPS)
@@ -4472,7 +4478,7 @@ ifeq ($(KBUILD_TARGET),win)
  ifdef VBOX_WITH_DTRACE_R3
   TEMPLATE_VBOXR3EXE_LDFLAGS          += -Merge:VTGPrLc.Data=VTGPrLc.Begin -Merge:VTGPrLc.End=VTGPrLc.Begin -Merge:VTGPrLc.Begin=VTGObj
  endif
- if defined(VBOX_SIGNING_MODE) && defined(VBOX_WITH_HARDENING)
+ if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE) && defined(VBOX_WITH_HARDENING)
    TEMPLATE_VBOXR3EXE_LDFLAGS         += -IntegrityCheck
  endif
 
@@ -5283,7 +5289,7 @@ ifeq ($(KBUILD_TARGET),win)
 	/DISALLOWLIB:libcmtd.lib \
 	/DISALLOWLIB:msvcrt$(VBOX_VCC_CRT_TYPE_N).lib \
 	/DISALLOWLIB:msvcprt$(VBOX_VCC_CRT_TYPE_N).lib
- if defined(VBOX_SIGNING_MODE) && defined(VBOX_WITH_HARDENING)
+ if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE) && defined(VBOX_WITH_HARDENING)
   TEMPLATE_VBOXMAINEXE_LDFLAGS          += -IntegrityCheck
  endif
  ifdef VBOX_WITH_DTRACE_R3_MAIN
@@ -5835,7 +5841,7 @@ ifdef VBOX_WITH_QTGUI
 	/NOD /INCREMENTAL:NO /MAPINFO:EXPORTS /LargeAddressAware /DynamicBase /NxCompat /Release /Debug /Opt:Ref /Opt:Icf \
 	/Version:$(VBOX_VERSION_MAJOR)0$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD) \
 	/STUB:$(PATH_ROOT)/src/VBox/HostDrivers/Support/win/winstub.com
-  if defined(VBOX_SIGNING_MODE) && defined(VBOX_WITH_HARDENING)
+  if defined(VBOX_SIGNING_MODE) && defined(VBOX_CROSS_CERTIFICATE_FILE) && defined(VBOX_WITH_HARDENING)
    TEMPLATE_VBOXQTGUIEXE_LDFLAGS += -IntegrityCheck
   endif
   TEMPLATE_VBOXQTGUIEXE_SDKS += $(VBOX_WINPSDK)
