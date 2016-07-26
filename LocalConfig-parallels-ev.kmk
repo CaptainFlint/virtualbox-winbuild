@@ -1,0 +1,43 @@
+VBOX_WITH_HARDENING :=
+# Convert WiX path to 8.3 if it contains spaces
+VBOX_PATH_WIX := C:\Programs\WiX
+VBOX_GSOAP_INSTALLED := 1
+VBOX_PATH_GSOAP := C:\Programs\gSOAP
+VBOX_WITH_COMBINED_PACKAGE := 1
+VBOX_WITH_QT_PAYLOAD := 1
+VBOX_WITH_QTGUI_V5 := 1
+VBOX_SIGNING_MODE := release
+VBOX_CERTIFICATE_SUBJECT_NAME := Parallels International Gmbh
+VBOX_CERTIFICATE_SHA2_SUBJECT_NAME :=
+## Sign file function replacement for auto-sign
+# @param 1  The file to sign.
+# @param 2  File description. Optional.
+# @param 3  Additional parameters. Optional.
+VBOX_TOKEN_PASSWD := $(shell cmd /c type token-passwd)
+if "$(VBOX_TOKEN_PASSWD)" == ""
+ $(error ERROR! Token password in not specified. Save it into file 'token-passwd')
+endif
+VBOX_SIGN_FILE_FN = $(VBOX_RETRY) python c:\Devel\VirtualBox-src\signer_client.py -c --sha2 -p $(VBOX_TOKEN_PASSWD) \
+	$(if $(strip $(2)),-a /d -a "$(strip $(2))",) \
+	$(if $(strip $(3)),-a "$(strip $(3))",) \
+	$(1)
+VBOX_PATH_SELFSIGN := C:\WinDDK\7600.16385.1\bin\selfsign
+VBOX_PATH_WISUMINFO := "C:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\sysmgmt\msi\scripts\WiSumInf.vbs"
+VBOX_WITH_DOCS := 1
+VBOX_WITH_DOCS_CHM := 1
+VBOX_WITH_DOCS_PACKING := 1
+VBOX_HAVE_XMLLINT := C:\Programs\xmllint\bin\xmllint.exe
+VBOX_PATH_DOCBOOK        := C:/Programs/DocBook/xsl/
+VBOX_PATH_DOCBOOK_DTD    := C:/Programs/DocBook/xml/
+VBOX_XML_CATALOG         := $(PATH_TARGET)/manual/catalog
+VBOX_XML_CATALOG_DOCBOOK := $(PATH_TARGET)/manual/docbook
+VBOX_PATH_HTML_HELP_WORKSHOP := "C:\Program Files (x86)\HTML Help Workshop"
+VBOX_PDFLATEX := C:\Programs\MiKTeX\miktex\bin\pdflatex.exe
+VBOX_PDFLATEX_CMD := $(VBOX_PDFLATEX) -halt-on-error -interaction batchmode
+TOOL_WGET_FETCH := C:\Programs\wget\bin\wget.exe
+PATH_TOOL_NASM := C:/Programs/nasm
+VBOX_INSTALLER_LANGUAGES := en_US
+VBOX_WITH_TESTCASES :=
+VBOX_WITH_VALIDATIONKIT :=
+VBOX_WITH_VBOX_IMG := 1
+VBOX_BUILD_PUBLISHER :=
