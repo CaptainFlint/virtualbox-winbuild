@@ -206,6 +206,10 @@
     X509_VERIFY_PARAM_new
     X509_VERIFY_PARAM_set_flags
     X509V3_conf_free
+    OpenSSL_version_num
+    DH_generate_parameters_ex
+    DH_new
+    ASN1_STRING_get0_data
 
     ; tstRTBigNum.cpp
     BN_div
