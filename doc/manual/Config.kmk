@@ -145,6 +145,9 @@ ifdef VBOX_XML_CATALOG
  # quite correctly with file:////, doing incorrect filename transformations)
  # and on Windows (where the absolute path starts with a drive letter).
  VBOX_FILE_URL_MAYBE_SLASH = $(if $(eq $(KBUILD_HOST),win),/,)
+ # Triple-slash for raw paths
+ VBOX_PATH_MANUAL_SRC_SLASHED = $(subst :/,:///,$(VBOX_PATH_MANUAL_SRC))
+ VBOX_PATH_MANUAL_OUTBASE_SLASHED = $(subst :/,:///,$(VBOX_PATH_MANUAL_OUTBASE))
  #
  # To avoid network I/O for fetching DTDs, we generate catalogs mapping the public
  # entity IDs to local files.  (Obviously, only done when we have local files.)
@@ -161,9 +164,12 @@ ifdef VBOX_XML_CATALOG
 		'  <delegateSystem systemIdStartString="http://www.oasis-open.org/docbook/" catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_DOCBOOK)"/>' \
 		'  <delegateURI uriStartString="http://www.oasis-open.org/docbook/"         catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_DOCBOOK)"/>' \
 		'  <delegateSystem systemIdStartString="$(VBOX_PATH_MANUAL_SRC)"            catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
+		'  <delegateSystem systemIdStartString="$(VBOX_PATH_MANUAL_SRC_SLASHED)"    catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
 		'  <delegateURI uriStartString="$(VBOX_PATH_MANUAL_SRC)"                    catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
+		'  <delegateURI uriStartString="$(VBOX_PATH_MANUAL_SRC_SLASHED)"            catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
 		'  <delegateURI uriStartString="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)" catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
 		'  <delegateURI uriStartString="$(VBOX_PATH_MANUAL_OUTBASE)"                catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
+		'  <delegateURI uriStartString="$(VBOX_PATH_MANUAL_OUTBASE_SLASHED)"        catalog="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_XML_CATALOG_MANUAL)"/>' \
 		'</catalog>'
 
  # Create a docbook catalog file for xsltproc that points to the local docbook files.
@@ -211,22 +217,37 @@ ifdef VBOX_XML_CATALOG
 		'<?xml version="1.0"?>' \
 		'<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">' \
 		'<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">' \
-		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/common/oracle-accessibility-en.xml"            uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-accessibility-en.xml"/>' \
-		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/common/oracle-support-en.xml"                  uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-support-en.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/common/oracle-accessibility-en.xml"            uri="$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-accessibility-en.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/common/oracle-accessibility-en.xml"          uri="$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-accessibility-en.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/common/oracle-support-en.xml"                  uri="$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-support-en.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/common/oracle-support-en.xml"                uri="$(VBOX_PATH_MANUAL_SRC)/en_US/oracle-support-en.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_ChangeLogImpl.xml"                  uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)/user_ChangeLogImpl.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_ChangeLogImpl.xml"                uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)/user_ChangeLogImpl.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_VBoxManage_CommandsOverview.xml"    uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/user_VBoxManage_CommandsOverview.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_VBoxManage_CommandsOverview.xml"  uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/user_VBoxManage_CommandsOverview.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/titlepage-htmlhelp.xsl"                        uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/titlepage-htmlhelp.xsl"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/titlepage-htmlhelp.xsl"                      uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/titlepage-htmlhelp.xsl"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_man_VBoxManage-mediumio.xml"        uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-mediumio.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_man_VBoxManage-mediumio.xml"      uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-mediumio.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_man_VBoxManage-debugvm.xml"         uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-debugvm.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_man_VBoxManage-debugvm.xml"       uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-debugvm.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_man_VBoxManage-extpack.xml"         uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-extpack.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_man_VBoxManage-extpack.xml"       uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-extpack.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_man_VBoxManage-unattended.xml"      uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-unattended.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_man_VBoxManage-unattended.xml"    uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_man_VBoxManage-unattended.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/user_isomakercmd-man.xml"                uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_isomakercmd-man.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/user_isomakercmd-man.xml"              uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/user_isomakercmd-man.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/SDKRef_apiref.xml"                       uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/SDKRef_apiref.xml"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/SDKRef_apiref.xml"                     uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/en_US/SDKRef_apiref.xml"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/en_US/all-entities.ent"                        uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/all-entities.ent"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/en_US/all-entities.ent"                      uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/all-entities.ent"/>' \
 		'  <uri name="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_SRC)/en_US/all-entities.ent" uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_MANUAL_OUTBASE)/all-entities.ent"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/html/docbook.xsl"                              uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/html/docbook.xsl"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/html/docbook.xsl"                            uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/html/docbook.xsl"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/html/chunk.xsl"                                uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/html/chunk.xsl"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/html/chunk.xsl"                              uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/html/chunk.xsl"/>' \
 		'  <system systemId="$(VBOX_PATH_MANUAL_SRC)/htmlhelp/htmlhelp.xsl"                         uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/htmlhelp/htmlhelp.xsl"/>' \
+		'  <system systemId="$(VBOX_PATH_MANUAL_SRC_SLASHED)/htmlhelp/htmlhelp.xsl"                       uri="file://$(VBOX_FILE_URL_MAYBE_SLASH)$(VBOX_PATH_DOCBOOK)/htmlhelp/htmlhelp.xsl"/>' \
 		'</catalog>'
 
 endif # VBOX_XML_CATALOG
