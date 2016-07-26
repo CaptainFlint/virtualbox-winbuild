@@ -25,9 +25,6 @@ rem Globals and Check for environment variables we need.
 rem
 if ".%KBUILD_DEVTOOLS%" == "." (echo KBUILD_DEVTOOLS is not set & goto end_failed)
 set _MY_DRIVER_BASE_NAMES=VBoxDrv VBoxNetAdp6 VBoxNetLwf VBoxUSB VBoxUSBMon
-set _MY_DRIVER_BASE_NAMES=VBoxDrv VBoxNetAdp6 VBoxNetLwf VBoxUSB VBoxUSBMon
-set _MY_UNZIP=%KBUILD_DEVTOOLS%\win.x86\bin\unzip.exe
-if not exist "%_MY_UNZIP%" (echo "%_MY_UNZIP%" does not exist & goto end_failed)
 
 rem
 rem Parse arguments.
@@ -118,26 +115,35 @@ if not exist "%_MY_OPT_INPUT%"      goto error_input_not_found
 
 rem
 rem Unpack the stuff.
-rem We ignore error level 1 here as that is what unzip returns on warning (slashes).
 rem
-"%_MY_UNZIP%" -o -j "%_MY_OPT_INPUT%" -d "%_MY_OPT_BINDIR%" && goto unzip_okay
-if NOT ERRORLEVEL 1 goto end_failed
+perl ^
+ -we " use Archive::Zip;                                                                    " ^
+ -we " my $z = Archive::Zip->new();                                                         " ^
+ -we " $z->read($ARGV[0]) == 0 or die 'Cannot read ' . $ARGV[0];                            " ^
+ -we " for ($z->members()) {                                                                " ^
+ -we "   my $fn = ($_->fileName() =~ s!^.*[\\/]([^\\/]*)$!$1!r);                            " ^
+ -we "   print 'Unpacked ' . $_->fileName() . ' into ' . $fn . $/;                          " ^
+ -we "   $_->extractToFileNamed($ARGV[1] . '\\' . $fn) == 0 or die 'Cannot extract ' . $fn; " ^
+ -we " }                                                                                    " ^
+ -we " print $/;                                                                            " ^
+ "%_MY_OPT_INPUT%" "%_MY_OPT_BINDIR%"
+if ERRORLEVEL 1 goto end_failed
 :unzip_okay
 
 if ".%_MY_OPT_SIGN_VERIFY%" == ".0" goto no_sign_verify
 rem
 rem Verify it against the PreW10 catalog files we saved.
 rem
-set _MY_SIGNTOOL=%KBUILD_DEVTOOLS%\win.x86\sdk\v8.1\bin\x86\signtool.exe
+if not exist "%_MY_SIGNTOOL%" set _MY_SIGNTOOL=%KBUILD_DEVTOOLS%\win.x86\sdk\v8.1\bin\x86\signtool.exe
 if not exist "%_MY_SIGNTOOL%" set _MY_SIGNTOOL=%KBUILD_DEVTOOLS%\win.x86\selfsign\r3\signtool.exe
 
 for %%d in (%_MY_DRIVER_BASE_NAMES%) do (
     @echo * Verifying %%d against %%d.cat...
     "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d.cat"        "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
     "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d.cat"        "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
-    @echo * Verifying %%d against %%d-PreW10.cat...
-    "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
-    "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
+    rem @echo * Verifying %%d against %%d-PreW10.cat...
+    rem "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
+    rem "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
 )
 :no_sign_verify
 
