@@ -1095,7 +1095,7 @@ sub CheckForVisualCPP(strOptVC, strOptVCCommon, blnOptVCExpressEdition)
    if (strPathVCCommon <> "") Then
       EnvAppend "PATH", ";" & strPathVCCommon & "/IDE"
    end if
-   if Shell(DosSlashes(strPathVC & "/bin/cl.exe"), True) <> 0 then
+   if Shell(DosSlashes(strPathVC & "/bin/cl.exe") & " /?", True) <> 0 then
       MsgError "Executing '" & strClExe & "' (which we believe to be the Visual C++ compiler driver) failed."
       exit sub
    end if
@@ -1986,12 +1986,85 @@ function CheckForCurlSub(strPathCurl)
    CheckForCurlSub = False
    LogPrint "trying: strPathCurl=" & strPathCurl
    if   LogFileExists(strPathCurl, "include/curl/curl.h") _
-    And LogFindFile(strPathCurl, "libcurl.dll") <> "" _
     And LogFindFile(strPathCurl, "libcurl.lib") <> "" _
       then
          CheckForCurlSub = True
       end if
 end function
+
+
+
+''
+' Checks for libvpx
+sub CheckForVpx(strOptVpx)
+   dim strPathVpx, str
+   strVpx = "libvpx"
+   PrintHdr strVpx
+
+   if strOptVpx = "" then
+      MsgError "Invalid path specified!"
+      exit sub
+   end if
+
+   if g_strTargetArch = "amd64" then
+      strVsBuildArch = "x64"
+   else
+      strVsBuildArch = "Win32"
+   end if
+   strLibPathVpx = "lib/" & strVsBuildArch & "/vpxmd.lib"
+
+   strPathVpx = ""
+   if   LogFileExists(strOptVpx, "include/vpx/vpx_encoder.h") _
+    And LogFileExists(strOptVpx, strLibPathVpx) _
+      then
+         strPathVpx = UnixSlashes(PathAbs(strOptVpx))
+         CfgPrint "SDK_VBOX_VPX_INCS := " & strPathVpx & "/include"
+         CfgPrint "SDK_VBOX_VPX_LIBS := " & strPathVpx & "/" & strLibPathVpx
+      else
+         MsgError "Can't locate " & strVpx & ". " _
+                & "Please consult the configure.log and the build requirements."
+         exit sub
+      end if
+
+   PrintResult strVpx, strPathVpx
+end sub
+
+
+
+''
+' Checks for libopus
+sub CheckForOpus(strOptOpus)
+   dim strPathOpus, str
+   strOpus = "libopus"
+   PrintHdr strOpus
+
+   if strOptOpus = "" then
+      MsgError "Invalid path specified!"
+      exit sub
+   end if
+
+   if g_strTargetArch = "amd64" then
+      strVsBuildArch = "x64"
+   else
+      strVsBuildArch = "Win32"
+   end if
+   strLibPathOpus = "lib/" & strVsBuildArch & "/opus.lib"
+
+   strPathOpus = ""
+   if   LogFileExists(strOptOpus, "include/opus.h") _
+    And LogFileExists(strOptOpus, strLibPathOpus) _
+      then
+         strPathOpus = UnixSlashes(PathAbs(strOptOpus))
+         CfgPrint "SDK_VBOX_OPUS_INCS := " & strPathOpus & "/include"
+         CfgPrint "SDK_VBOX_OPUS_LIBS := " & strPathOpus & "/" & strLibPathOpus
+      else
+         MsgError "Can't locate " & strOpus & ". " _
+                & "Please consult the configure.log and the build requirements."
+         exit sub
+      end if
+
+   PrintResult strOpus, strPathOpus
+end sub
 
 
 
@@ -2069,7 +2142,7 @@ function CheckForPython(strPathPython)
    LogPrint "trying: strPathPython=" & strPathPython
 
    if LogFileExists(strPathPython, "python.exe") then
-      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "\python.exe"
+      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "/python.exe"
       CheckForPython = True
    end if
 
@@ -2111,6 +2184,8 @@ sub usage
    Print "  --with-libcurl=PATH   "
    Print "  --with-libcurl32=PATH (only for 64-bit targets)"
    Print "  --with-python=PATH    "
+   Print "  --with-libvpx=PATH    "
+   Print "  --with-libopus=PATH   "
 end sub
 
 
@@ -2148,6 +2223,8 @@ Sub Main
    strOptCurl = ""
    strOptCurl32 = ""
    strOptPython = ""
+   strOptVpx = ""
+   strOptOpus = ""
    blnOptDisableCOM = False
    blnOptDisableUDPTunnel = False
    blnOptDisableSDL = False
@@ -2203,6 +2280,10 @@ Sub Main
             strOptCurl32 = strPath
          case "--with-python"
             strOptPython = strPath
+         case "--with-libvpx"
+            strOptVpx = strPath
+         case "--with-libopus"
+            strOptOpus = strPath
          case "--disable-com"
             blnOptDisableCOM = True
          case "--enable-com"
@@ -2292,6 +2373,9 @@ Sub Main
    if (strOptPython <> "") then
      CheckForPython strOptPython
    end if
+   CheckForVpx strOptVpx
+   CheckForOpus strOptOpus
+
    if g_blnInternalMode then
       EnvPrint "call " & g_strPathDev & "/env.cmd %1 %2 %3 %4 %5 %6 %7 %8 %9"
    end if
