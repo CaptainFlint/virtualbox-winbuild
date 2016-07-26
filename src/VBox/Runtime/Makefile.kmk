@@ -1679,7 +1679,9 @@ endif
 VBoxRT_LIBS.win                = \
 	$(PATH_SDK_$(VBOX_WINDDK)_LIB)/vccomsup.lib \
 	$(PATH_SDK_$(VBOX_WINDDK)_LIB)/wbemuuid.lib \
-	$(PATH_TOOL_$(VBOX_VCC_TOOL)_LIB)/delayimp.lib
+	$(PATH_TOOL_$(VBOX_VCC_TOOL)_LIB)/delayimp.lib \
+	$(PATH_SDK_$(VBOX_WINPSDK)_LIB)/crypt32.lib \
+	$(PATH_SDK_$(VBOX_WINPSDK)_LIB)/bcrypt.lib
 VBoxRT_LDFLAGS.darwin          = \
 	-framework IOKit \
 	-framework CoreFoundation \
@@ -1825,7 +1827,9 @@ endif
 VBoxRT-x86_LIBS.win                = \
 	$(PATH_SDK_$(VBOX_WINDDK)_LIB.x86)/vccomsup.lib \
 	$(PATH_SDK_$(VBOX_WINDDK)_LIB.x86)/wbemuuid.lib \
-	$(PATH_TOOL_$(VBOX_VCC_TOOL_STEM)X86_LIB)/delayimp.lib
+	$(PATH_TOOL_$(VBOX_VCC_TOOL_STEM)X86_LIB)/delayimp.lib \
+	$(PATH_SDK_$(VBOX_WINPSDK)_LIB.x86)/crypt32.lib \
+	$(PATH_SDK_$(VBOX_WINPSDK)_LIB.x86)/bcrypt.lib
 
 VBoxRT-x86_SOURCES.win = $(filter-out %.def %.rc,$(VBoxRT_SOURCES.win)) \
 	$(VBoxRT-x86_0_OUTDIR)/VBoxRT-x86.def
