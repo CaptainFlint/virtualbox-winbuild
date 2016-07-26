@@ -359,6 +359,12 @@
               Source="$(env.PATH_OUT)\bin\msvcp110.dll" />
 <?endif?>
 
+        <!-- OpenSSL DLL files -->
+        <File Id="file_ssleay32.dll" Name="ssleay32.dll"
+              Source="$(env.PATH_OUT)\bin\ssleay32.dll" />
+        <File Id="file_libeay32.dll" Name="libeay32.dll"
+              Source="$(env.PATH_OUT)\bin\libeay32.dll" />
+
         <!-- EFI firmware -->
 <?if $(env.VBOX_WITH_EFIFW_PACKING) = "yes" ?>
         <File Id="file_VBoxEFI32.fd" Name="VBoxEFI32.fd" DiskId="$(var.Property_DiskIdCommon)"
