@@ -2011,7 +2011,6 @@ function CheckForCurlSub(strPathCurl)
    CheckForCurlSub = False
    LogPrint "trying: strPathCurl=" & strPathCurl
    if   LogFileExists(strPathCurl, "include/curl/curl.h") _
-    And LogFindFile(strPathCurl, "libcurl.dll") <> "" _
     And LogFindFile(strPathCurl, "libcurl.lib") <> "" _
       then
          CheckForCurlSub = True
