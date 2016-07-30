@@ -13,6 +13,7 @@ echo call "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.Cmd" /Release
 echo color 07>> build-tmp.cmd
 echo set BUILD_TARGET_ARCH=amd64>> build-tmp.cmd
 echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x64 --with-openssl=C:\Programs\OpenSSL\x64 --with-libcurl=C:\Programs\curl\x64 --with-Qt5=C:\Programs\Qt\5.6.1-x64 --with-python=C:\Programs\Python>> build-tmp.cmd
+echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
 echo call env.bat>> build-tmp.cmd
 echo kmk>> build-tmp.cmd
 echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
@@ -33,6 +34,7 @@ echo call "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.Cmd" /Release
 echo color 07>> build-tmp.cmd
 echo set BUILD_TARGET_ARCH=x86>> build-tmp.cmd
 echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x32 --with-openssl=C:\Programs\OpenSSL\x32 --with-libcurl=C:\Programs\curl\x32 --with-Qt5=C:\Programs\Qt\5.6.1-x32 --with-python=C:\Programs\Python>> build-tmp.cmd
+echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
 echo call env.bat>> build-tmp.cmd
 echo kmk>> build-tmp.cmd
 echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
