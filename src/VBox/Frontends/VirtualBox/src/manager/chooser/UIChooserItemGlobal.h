@@ -186,6 +186,7 @@ private:
         GlobalItemData_Margin,
         GlobalItemData_Spacing,
         GlobalItemData_ButtonMargin,
+        GlobalItemData_MinorSpacing,
     };
 
     /** @name Prepare/cleanup cascade.
