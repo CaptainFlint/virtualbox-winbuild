@@ -246,6 +246,8 @@ private:
         GroupItemData_HeaderSpacing,
         GroupItemData_ChildrenSpacing,
         GroupItemData_ParentIndent,
+        GroupItemData_RootIndent,
+        GroupItemData_MinorSpacing
     };
 
     /** @name Prepare/cleanup cascade.
@@ -312,7 +314,7 @@ private:
         /** Paints background using specified @a pPainter and certain @a rect. */
         void paintBackground(QPainter *pPainter, const QRect &rect);
         /** Paints frame rectangle using specified @a pPainter and certain @a rect. */
-        void paintFrame(QPainter *pPainter, const QRect &rect);
+        void paintFrame(QPainter *pPainter, const QRect &rect, const bool isDragging = false);
         /** Paints header using specified @a pPainter and certain @a rect. */
         void paintHeader(QPainter *pPainter, const QRect &rect);
     /** @} */
