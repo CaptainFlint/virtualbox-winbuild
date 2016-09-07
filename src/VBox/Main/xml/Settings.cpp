@@ -2745,9 +2745,8 @@ Hardware::Hardware() :
     ulMemoryBalloonSize(0),
     fPageFusionEnabled(false)
 {
-    mapBootOrder[0] = DeviceType_Floppy;
+    mapBootOrder[0] = DeviceType_HardDisk;
     mapBootOrder[1] = DeviceType_DVD;
-    mapBootOrder[2] = DeviceType_HardDisk;
 
     /* The default value for PAE depends on the host:
      * - 64 bits host -> always true
@@ -2791,12 +2790,14 @@ bool Hardware::areBootOrderDefaultSettings() const
     BootOrderMap::const_iterator it1 = mapBootOrder.find(1);
     BootOrderMap::const_iterator it2 = mapBootOrder.find(2);
     BootOrderMap::const_iterator it3 = mapBootOrder.find(3);
-    return    (   mapBootOrder.size() == 3
+    return    (   mapBootOrder.size() == 2
+               || (   mapBootOrder.size() == 3
+                   && (it2 != mapBootOrder.end() && it2->second == DeviceType_Null))
                || (   mapBootOrder.size() == 4
+                   && (it2 != mapBootOrder.end() && it2->second == DeviceType_Null)
                    && (it3 != mapBootOrder.end() && it3->second == DeviceType_Null)))
-           && (it0 != mapBootOrder.end() && it0->second == DeviceType_Floppy)
-           && (it1 != mapBootOrder.end() && it1->second == DeviceType_DVD)
-           && (it2 != mapBootOrder.end() && it2->second == DeviceType_HardDisk);
+           && (it0 != mapBootOrder.end() && it0->second == DeviceType_HardDisk)
+           && (it1 != mapBootOrder.end() && it1->second == DeviceType_DVD);
 }
 
 /**
