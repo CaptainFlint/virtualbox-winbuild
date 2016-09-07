@@ -16,6 +16,7 @@
  */
 
 /* Qt includes: */
+#include <QStyleOption>
 #include <QGraphicsScene>
 #include <QGraphicsSceneDragDropEvent>
 #include <QHBoxLayout>
@@ -36,6 +37,11 @@
 #include "UIIconPool.h"
 #include "UIVirtualBoxManager.h"
 
+
+enum CustomOptionType
+{
+    SO_DragPixmap = QStyleOption::SO_CustomBase + 1
+};
 
 /*********************************************************************************************************************************
 *   Class UIChooserItemGroup implementation.                                                                                     *
@@ -313,9 +319,9 @@ void UIChooserItemGroup::hoverMoveEvent(QGraphicsSceneHoverEvent *pEvent)
 
     /* Prepare variables: */
     const QPoint pos = pEvent->pos().toPoint();
-    const int iMargin = data(GroupItemData_VerticalMargin).toInt();
+    const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
     const int iHeaderHeight = m_minimumHeaderSize.height();
-    const int iFullHeaderHeight = 2 * iMargin + iHeaderHeight;
+    const int iFullHeaderHeight = 2 * iVerticalMargin + iHeaderHeight;
     /* Skip if hovered part out of the header: */
     if (pos.y() >= iFullHeaderHeight)
         return;
@@ -348,7 +354,7 @@ void UIChooserItemGroup::paint(QPainter *pPainter, const QStyleOptionGraphicsIte
     /* Paint background: */
     paintBackground(pPainter, rectangle);
     /* Paint frame: */
-    paintFrame(pPainter, rectangle);
+    paintFrame(pPainter, rectangle, (pOptions->type == SO_DragPixmap));
     /* Paint header: */
     paintHeader(pPainter, rectangle);
 }
@@ -386,8 +392,8 @@ void UIChooserItemGroup::startEditing()
     m_pNameEditorWidget->setText(name());
 
     /* Layout name-editor: */
-    const int iMargin = data(GroupItemData_VerticalMargin).toInt();
-    const int iHeaderHeight = 2 * iMargin + m_minimumHeaderSize.height();
+    const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
+    const int iHeaderHeight = 2 * iVerticalMargin + m_minimumHeaderSize.height();
     const QSize headerSize = QSize(geometry().width(), iHeaderHeight);
     const QGraphicsView *pView = model()->scene()->views().first();
     const QPoint viewPoint = pView->mapFromScene(geometry().topLeft().toPoint());
@@ -750,8 +756,9 @@ void UIChooserItemGroup::updateLayout()
     /* Prepare variables: */
     const int iHorizontalMargin = data(GroupItemData_HorizonalMargin).toInt();
     const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
-    const int iParentIndent = data(GroupItemData_ParentIndent).toInt();
     const int iFullHeaderHeight = m_minimumHeaderSize.height();
+    const int iRootIndent = data(GroupItemData_RootIndent).toInt();
+    const int iMinorSpacing = data(GroupItemData_MinorSpacing).toInt();
     int iPreviousVerticalIndent = 0;
 
     /* Header (root-item): */
@@ -781,7 +788,7 @@ void UIChooserItemGroup::updateLayout()
             }
 
             /* Prepare body indent: */
-            iPreviousVerticalIndent = iVerticalMargin + iFullHeaderHeight + iVerticalMargin;
+            iPreviousVerticalIndent = 2 * iVerticalMargin + iFullHeaderHeight;
         }
     }
     /* Header (non-root-item): */
@@ -797,7 +804,7 @@ void UIChooserItemGroup::updateLayout()
             /* Prepare variables: */
             int iToggleButtonHeight = m_toggleButtonSize.height();
             /* Layout toggle-button: */
-            int iToggleButtonX = iHorizontalMargin + iParentIndent * level();
+            int iToggleButtonX = iHorizontalMargin;
             int iToggleButtonY = iToggleButtonHeight == iFullHeaderHeight ? iVerticalMargin :
                                  iVerticalMargin + (iFullHeaderHeight - iToggleButtonHeight) / 2;
             m_pToggleButton->setPos(iToggleButtonX, iToggleButtonY);
@@ -834,7 +841,7 @@ void UIChooserItemGroup::updateLayout()
     else
     {
         /* Prepare variables: */
-        const int iChildrenSpacing = data(GroupItemData_ChildrenSpacing).toInt();
+        const int iHorizontalIndent = isRoot() ? iRootIndent : iHorizontalMargin;
         QRect geo = geometry().toRect();
         int iX = geo.x();
         int iY = geo.y();
@@ -847,14 +854,19 @@ void UIChooserItemGroup::updateLayout()
             pItem->show();
             /* Get item height-hint: */
             int iMinimumHeight = pItem->minimumHeightHint();
+            /* Indent the current item from the top */
+            iPreviousVerticalIndent += iMinorSpacing;
             /* Set item position: */
-            pItem->setPos(iX, iY + iPreviousVerticalIndent);
+            pItem->setPos(iX + iHorizontalIndent, iY + iPreviousVerticalIndent);
             /* Set item size: */
-            pItem->resize(iWidth, iMinimumHeight);
+            pItem->resize(iWidth - 2 * iHorizontalIndent, iMinimumHeight);
             /* Relayout group: */
             pItem->updateLayout();
-            /* Advance indent for next items: */
-            iPreviousVerticalIndent += (iMinimumHeight + iChildrenSpacing);
+            /* Advance indent: */
+            iPreviousVerticalIndent += iMinimumHeight;
+            /* Below Global and Machine items there is additional indent + delimiter: */
+            if (pItem->type() != UIChooserItemType_Group)
+                iPreviousVerticalIndent += iMinorSpacing + 1;
         }
     }
 }
@@ -888,6 +900,7 @@ QPixmap UIChooserItemGroup::toPixmap()
     QPainter painter(&pixmap);
     QStyleOptionGraphicsItem options;
     options.rect = QRect(QPoint(0, 0), actualSize);
+    options.type = SO_DragPixmap;
     paint(&painter, &options);
     return pixmap;
 }
@@ -1168,6 +1181,12 @@ void UIChooserItemGroup::sltGroupToggleFinish(bool fToggled)
     model()->updateLayout();
     /* Update toggle-button tool-tip: */
     updateToggleButtonToolTip();
+    /* Force redraw of the chooser pane to get rid of residual artefacts */
+    UIChooserItem *pRootItem = parentItem();
+    while (pRootItem && !pRootItem->isRoot())
+        pRootItem = pRootItem->parentItem();
+    if (pRootItem)
+        pRootItem->update();
 
     /* Toggle finished: */
     if (!isTemporary())
@@ -1262,10 +1281,12 @@ QVariant UIChooserItemGroup::data(int iKey) const
     {
         /* Layout hints: */
         case GroupItemData_HorizonalMargin: return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 4;
-        case GroupItemData_VerticalMargin:  return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 2;
+        case GroupItemData_VerticalMargin:  return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 4;
         case GroupItemData_HeaderSpacing:   return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 2;
         case GroupItemData_ChildrenSpacing: return 1;
         case GroupItemData_ParentIndent:    return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 3;
+        case GroupItemData_RootIndent:      return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 6;
+        case GroupItemData_MinorSpacing:    return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 5;
 
         /* Default: */
         default: break;
@@ -1397,7 +1418,6 @@ int UIChooserItemGroup::minimumWidthHintForGroup(bool fGroupOpened) const
     {
         /* Prepare variables: */
         const int iHorizontalMargin = data(GroupItemData_HorizonalMargin).toInt();
-        const int iParentIndent = data(GroupItemData_ParentIndent).toInt();
 
         /* Basically we have to take header width into account: */
         iProposedWidth += m_minimumHeaderSize.width();
@@ -1413,7 +1433,7 @@ int UIChooserItemGroup::minimumWidthHintForGroup(bool fGroupOpened) const
         }
 
         /* And 2 margins at last - left and right: */
-        iProposedWidth += 2 * iHorizontalMargin + iParentIndent * level();
+        iProposedWidth += 2 * iHorizontalMargin;
     }
 
     /* Return result: */
@@ -1422,6 +1442,9 @@ int UIChooserItemGroup::minimumWidthHintForGroup(bool fGroupOpened) const
 
 int UIChooserItemGroup::minimumHeightHintForGroup(bool fGroupOpened) const
 {
+    /* Prepare variables: */
+    const int iMinorSpacing = data(GroupItemData_MinorSpacing).toInt();
+
     /* Calculating proposed height: */
     int iProposedHeight = 0;
 
@@ -1431,14 +1454,15 @@ int UIChooserItemGroup::minimumHeightHintForGroup(bool fGroupOpened) const
         /* Main root-item always takes body into account: */
         if (hasItems())
         {
-            /* Prepare variables: */
-            const int iChildrenSpacing = data(GroupItemData_ChildrenSpacing).toInt();
-
-            /* And every existing child height: */
+            /* Add children: */
             foreach (UIChooserItem *pItem, items())
-                iProposedHeight += (pItem->minimumHeightHint() + iChildrenSpacing);
-            /* Minus last spacing: */
-            iProposedHeight -= iChildrenSpacing;
+            {
+                /* Every child has its own height and the top indent */
+                iProposedHeight += (pItem->minimumHeightHint() + iMinorSpacing);
+                /* And non-group children have also bottom indent + delimiter */
+                if (pItem->type() != UIChooserItemType_Group)
+                    iProposedHeight += iMinorSpacing + 1;
+            }
         }
     }
     /* Other items, including temporary roots: */
@@ -1446,7 +1470,6 @@ int UIChooserItemGroup::minimumHeightHintForGroup(bool fGroupOpened) const
     {
         /* Prepare variables: */
         const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
-        const int iChildrenSpacing = data(GroupItemData_ChildrenSpacing).toInt();
 
         /* Group-item header have 2 margins - top and bottom: */
         iProposedHeight += 2 * iVerticalMargin;
@@ -1458,9 +1481,13 @@ int UIChooserItemGroup::minimumHeightHintForGroup(bool fGroupOpened) const
         {
             /* And every existing child height: */
             foreach (UIChooserItem *pItem, items())
-                iProposedHeight += (pItem->minimumHeightHint() + iChildrenSpacing);
-            /* Minus last spacing: */
-            iProposedHeight -= iChildrenSpacing;
+            {
+                /* Every child has its own height and the top indent */
+                iProposedHeight += (pItem->minimumHeightHint() + iMinorSpacing);
+                /* And non-group children have also bottom indent + delimiter */
+                if (pItem->type() != UIChooserItemType_Group)
+                    iProposedHeight += iMinorSpacing + 1;
+            }
         }
 
         /* Finally, additional height during animation: */
@@ -1631,16 +1658,20 @@ void UIChooserItemGroup::paintBackground(QPainter *pPainter, const QRect &rect)
     const QColor headerColor = pal.color(QPalette::Active,
                                          model()->currentItems().contains(this) ?
                                          QPalette::Highlight : QPalette::Midlight);
+    const QColor bodyColor = pal.color(QPalette::Active, QPalette::Base);
 
     /* Root-item: */
     if (isRoot())
     {
+        /* Simple and clear: */
+        pPainter->fillRect(rect, bodyColor);
+
         /* Non-main root-item: */
         if (!isMainRoot())
         {
             /* Prepare variables: */
-            const int iMargin = data(GroupItemData_VerticalMargin).toInt();
-            const int iFullHeaderHeight = 2 * iMargin + m_minimumHeaderSize.height();
+            const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
+            const int iFullHeaderHeight = 2 * iVerticalMargin + m_minimumHeaderSize.height();
             QRect headerRect = QRect(0, 0, rect.width(), iFullHeaderHeight);
 
             /* Fill background: */
@@ -1654,8 +1685,9 @@ void UIChooserItemGroup::paintBackground(QPainter *pPainter, const QRect &rect)
     else
     {
         /* Prepare variables: */
-        const int iMargin = data(GroupItemData_VerticalMargin).toInt();
-        const int iFullHeaderHeight = 2 * iMargin + m_minimumHeaderSize.height();
+        const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
+        const int iFullHeaderHeight = 2 * iVerticalMargin + m_minimumHeaderSize.height();
+        const int iMinorSpacing = data(GroupItemData_MinorSpacing).toInt();
 
         /* Calculate top rectangle: */
         QRect tRect = rect;
@@ -1670,9 +1702,20 @@ void UIChooserItemGroup::paintBackground(QPainter *pPainter, const QRect &rect)
         /* Fill top rectangle: */
         pPainter->fillRect(tRect, tGradient);
 
+        /* Fill the rest: */
+        if (rect.height() > tRect.height())
+        {
+            /* Calculate middle rectangle: */
+            QRect midRect = QRect(tRect.bottomLeft(), rect.bottomRight());
+            /* Paint all the stuff: */
+            pPainter->fillRect(midRect, bodyColor);
+        }
+
         /* Paint drag token UP? */
         if (dragTokenPlace() != DragToken_Off)
         {
+            QColor color1;
+            QColor color2;
             QLinearGradient dragTokenGradient;
             QRect dragTokenRect = rect;
             if (dragTokenPlace() == DragToken_Up)
@@ -1680,15 +1723,19 @@ void UIChooserItemGroup::paintBackground(QPainter *pPainter, const QRect &rect)
                 dragTokenRect.setHeight(5);
                 dragTokenGradient.setStart(dragTokenRect.bottomLeft());
                 dragTokenGradient.setFinalStop(dragTokenRect.topLeft());
+                color1 = headerColor.darker(dragTokenDarkness());
+                color2 = headerColor.darker(dragTokenDarkness() + 40);
             }
             else if (dragTokenPlace() == DragToken_Down)
             {
-                dragTokenRect.setTopLeft(dragTokenRect.bottomLeft() - QPoint(0, 5));
+                dragTokenRect.setTopLeft(dragTokenRect.bottomLeft() - QPoint(0, iMinorSpacing));
                 dragTokenGradient.setStart(dragTokenRect.topLeft());
                 dragTokenGradient.setFinalStop(dragTokenRect.bottomLeft());
+                color1 = headerColor.darker(dragTokenDarkness() - 75);
+                color2 = headerColor.darker(dragTokenDarkness());
             }
-            dragTokenGradient.setColorAt(0, headerColor.darker(dragTokenDarkness()));
-            dragTokenGradient.setColorAt(1, headerColor.darker(dragTokenDarkness() + 40));
+            dragTokenGradient.setColorAt(0, color1);
+            dragTokenGradient.setColorAt(1, color2);
             pPainter->fillRect(dragTokenRect, dragTokenGradient);
         }
     }
@@ -1697,18 +1744,15 @@ void UIChooserItemGroup::paintBackground(QPainter *pPainter, const QRect &rect)
     pPainter->restore();
 }
 
-void UIChooserItemGroup::paintFrame(QPainter *pPainter, const QRect &rectangle)
+void UIChooserItemGroup::paintFrame(QPainter *pPainter, const QRect &rectangle, const bool isDragging /* = false */)
 {
-    /* Not for roots: */
-    if (isRoot())
-        return;
-
     /* Save painter: */
     pPainter->save();
 
     /* Prepare variables: */
-    const int iMargin = data(GroupItemData_VerticalMargin).toInt();
-    const int iFullHeaderHeight = 2 * iMargin + m_minimumHeaderSize.height();
+    const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
+    const int iFullHeaderHeight = 2 * iVerticalMargin + m_minimumHeaderSize.height();
+    const int iMinorSpacing = data(GroupItemData_MinorSpacing).toInt();
 
     /* Prepare color: */
     const QPalette pal = palette();
@@ -1723,12 +1767,37 @@ void UIChooserItemGroup::paintFrame(QPainter *pPainter, const QRect &rectangle)
 
     /* Calculate top rectangle: */
     QRect topRect = rectangle;
-    if (!m_fClosed)
-        topRect.setBottom(topRect.top() + iFullHeaderHeight - 1);
 
-    /* Draw borders: */
-    pPainter->drawLine(topRect.bottomLeft(), topRect.bottomRight() + QPoint(1, 0));
-    pPainter->drawLine(topRect.topLeft(),    topRect.bottomLeft());
+    /* Draw the delimiters after every non-group item: */
+    if (!m_fClosed && !isDragging)
+    {
+        /* Start from the top */
+        int py = topRect.y();
+        /* Take the group header into account, if present: */
+        if (!isMainRoot())
+            py += iFullHeaderHeight;
+        /* Process the child items  */
+        foreach (UIChooserItem *pItem, items())
+        {
+            py += (pItem->minimumHeightHint() + iMinorSpacing);
+            if (pItem->type() != UIChooserItemType_Group)
+            {
+                py += iMinorSpacing;
+                pPainter->drawLine(topRect.x(), py, topRect.right(), py);
+                py += 1;
+            }
+        }
+    }
+
+    /* Not for roots: */
+    if (!isRoot())
+    {
+        if (!m_fClosed)
+            topRect.setBottom(topRect.top() + iFullHeaderHeight - 1);
+
+        /* Draw borders: */
+        pPainter->drawRect(rectangle.adjusted(0, 0, -1, -1));
+    }
 
     /* Restore painter: */
     pPainter->restore();
@@ -1744,7 +1813,6 @@ void UIChooserItemGroup::paintHeader(QPainter *pPainter, const QRect &rect)
     const int iHorizontalMargin = data(GroupItemData_HorizonalMargin).toInt();
     const int iVerticalMargin = data(GroupItemData_VerticalMargin).toInt();
     const int iHeaderSpacing = data(GroupItemData_HeaderSpacing).toInt();
-    const int iParentIndent = data(GroupItemData_ParentIndent).toInt();
     const int iFullHeaderHeight = m_minimumHeaderSize.height();
 
     /* Configure painter color: */
@@ -1761,7 +1829,7 @@ void UIChooserItemGroup::paintHeader(QPainter *pPainter, const QRect &rect)
         m_pExitButton->setParentSelected(model()->currentItems().contains(this));
 
     /* Paint name: */
-    int iNameX = iHorizontalMargin + iParentIndent * level();
+    int iNameX = iHorizontalMargin;
     if (isRoot())
         iNameX += m_exitButtonSize.width();
     else
