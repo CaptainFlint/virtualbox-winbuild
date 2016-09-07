@@ -200,14 +200,13 @@ Machine::HWData::HWData()
     mCpuProfile = "host";
 
     /* default boot order: floppy - DVD - HDD */
-    mBootOrder[0] = DeviceType_Floppy;
+    mBootOrder[0] = DeviceType_HardDisk;
     mBootOrder[1] = DeviceType_DVD;
-    mBootOrder[2] = DeviceType_HardDisk;
-    for (size_t i = 3; i < RT_ELEMENTS(mBootOrder); ++i)
+    for (size_t i = 2; i < RT_ELEMENTS(mBootOrder); ++i)
         mBootOrder[i] = DeviceType_Null;
 
-    mClipboardMode = ClipboardMode_Disabled;
-    mDnDMode = DnDMode_Disabled;
+    mClipboardMode = ClipboardMode_Bidirectional;
+    mDnDMode = DnDMode_Bidirectional;
 
     mFirmwareType = FirmwareType_BIOS;
     mKeyboardHIDType = KeyboardHIDType_PS2Keyboard;
