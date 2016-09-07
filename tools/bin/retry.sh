@@ -24,7 +24,7 @@ if [ "${EXITCODE}" = "0" ]; then
 fi
 
 # Retries.
-for RETRY in 2 3 4 5;
+for RETRY in 2 3 4 5 6 7 8 9 10;
 do
     echo "retry.sh: retry$((${RETRY} - 1)): exitcode=${EXITCODE};  retrying: $*"
     "$@"
@@ -33,6 +33,8 @@ do
         echo "retry.sh: Success after ${RETRY} tries: $*!"
         exit 0;
     fi
+    # Sleep 3 seconds to avoid DoS in case it's already overloaded
+    timeout /t 3 /nobreak >nul
 done
 echo "retry.sh: Giving up: exitcode=${EXITCODE}  command: $@"
 exit ${EXITCODE};
