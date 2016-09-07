@@ -198,6 +198,8 @@ private:
 
     /** Holds the main toolbar instance. */
     UIToolBar *m_pToolBar;
+    /** Holds the main toolbar minimal height. */
+    int m_iToolBarMinHeight;
 
     /** Holds the Chooser-pane instance. */
     UIChooser          *m_pPaneChooser;
