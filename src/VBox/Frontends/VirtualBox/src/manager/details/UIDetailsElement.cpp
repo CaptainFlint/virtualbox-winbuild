@@ -49,8 +49,8 @@ UIDetailsElement::UIDetailsElement(UIDetailsSet *pParent, DetailsElementType enm
 #else
     , m_iDefaultToneStart(160)
     , m_iDefaultToneFinal(190)
-    , m_iHoverToneStart(160)
-    , m_iHoverToneFinal(190)
+    , m_iHoverToneStart(130)
+    , m_iHoverToneFinal(180)
 #endif
     , m_fHovered(false)
     , m_fNameHovered(false)
@@ -675,13 +675,23 @@ void UIDetailsElement::paintBackground(QPainter *pPainter, const QStyleOptionGra
     gradientDefault.setColorAt(1, dcTone2);
     pPainter->fillRect(fullRect, gradientDefault);
 
+    QColor hcTone1;
+    QColor hcTone2;
+    /* Paint normal background: */
+    const QColor normalColor = pal.color(QPalette::Active, QPalette::Mid);
+    hcTone1 = normalColor.lighter(m_iDefaultToneFinal);
+    hcTone2 = normalColor.lighter(m_iDefaultToneStart - 30);
+    QLinearGradient gradientNormal(headRect.topLeft(), headRect.bottomLeft());
+    gradientNormal.setColorAt(0, hcTone1);
+    gradientNormal.setColorAt(1, hcTone2);
+    pPainter->fillRect(headRect, gradientNormal);
     /* If element is hovered: */
     if (m_fHovered)
     {
         /* Paint hovered background: */
         const QColor hoveredColor = pal.color(QPalette::Active, QPalette::Highlight);
-        QColor hcTone1 = hoveredColor.lighter(m_iHoverToneFinal);
-        QColor hcTone2 = hoveredColor.lighter(m_iHoverToneStart);
+        hcTone1 = hoveredColor.lighter(m_iHoverToneFinal);
+        hcTone2 = hoveredColor.lighter(m_iHoverToneStart);
         hcTone1.setAlpha(m_iAnimatedValue);
         hcTone2.setAlpha(m_iAnimatedValue);
         QLinearGradient gradientHovered(headRect.topLeft(), headRect.bottomLeft());
