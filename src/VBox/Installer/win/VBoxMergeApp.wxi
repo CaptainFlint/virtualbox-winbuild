@@ -360,10 +360,17 @@
 <?endif?>
 
         <!-- OpenSSL DLL files -->
-        <File Id="file_ssleay32.dll" Name="ssleay32.dll"
-              Source="$(env.PATH_OUT)\bin\ssleay32.dll" />
-        <File Id="file_libeay32.dll" Name="libeay32.dll"
-              Source="$(env.PATH_OUT)\bin\libeay32.dll" />
+<?if $(env.BUILD_TARGET_ARCH) = "x86" ?>
+        <File Id="file_libssl.dll" Name="libssl.dll"
+              Source="$(env.PATH_OUT)\bin\libssl-1_1.dll" />
+        <File Id="file_libcrypto.dll" Name="libcrypto.dll"
+              Source="$(env.PATH_OUT)\bin\libcrypto-1_1.dll" />
+<?else ?>
+        <File Id="file_libssl.dll" Name="libssl.dll"
+              Source="$(env.PATH_OUT)\bin\libssl-1_1-x64.dll" />
+        <File Id="file_libcrypto.dll" Name="libcrypto.dll"
+              Source="$(env.PATH_OUT)\bin\libcrypto-1_1-x64.dll" />
+<?endif ?>
 
         <!-- EFI firmware -->
 <?if $(env.VBOX_WITH_EFIFW_PACKING) = "yes" ?>

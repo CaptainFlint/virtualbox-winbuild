@@ -142,7 +142,8 @@ endif
 
 # OpenSSL DLLs
 ifeq ($(KBUILD_TARGET),win)
- SDK_VBOX_OPENSSL_DLLS ?= $(subst .lib,.dll,$(subst /lib/,/bin/,$(SDK_VBOX_OPENSSL_LIBS)))
+ OPENSSL_ARCH_SUFFIX = $(select "$(KBUILD_TARGET_ARCH)" == "x86", "", "$(KBUILD_TARGET_ARCH)" == "amd64", "-x64")
+ SDK_VBOX_OPENSSL_DLLS ?= $(subst .lib,-1_1$(OPENSSL_ARCH_SUFFIX).dll,$(subst /lib/,/bin/,$(SDK_VBOX_OPENSSL_LIBS)))
  InstallExternalLibs_SOURCES += \
  	$(foreach sslmod,$(SDK_VBOX_OPENSSL_DLLS),$(call VBOX_RE_SIGN_DLL_FN,InstallExternalLibs,$(sslmod)))
 endif
