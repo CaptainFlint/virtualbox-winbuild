@@ -1,6 +1,6 @@
 VBOX_WITH_HARDENING :=
 SDK_VBOX_OPENSSL-x86_INCS := C:\Programs\OpenSSL\x32\include
-SDK_VBOX_OPENSSL-x86_LIBS := C:\Programs\OpenSSL\x32\lib\ssleay32.lib C:\Programs\OpenSSL\x32\lib\libeay32.lib
+SDK_VBOX_OPENSSL-x86_LIBS := C:\Programs\OpenSSL\x32\lib\libssl.lib C:\Programs\OpenSSL\x32\lib\libcrypto.lib
 SDK_VBOX_LIBCURL-x86_INCS := C:\Programs\curl\x32\include
 SDK_VBOX_LIBCURL-x86_LIBS := C:\Programs\curl\x32\libcurl.lib
 SDK_VBOX_LIBCURL-x86_LIBS.x86 := C:\Programs\curl\x32\libcurl.lib
@@ -39,4 +39,3 @@ VBOX_WITH_TESTCASES :=
 VBOX_WITH_VALIDATIONKIT :=
 VBOX_WITH_VBOX_IMG := 1
 VBOX_BUILD_PUBLISHER :=
-VBOX_WITH_OPENSSL_PRE_1_1 := 1
