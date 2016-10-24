@@ -361,14 +361,14 @@
 
         <!-- OpenSSL DLL files -->
 <?if $(env.BUILD_TARGET_ARCH) = "x86" ?>
-        <File Id="file_libssl.dll" Name="libssl.dll"
+        <File Id="file_libssl.dll" Name="libssl-1_1.dll"
               Source="$(env.PATH_OUT)\bin\libssl-1_1.dll" />
-        <File Id="file_libcrypto.dll" Name="libcrypto.dll"
+        <File Id="file_libcrypto.dll" Name="libcrypto-1_1.dll"
               Source="$(env.PATH_OUT)\bin\libcrypto-1_1.dll" />
 <?else ?>
-        <File Id="file_libssl.dll" Name="libssl.dll"
+        <File Id="file_libssl.dll" Name="libssl-1_1-x64.dll"
               Source="$(env.PATH_OUT)\bin\libssl-1_1-x64.dll" />
-        <File Id="file_libcrypto.dll" Name="libcrypto.dll"
+        <File Id="file_libcrypto.dll" Name="libcrypto-1_1-x64.dll"
               Source="$(env.PATH_OUT)\bin\libcrypto-1_1-x64.dll" />
 <?endif ?>
 
