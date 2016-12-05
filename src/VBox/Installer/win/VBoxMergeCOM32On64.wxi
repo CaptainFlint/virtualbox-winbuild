@@ -43,12 +43,6 @@
                   Source="$(env.PATH_OUT)\bin\x86\VBoxRT-x86.dll"
                   DiskId="$(var.Property_DiskIdCommon)">
             </File>
-            <File Id="file_libssl_x86" Name="libssl-1_1.dll"
-                  Source="$(env.PATH_OUT)\bin\x86\libssl-1_1.dll"
-                  DiskId="$(var.Property_DiskIdCommon)" />
-            <File Id="file_libcrypto_x86" Name="libcrypto-1_1.dll"
-                  Source="$(env.PATH_OUT)\bin\x86\libcrypto-1_1.dll"
-                  DiskId="$(var.Property_DiskIdCommon)" />
             <?include $(env.PATH_TARGET)\VirtualBox_TypeLib_x86.wxi ?>
     <?if $(env.VBOX_VCC_TOOL_STEM) = "VCC100" ?>
             <!-- MS C/C++ v10.0 32 bit Runtime DLL files -->

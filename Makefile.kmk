@@ -140,19 +140,6 @@ ifeq ($(KBUILD_TARGET).$(VBOX_WITHOUT_COMPILER_REDIST),win.)
  endif
 endif
 
-# OpenSSL DLLs
-ifeq ($(KBUILD_TARGET),win)
- OPENSSL_ARCH_SUFFIX = $(select "$(KBUILD_TARGET_ARCH)" == "x86",,"$(KBUILD_TARGET_ARCH)" == "amd64",-x64)
- SDK_VBOX_OPENSSL_DLLS ?= $(subst .lib,-1_1$(OPENSSL_ARCH_SUFFIX).dll,$(subst /lib/,/bin/,$(SDK_VBOX_OPENSSL_LIBS)))
- InstallExternalLibs_SOURCES += \
- 	$(foreach sslmod,$(SDK_VBOX_OPENSSL_DLLS),$(call VBOX_RE_SIGN_DLL_FN,InstallExternalLibs,$(sslmod)))
- ifdef VBOX_WITH_32_ON_64_MAIN_API
-  SDK_VBOX_OPENSSL-x86_DLLS ?= $(subst .lib,-1_1.dll,$(subst /lib/,/bin/,$(subst \,/,$(SDK_VBOX_OPENSSL-x86_LIBS))))
-  InstallExternalLibs_SOURCES += \
- 	$(foreach sslmod,$(SDK_VBOX_OPENSSL-x86_DLLS),$(call VBOX_RE_SIGN_DLL_FN,InstallExternalLibs,$(sslmod),x86_)=>x86/$(substr $(sslmod),$(int-add $(lastpos /,$(sslmod)),1)))
- endif
-endif
-
 #
 # Install our Qt DLLs / Shared Objects / Frameworks.
 # Note: The installer fixes the darwin .dylibs when hardening is enabled.

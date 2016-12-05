@@ -1949,9 +1949,7 @@ function CheckForSslSub(strPathSsl)
    CheckForSslSub = False
    LogPrint "trying: strPathSsl=" & strPathSsl
    if   LogFileExists(strPathSsl, "include/openssl/md5.h") _
-    And LogFindFile(strPathSsl, "bin/libssl*.dll") <> "" _
     And LogFindFile(strPathSsl, "lib/libssl.lib") <> "" _
-    And LogFindFile(strPathSsl, "bin/libcrypto*.dll") <> "" _
     And LogFindFile(strPathSsl, "lib/libcrypto.lib") <> "" _
       then
          CheckForSslSub = True
