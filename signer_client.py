@@ -5,6 +5,8 @@ import os
 import argparse
 import uuid
 import httplib
+import msvcrt
+import time
 
 __all__ = ['sign', 'sign_impl']
 
@@ -52,6 +54,30 @@ def encode_multipart_formdata(fields, files, boundary):
     lines.append('--' + boundary + '--')
     lines.append('')
     return '\r\n'.join(lines)
+
+lockfile = __file__ + '.lock'
+lockfh = None
+def cs_enter():
+    global lockfile, lockfh
+    #print 'cs_enter'
+    lockfh = open(lockfile, 'w')
+    #print 'opened %s' % lockfh
+    while True:
+        try:
+            msvcrt.locking(lockfh.fileno(), msvcrt.LK_NBRLCK, 1)
+            #print 'locked'
+            break
+        except IOError:
+            time.sleep(1)
+
+def cs_leave():
+    global lockfile, lockfh
+    #print 'cs_leave, lfh: %s, file: %s' % (lockfh, lockfile)
+    msvcrt.locking(lockfh.fileno(), msvcrt.LK_UNLCK, 1)
+    #print 'unlocked'
+    lockfh.close()
+    #print 'closed'
+    lockfh = None
 
 ################################################################################
 # Signing functions
@@ -106,6 +132,7 @@ def sign_impl(passwd, args1, cross1, args2, cross2, filepath):
     files = {'filedata': filepath}
 
     res = False
+    cs_enter()
     try:
         # Random boundary that will hardly appear in our data
         boundary = '----------' + uuid.uuid4().hex
@@ -129,6 +156,7 @@ def sign_impl(passwd, args1, cross1, args2, cross2, filepath):
         print "File input/output problem: " + e.strerror
     except httplib.HTTPException, e:
         print "Connection problem: " + str(e)
+    cs_leave()
     return res
 
 
