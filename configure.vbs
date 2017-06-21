@@ -1897,9 +1897,14 @@ end function
 
 ''
 ' Checks for openssl
-sub CheckForSsl(strOptSsl)
+sub CheckForSsl(strOptSsl, bln32Bit)
    dim strPathSsl, str
    PrintHdr "openssl"
+
+   strOpenssl = "openssl"
+   if bln32Bit = True then
+       strOpenssl = "openssl32"
+   end if
 
    '
    ' Try find some openssl dll/lib.
@@ -1919,27 +1924,35 @@ sub CheckForSsl(strOptSsl)
 
    ' Ignore failure if we're in 'internal' mode.
    if (strPathSsl = "") and g_blnInternalMode then
-      PrintResultMsg "openssl", "ignored (internal mode)"
+      PrintResultMsg strOpenssl, "ignored (internal mode)"
       exit sub
    end if
 
    ' Success?
    if strPathSsl = "" then
       if strOptSsl = "" then
-         MsgError "Can't locate openssl. Try specify the path with the --with-openssl=<path> argument. " _
+         MsgError "Can't locate " & strOpenssl & ". " _
+                & "Try specify the path with the --with-" & strOpenssl & "=<path> argument. " _
                 & "If still no luck, consult the configure.log and the build requirements."
       else
-         MsgError "Can't locate openssl. Please consult the configure.log and the build requirements."
+         MsgError "Can't locate " & strOpenssl & ". " _
+                & "Please consult the configure.log and the build requirements."
       end if
       exit sub
    end if
 
    strPathSsl = UnixSlashes(PathAbs(strPathSsl))
-   CfgPrint "SDK_VBOX_OPENSSL_INCS := " & strPathSsl & "/include"
-   CfgPrint "SDK_VBOX_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
-   CfgPrint "SDK_VBOX_BLD_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+   if bln32Bit = True then
+      CfgPrint "SDK_VBOX_OPENSSL-x86_INCS := " & strPathSsl & "/include"
+      CfgPrint "SDK_VBOX_OPENSSL-x86_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+      CfgPrint "SDK_VBOX_BLD_OPENSSL-x86_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+   else
+      CfgPrint "SDK_VBOX_OPENSSL_INCS := " & strPathSsl & "/include"
+      CfgPrint "SDK_VBOX_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+      CfgPrint "SDK_VBOX_BLD_OPENSSL_LIBS := " & strPathSsl & "/lib/libssl.lib" & " " & strPathSsl & "/lib/libcrypto.lib"
+   end if
 
-   PrintResult "openssl", strPathSsl
+   PrintResult strOpenssl, strPathSsl
 end sub
 
 ''
@@ -1959,9 +1972,14 @@ end function
 
 ''
 ' Checks for libcurl
-sub CheckForCurl(strOptCurl)
+sub CheckForCurl(strOptCurl, bln32Bit)
    dim strPathCurl, str
    PrintHdr "libcurl"
+
+   strCurl = "libcurl"
+   if bln32Bit = True then
+       strCurl = "libcurl32"
+   end if
 
    '
    ' Try find some cURL dll/lib.
@@ -1981,26 +1999,33 @@ sub CheckForCurl(strOptCurl)
 
    ' Ignore failure if we're in 'internal' mode.
    if (strPathCurl = "") and g_blnInternalMode then
-      PrintResultMsg "curl", "ignored (internal mode)"
+      PrintResultMsg strCurl, "ignored (internal mode)"
       exit sub
    end if
 
    ' Success?
    if strPathCurl = "" then
       if strOptCurl = "" then
-         MsgError "Can't locate libcurl. Try specify the path with the --with-libcurl=<path> argument. " _
+         MsgError "Can't locate " & strCurl & ". " _
+                & "Try specify the path with the --with-" & strCurl & "=<path> argument. " _
                 & "If still no luck, consult the configure.log and the build requirements."
       else
-         MsgError "Can't locate libcurl. Please consult the configure.log and the build requirements."
+         MsgError "Can't locate " & strCurl & ". " _
+                & "Please consult the configure.log and the build requirements."
       end if
       exit sub
    end if
 
    strPathCurl = UnixSlashes(PathAbs(strPathCurl))
-   CfgPrint "SDK_VBOX_LIBCURL_INCS := " & strPathCurl & "/include"
-   CfgPrint "SDK_VBOX_LIBCURL_LIBS := " & strPathCurl & "/libcurl.lib"
+   if bln32Bit = True then
+      CfgPrint "SDK_VBOX_LIBCURL-x86_INCS := " & strPathCurl & "/include"
+      CfgPrint "SDK_VBOX_LIBCURL-x86_LIBS.x86 := " & strPathCurl & "/libcurl.lib"
+   else
+      CfgPrint "SDK_VBOX_LIBCURL_INCS := " & strPathCurl & "/include"
+      CfgPrint "SDK_VBOX_LIBCURL_LIBS := " & strPathCurl & "/libcurl.lib"
+   end if
 
-   PrintResult "libcurl", strPathCurl
+   PrintResult strCurl, strPathCurl
 end sub
 
 ''
@@ -2155,7 +2180,7 @@ function CheckForPython(strPathPython)
    LogPrint "trying: strPathPython=" & strPathPython
 
    if LogFileExists(strPathPython, "python.exe") then
-      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "\python.exe"
+      CfgPrint "VBOX_BLD_PYTHON       := " & strPathPython & "/python.exe"
       CheckForPython = True
    end if
 
@@ -2213,7 +2238,9 @@ sub usage
    Print "  --with-libxml2=PATH   "
    Print "  --with-libxslt=PATH   "
    Print "  --with-openssl=PATH   "
+   Print "  --with-openssl32=PATH (only for 64-bit targets)"
    Print "  --with-libcurl=PATH   "
+   Print "  --with-libcurl32=PATH (only for 64-bit targets)"
    Print "  --with-python=PATH    "
 end sub
 
@@ -2250,7 +2277,9 @@ Sub Main
    strOptXml2 = ""
    strOptXslt = ""
    strOptSsl = ""
+   strOptSsl32 = ""
    strOptCurl = ""
+   strOptCurl32 = ""
    strOptPython = ""
    strOptMkisofs = ""
    blnOptDisableCOM = False
@@ -2303,8 +2332,12 @@ Sub Main
             strOptXslt = strPath
          case "--with-openssl"
             strOptSsl = strPath
+         case "--with-openssl32"
+            strOptSsl32 = strPath
          case "--with-libcurl"
             strOptCurl = strPath
+         case "--with-libcurl32"
+            strOptCurl32 = strPath
          case "--with-python"
             strOptPython = strPath
          case "--with-mkisofs"
@@ -2378,8 +2411,16 @@ Sub Main
    if (strOptXslt <> "") then
       CheckForXslt strOptXslt
    end if
-   CheckForSsl strOptSsl
-   CheckForCurl strOptCurl
+   CheckForSsl strOptSsl, False
+   if g_strTargetArch = "amd64" then
+       ' 32-bit openssl required as well
+       CheckForSsl strOptSsl32, True
+   end if
+   CheckForCurl strOptCurl, False
+   if g_strTargetArch = "amd64" then
+       ' 32-bit Curl required as well
+       CheckForCurl strOptCurl32, True
+   end if
    CheckForQt strOptQt4, strOptQt5
    if (strOptPython <> "") then
      CheckForPython strOptPython

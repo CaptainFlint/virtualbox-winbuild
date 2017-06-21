@@ -1,11 +1,6 @@
 VBOX_WITH_HARDENING :=
-SDK_VBOX_OPENSSL-x86_INCS := C:\Programs\OpenSSL\x32\include
-SDK_VBOX_OPENSSL-x86_LIBS := C:\Programs\OpenSSL\x32\lib\libssl.lib C:\Programs\OpenSSL\x32\lib\libcrypto.lib
-SDK_VBOX_LIBCURL-x86_INCS := C:\Programs\curl\x32\include
-SDK_VBOX_LIBCURL-x86_LIBS := C:\Programs\curl\x32\libcurl.lib
-SDK_VBOX_LIBCURL-x86_LIBS.x86 := C:\Programs\curl\x32\libcurl.lib
-# 8.3 path for C:\Program Files (x86)\WiX Toolset v3.10\bin
-VBOX_PATH_WIX := C:\PROGRA~2\WIXTOO~1.10\bin
+# Convert WiX path to 8.3 if it contains spaces
+VBOX_PATH_WIX := C:\Programs\WiX
 VBOX_GSOAP_INSTALLED := 1
 VBOX_PATH_GSOAP := C:\Programs\gSOAP
 VBOX_WITH_COMBINED_PACKAGE := 1
@@ -37,6 +32,7 @@ VBOX_PATH_HTML_HELP_WORKSHOP := "C:\Program Files (x86)\HTML Help Workshop"
 VBOX_PDFLATEX := C:\Programs\MiKTeX\miktex\bin\pdflatex.exe
 VBOX_PDFLATEX_CMD := $(VBOX_PDFLATEX) -halt-on-error -interaction batchmode
 TOOL_WGET_FETCH := C:\Programs\wget\bin\wget.exe
+PATH_TOOL_NASM := C:/Programs/nasm
 VBOX_INSTALLER_LANGUAGES := en_US
 VBOX_WITH_TESTCASES :=
 VBOX_WITH_VALIDATIONKIT :=
