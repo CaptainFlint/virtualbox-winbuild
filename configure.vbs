@@ -1496,41 +1496,38 @@ function CheckForMinGW32Sub(strPathMingW32, strPathW32API)
    if strPathW32API = "" then strPathW32API = strPathMingW32
    LogPrint "trying: strPathMingW32="  &strPathMingW32 & " strPathW32API=" & strPathW32API
 
-   if   LogFileExists(strPathMingW32, "bin/mingw32-gcc.exe") _
+   if   LogFileExists(strPathMingW32, "bin/gcc.exe") _
     And LogFileExists(strPathMingW32, "bin/ld.exe") _
     And LogFileExists(strPathMingW32, "bin/objdump.exe") _
     And LogFileExists(strPathMingW32, "bin/dllwrap.exe") _
+    And LogFileExists(strPathMingW32, "bin/dlltool.exe") _
     And LogFileExists(strPathMingW32, "bin/as.exe") _
-    And LogFileExists(strPathMingW32, "include/string.h") _
-    And LogFileExists(strPathMingW32, "include/_mingw.h") _
-    And LogFileExists(strPathMingW32, "lib/dllcrt1.o") _
-    And LogFileExists(strPathMingW32, "lib/dllcrt2.o") _
-    And LogFileExists(strPathMingW32, "lib/libmsvcrt.a") _
-    _
-    And LogFileExists(strPathW32API, "lib/libkernel32.a") _
-    And LogFileExists(strPathW32API, "include/windows.h") _
+    And LogFileExists(strPathMingW32, "include/bfd.h") _
+    And LogFileExists(strPathMingW32, "lib32/libgcc_s.a") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/lib/dllcrt1.o") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/lib/dllcrt2.o") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/lib/libmsvcrt.a") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/lib/libmsvcr100.a") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/include/_mingw.h") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/include/stdint.h") _
+    And LogFileExists(strPathMingW32, "i686-w64-mingw32/include/windows.h") _
       then
-      if Shell(DosSlashes(strPathMingW32 & "/bin/gcc.exe") & " --version", True) = 0 then
+      if Shell(DosSlashes(strPathMingW32 & "/bin/gcc.exe") & " -dumpversion", True) = 0 then
          dim offVer, iMajor, iMinor, iPatch, strVer
 
          ' extract the version.
-         strVer = ""
-         offVer = InStr(1, g_strShellOutput, "(GCC) ")
-         if offVer > 0 then
-            strVer = LTrim(Mid(g_strShellOutput, offVer + Len("(GCC) ")))
-            strVer = RTrim(Left(strVer, InStr(1, strVer, " ")))
-            if   (Mid(strVer, 2, 1) = ".") _
-             And (Mid(strVer, 4, 1) = ".") then
-               iMajor = Int(Left(strVer, 1)) ' Is Int() the right thing here? I want atoi()!!!
-               iMinor = Int(Mid(strVer, 3, 1))
-               iPatch = Int(Mid(strVer, 5))
-            else
-               LogPrint "Malformed version: '" & strVer & "'"
-               strVer = ""
-            end if
+         strVer = Trim(Replace(Replace(g_strShellOutput, vbCr, ""), vbLf, ""))
+         if   (Mid(strVer, 2, 1) = ".") _
+          And (Mid(strVer, 4, 1) = ".") then
+            iMajor = Int(Left(strVer, 1)) ' Is Int() the right thing here? I want atoi()!!!
+            iMinor = Int(Mid(strVer, 3, 1))
+            iPatch = Int(Mid(strVer, 5))
+         else
+            LogPrint "Malformed version: '" & strVer & "'"
+            strVer = ""
          end if
          if strVer <> "" then
-            if (iMajor = 3) And (iMinor = 3) then
+            if (iMajor = 4) And (iMinor >= 4) then
                CheckForMinGW32Sub = True
                g_strSubOutput = strVer
             else
