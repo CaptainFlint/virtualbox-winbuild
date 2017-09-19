@@ -1,0 +1,9140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="it_IT">
+<context>
+    <name>AudioOutput</name>
+    <message>
+        <source>&lt;html&gt;The audio playback device &lt;b&gt;%1&lt;/b&gt; does not work.&lt;br/&gt;Falling back to &lt;b&gt;%2&lt;/b&gt;.&lt;/html&gt;</source>
+        <translation>&lt;html&gt;Il dispositivo di riproduzione audio &lt;b&gt;%1&lt;/b&gt; non funziona.&lt;br/&gt;Ripiego su &lt;b&gt;%2&lt;/b&gt;.&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;Switching to the audio playback device &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;which just became available and has higher preference.&lt;/html&gt;</source>
+        <translation>&lt;html&gt;Commutazione del dispositivo di riproduzione audio &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;che è diventato disponibile e ha una preferenza maggiore.&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Revert back to device &apos;%1&apos;</source>
+        <translation>Ripristino del dispositivo &apos;%1&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>CloseButton</name>
+    <message>
+        <source>Close Tab</source>
+        <translation>Chiudi scheda</translation>
+    </message>
+</context>
+<context>
+    <name>MAC_APPLICATION_MENU</name>
+    <message>
+        <source>Services</source>
+        <translation>Servizi</translation>
+    </message>
+    <message>
+        <source>Hide %1</source>
+        <translation>Nascondi %1</translation>
+    </message>
+    <message>
+        <source>Hide Others</source>
+        <translation>Nascondi gli altri</translation>
+    </message>
+    <message>
+        <source>Show All</source>
+        <translation>Mostra tutto</translation>
+    </message>
+    <message>
+        <source>Preferences...</source>
+        <translation>Preferenze...</translation>
+    </message>
+    <message>
+        <source>Quit %1</source>
+        <translation>Chiudi %1</translation>
+    </message>
+    <message>
+        <source>About %1</source>
+        <translation>Informazioni su %1</translation>
+    </message>
+</context>
+<context>
+    <name>Phonon::</name>
+    <message>
+        <source>Notifications</source>
+        <translation>Notifiche</translation>
+    </message>
+    <message>
+        <source>Music</source>
+        <translation>Musica</translation>
+    </message>
+    <message>
+        <source>Video</source>
+        <translation>Video</translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation>Comunicazione</translation>
+    </message>
+    <message>
+        <source>Games</source>
+        <translation>Giochi</translation>
+    </message>
+    <message>
+        <source>Accessibility</source>
+        <translation>Accessibilità</translation>
+    </message>
+</context>
+<context>
+    <name>Phonon::Gstreamer::Backend</name>
+    <message>
+        <source>Warning: You do not seem to have the package gstreamer0.10-plugins-good installed.
+          Some video features have been disabled.</source>
+        <translation>Avviso: sembra che il pacchetto gstreamer0.10-plugins-good non sia installato.
+          Alcune funzionalità video sono state disabilitate.</translation>
+    </message>
+    <message>
+        <source>Warning: You do not seem to have the base GStreamer plugins installed.
+          All audio and video support has been disabled</source>
+        <translation>Avviso: sembra che il componente GStreamer di base non sia installato.
+          Tutti i supporti audio e video sono stati disabilitati</translation>
+    </message>
+</context>
+<context>
+    <name>Phonon::Gstreamer::MediaObject</name>
+    <message>
+        <source>Cannot start playback. 
+
+Check your Gstreamer installation and make sure you 
+have libgstreamer-plugins-base installed.</source>
+        <translation>Impossibile avviare la riproduzione.
+Controlla l&apos;installazione di Gstreamer e assicurati che
+libgstreamer-plugins-base sia installato.</translation>
+    </message>
+    <message numerus="yes">
+        <source>A required codec is missing. You need to install the following codec(s) to play this content: %0</source>
+        <translation>
+            <numerusform>Manca un codificatore richiesto. Devi installare il seguente codificatore per riprodurre questo contenuto: %0</numerusform>
+            <numerusform>Manca un codificatore richiesto. Devi installare i seguenti codificatori per riprodurre questo contenuto: %0</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Could not open media source.</source>
+        <translation>Impossibile aprire la sorgente multimediale.</translation>
+    </message>
+    <message>
+        <source>Invalid source type.</source>
+        <translation>Tipo di sorgente non valido.</translation>
+    </message>
+    <message>
+        <source>Could not locate media source.</source>
+        <translation>Impossibile individuare la sorgente multimediale.</translation>
+    </message>
+    <message>
+        <source>Could not open audio device. The device is already in use.</source>
+        <translation>Impossibile aprire il dispositivo audio. Il dispositivo è già in uso.</translation>
+    </message>
+    <message>
+        <source>Could not decode media source.</source>
+        <translation>Impossibile decodificare la sorgente multimediale.</translation>
+    </message>
+</context>
+<context>
+    <name>Phonon::VolumeSlider</name>
+    <message>
+        <source>Volume: %1%</source>
+        <translation>Volume: %1%</translation>
+    </message>
+    <message>
+        <source>Use this slider to adjust the volume. The leftmost position is 0%, the rightmost is %1%</source>
+        <translation>Utilizza questo cursore per regolare il volume. La posizione all&apos;estrema sinistra è 0%, a destra è %1%</translation>
+    </message>
+</context>
+<context>
+    <name>Q3Accel</name>
+    <message>
+        <source>%1, %2 not defined</source>
+        <translation>%1, %2 non definito</translation>
+    </message>
+    <message>
+        <source>Ambiguous %1 not handled</source>
+        <translation>Ambiguità di %1 non gestita</translation>
+    </message>
+</context>
+<context>
+    <name>Q3DataTable</name>
+    <message>
+        <source>True</source>
+        <translation>Vero</translation>
+    </message>
+    <message>
+        <source>False</source>
+        <translation>Falso</translation>
+    </message>
+    <message>
+        <source>Insert</source>
+        <translation>Inserisci</translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+</context>
+<context>
+    <name>Q3FileDialog</name>
+    <message>
+        <source>Copy or Move a File</source>
+        <translation>Copia o sposta un file</translation>
+    </message>
+    <message>
+        <source>Read: %1</source>
+        <translation>Lettura: %1</translation>
+    </message>
+    <message>
+        <source>Write: %1</source>
+        <translation>Scrittura: %1</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation>Tutti i file (*)</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Dimensione</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <source>Attributes</source>
+        <translation>Attributi</translation>
+    </message>
+    <message>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <source>Look &amp;in:</source>
+        <translation>Cerca &amp;in:</translation>
+    </message>
+    <message>
+        <source>File &amp;name:</source>
+        <translation>&amp;Nome file:</translation>
+    </message>
+    <message>
+        <source>File &amp;type:</source>
+        <translation>&amp;Tipo file:</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation>Indietro</translation>
+    </message>
+    <message>
+        <source>One directory up</source>
+        <translation>Livello superiore</translation>
+    </message>
+    <message>
+        <source>Create New Folder</source>
+        <translation>Crea una nuova cartella</translation>
+    </message>
+    <message>
+        <source>List View</source>
+        <translation>Vista a elenco</translation>
+    </message>
+    <message>
+        <source>Detail View</source>
+        <translation>Vista dettagliata</translation>
+    </message>
+    <message>
+        <source>Preview File Info</source>
+        <translation>Informazioni anteprima file</translation>
+    </message>
+    <message>
+        <source>Preview File Contents</source>
+        <translation>Anteprima del contenuto dei file</translation>
+    </message>
+    <message>
+        <source>Read-write</source>
+        <translation>Lettura-scrittura</translation>
+    </message>
+    <message>
+        <source>Read-only</source>
+        <translation>Sola lettura</translation>
+    </message>
+    <message>
+        <source>Write-only</source>
+        <translation>Sola scrittura</translation>
+    </message>
+    <message>
+        <source>Inaccessible</source>
+        <translation>Inaccessibile</translation>
+    </message>
+    <message>
+        <source>Symlink to File</source>
+        <translation>Collegamento simbolico a un file</translation>
+    </message>
+    <message>
+        <source>Symlink to Directory</source>
+        <translation>Collegamento simbolico a una cartella</translation>
+    </message>
+    <message>
+        <source>Symlink to Special</source>
+        <translation>Collegamento simbolico a speciale</translation>
+    </message>
+    <message>
+        <source>Dir</source>
+        <translation>Cartella</translation>
+    </message>
+    <message>
+        <source>Special</source>
+        <translation>Speciale</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation>Salva come</translation>
+    </message>
+    <message>
+        <source>&amp;Open</source>
+        <translation>&amp;Apri</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation>&amp;Salva</translation>
+    </message>
+    <message>
+        <source>&amp;Rename</source>
+        <translation>&amp;Rinomina</translation>
+    </message>
+    <message>
+        <source>&amp;Delete</source>
+        <translation>&amp;Elimina</translation>
+    </message>
+    <message>
+        <source>R&amp;eload</source>
+        <translation>Ri&amp;carica</translation>
+    </message>
+    <message>
+        <source>Sort by &amp;Name</source>
+        <translation>Ordina per &amp;nome</translation>
+    </message>
+    <message>
+        <source>Sort by &amp;Size</source>
+        <translation>Ordina per dimen&amp;sione</translation>
+    </message>
+    <message>
+        <source>Sort by &amp;Date</source>
+        <translation>Ordina per &amp;data</translation>
+    </message>
+    <message>
+        <source>&amp;Unsorted</source>
+        <translation>&amp;Non ordinati</translation>
+    </message>
+    <message>
+        <source>Sort</source>
+        <translation>Ordina</translation>
+    </message>
+    <message>
+        <source>Show &amp;hidden files</source>
+        <translation>Mos&amp;tra file nascosti</translation>
+    </message>
+    <message>
+        <source>the file</source>
+        <translation>il file</translation>
+    </message>
+    <message>
+        <source>the directory</source>
+        <translation>la cartella</translation>
+    </message>
+    <message>
+        <source>the symlink</source>
+        <translation>il collegamento simbolico</translation>
+    </message>
+    <message>
+        <source>Delete %1</source>
+        <translation>Elimina %1</translation>
+    </message>
+    <message>
+        <source>&lt;qt&gt;Are you sure you wish to delete %1 &quot;%2&quot;?&lt;/qt&gt;</source>
+        <translation>&lt;qt&gt;Sei sicuro di voler eliminare %1 &quot;%2&quot;?&lt;/qt&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation>&amp;Sì</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation>&amp;No</translation>
+    </message>
+    <message>
+        <source>New Folder 1</source>
+        <translation>Nuova cartella 1</translation>
+    </message>
+    <message>
+        <source>New Folder</source>
+        <translation>Nuova cartella</translation>
+    </message>
+    <message>
+        <source>New Folder %1</source>
+        <translation>Nuova cartella %1</translation>
+    </message>
+    <message>
+        <source>Find Directory</source>
+        <translation>Trova cartella</translation>
+    </message>
+    <message>
+        <source>Directories</source>
+        <translation>Cartelle</translation>
+    </message>
+    <message>
+        <source>Directory:</source>
+        <translation>Cartella:</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Errore</translation>
+    </message>
+    <message>
+        <source>%1
+File not found.
+Check path and filename.</source>
+        <translation>%1
+File non trovato.
+Controlla il percorso e il nome del file.</translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Q3LocalFs</name>
+    <message>
+        <source>Could not read directory
+%1</source>
+        <translation>Impossibile leggere la cartella
+%1</translation>
+    </message>
+    <message>
+        <source>Could not create directory
+%1</source>
+        <translation>Impossibile creare la cartella
+%1</translation>
+    </message>
+    <message>
+        <source>Could not remove file or directory
+%1</source>
+        <translation>Impossibile rimuovere il file o la cartella
+%1</translation>
+    </message>
+    <message>
+        <source>Could not rename
+%1
+to
+%2</source>
+        <translation>Impossibile rinominare
+%1
+in
+%2</translation>
+    </message>
+    <message>
+        <source>Could not open
+%1</source>
+        <translation>Impossibile aprire
+%1</translation>
+    </message>
+    <message>
+        <source>Could not write
+%1</source>
+        <translation>Impossibile scrivere
+%1</translation>
+    </message>
+</context>
+<context>
+    <name>Q3MainWindow</name>
+    <message>
+        <source>Line up</source>
+        <translation>Allinea in alto</translation>
+    </message>
+    <message>
+        <source>Customize...</source>
+        <translation>Personalizza...</translation>
+    </message>
+</context>
+<context>
+    <name>Q3NetworkProtocol</name>
+    <message>
+        <source>Operation stopped by the user</source>
+        <translation>Operazione fermata dall&apos;utente</translation>
+    </message>
+</context>
+<context>
+    <name>Q3ProgressDialog</name>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
+    <name>Q3TabDialog</name>
+    <message>
+        <source>Apply</source>
+        <translation>Applica</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Defaults</source>
+        <translation>Predefiniti</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Q3TextEdit</name>
+    <message>
+        <source>&amp;Undo</source>
+        <translation>A&amp;nnulla</translation>
+    </message>
+    <message>
+        <source>&amp;Redo</source>
+        <translation>&amp;Rifai</translation>
+    </message>
+    <message>
+        <source>Cu&amp;t</source>
+        <translation>&amp;Taglia</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>&amp;Copia</translation>
+    </message>
+    <message>
+        <source>&amp;Paste</source>
+        <translation>&amp;Incolla</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Pulisci</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>Q3TitleBar</name>
+    <message>
+        <source>System</source>
+        <translation>Sistema</translation>
+    </message>
+    <message>
+        <source>Restore up</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Minimizza</translation>
+    </message>
+    <message>
+        <source>Restore down</source>
+        <translation>Minimizza</translation>
+    </message>
+    <message>
+        <source>Maximize</source>
+        <translation>Massimizza</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Contains commands to manipulate the window</source>
+        <translation>Contiene comandi per manipolare la finestra</translation>
+    </message>
+    <message>
+        <source>Puts a minimized back to normal</source>
+        <translation>Riporta una finestra minimizzata alla normalità</translation>
+    </message>
+    <message>
+        <source>Moves the window out of the way</source>
+        <translation>Sposta altrove una finestra</translation>
+    </message>
+    <message>
+        <source>Puts a maximized window back to normal</source>
+        <translation>Riporta una finestra massimizzata alla normalità</translation>
+    </message>
+    <message>
+        <source>Makes the window full screen</source>
+        <translation>Rende la finestra a schermo intero</translation>
+    </message>
+    <message>
+        <source>Closes the window</source>
+        <translation>Chiude la finestra</translation>
+    </message>
+    <message>
+        <source>Holds the name of the window and contains controls to manipulate it</source>
+        <translation>Visualizza il nome della finestra e contiene i controlli per manipolarla</translation>
+    </message>
+</context>
+<context>
+    <name>Q3ToolBar</name>
+    <message>
+        <source>More...</source>
+        <translation>Altro...</translation>
+    </message>
+</context>
+<context>
+    <name>Q3UrlOperator</name>
+    <message>
+        <source>The protocol `%1&apos; is not supported</source>
+        <translation>Il protocollo «%1» non è supportato</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support listing directories</source>
+        <translation>Il protocollo «%1» non supporta l&apos;elencazione delle cartelle</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support creating new directories</source>
+        <translation>Il protocollo «%1» non supporta la creazione di nuove cartelle</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support removing files or directories</source>
+        <translation>Il protocollo «%1» non supporta la rimozione di file o cartelle</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support renaming files or directories</source>
+        <translation>Il protocollo «%1» non supporta la rinomina di file o cartelle</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support getting files</source>
+        <translation>Il protocollo «%1» non supporta la ricezione di file</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support putting files</source>
+        <translation>Il protocollo «%1» non supporta l&apos;invio di file</translation>
+    </message>
+    <message>
+        <source>The protocol `%1&apos; does not support copying or moving files or directories</source>
+        <translation>Il protocollo «%1» non supporta la copia o lo spostamento di file o cartelle</translation>
+    </message>
+    <message>
+        <source>(unknown)</source>
+        <translation>(sconosciuto)</translation>
+    </message>
+</context>
+<context>
+    <name>Q3Wizard</name>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation>A&amp;nnulla</translation>
+    </message>
+    <message>
+        <source>&lt; &amp;Back</source>
+        <translation>&lt; &amp;Indietro</translation>
+    </message>
+    <message>
+        <source>&amp;Next &gt;</source>
+        <translation>&amp;Avanti &gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Finish</source>
+        <translation>&amp;Fine</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Ai&amp;uto</translation>
+    </message>
+</context>
+<context>
+    <name>QAbstractSocket</name>
+    <message>
+        <source>Host not found</source>
+        <translation>Host non trovato</translation>
+    </message>
+    <message>
+        <source>Connection refused</source>
+        <translation>Connessione rifiutata</translation>
+    </message>
+    <message>
+        <source>Socket operation timed out</source>
+        <translation>Operazione di socket scaduta</translation>
+    </message>
+    <message>
+        <source>Socket is not connected</source>
+        <translation>Il socket non è connesso</translation>
+    </message>
+    <message>
+        <source>Operation on socket is not supported</source>
+        <translation>Operazione sul socket non supportata</translation>
+    </message>
+    <message>
+        <source>Connection timed out</source>
+        <translation>Connessione scaduta</translation>
+    </message>
+    <message>
+        <source>Trying to connect while connection is in progress</source>
+        <translation>Tentativo di connessione mentre una connessione è ancora in corso</translation>
+    </message>
+    <message>
+        <source>Network unreachable</source>
+        <translation>Rete non raggiungibile</translation>
+    </message>
+</context>
+<context>
+    <name>QAbstractSpinBox</name>
+    <message>
+        <source>&amp;Step up</source>
+        <translation>A&amp;umenta</translation>
+    </message>
+    <message>
+        <source>Step &amp;down</source>
+        <translation>&amp;Diminuisci</translation>
+    </message>
+    <message>
+        <source>&amp;Select All</source>
+        <translation>&amp;Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>QAccessibleActionInterface</name>
+    <message>
+        <source>Press</source>
+        <translation>Premi</translation>
+    </message>
+    <message>
+        <source>Increase</source>
+        <translation>Incrementa</translation>
+    </message>
+    <message>
+        <source>Decrease</source>
+        <translation>Decrementa</translation>
+    </message>
+    <message>
+        <source>ShowMenu</source>
+        <translation>MostraMenu</translation>
+    </message>
+    <message>
+        <source>SetFocus</source>
+        <translation>ImpostaFuoco</translation>
+    </message>
+    <message>
+        <source>Toggle</source>
+        <translation>Commuta</translation>
+    </message>
+    <message>
+        <source>Scroll Left</source>
+        <translation>Scorri a sinistra</translation>
+    </message>
+    <message>
+        <source>Scroll Right</source>
+        <translation>Scorri a destra</translation>
+    </message>
+    <message>
+        <source>Scroll Up</source>
+        <translation>Scorri in alto</translation>
+    </message>
+    <message>
+        <source>Scroll Down</source>
+        <translation>Scorri in basso</translation>
+    </message>
+    <message>
+        <source>Previous Page</source>
+        <translation>Pagina precedente</translation>
+    </message>
+    <message>
+        <source>Next Page</source>
+        <translation>Pagina successiva</translation>
+    </message>
+    <message>
+        <source>Triggers the action</source>
+        <translation>Attiva l&apos;azione</translation>
+    </message>
+    <message>
+        <source>Increase the value</source>
+        <translation>Incrementa il valore</translation>
+    </message>
+    <message>
+        <source>Decrease the value</source>
+        <translation>Decrementa il valore</translation>
+    </message>
+    <message>
+        <source>Shows the menu</source>
+        <translation>Mostra il menu</translation>
+    </message>
+    <message>
+        <source>Sets the focus</source>
+        <translation>Imposta il focus</translation>
+    </message>
+    <message>
+        <source>Toggles the state</source>
+        <translation>Commuta lo stato</translation>
+    </message>
+    <message>
+        <source>Scrolls to the left</source>
+        <translation>Scorre a sinistra</translation>
+    </message>
+    <message>
+        <source>Scrolls to the right</source>
+        <translation>Scorre a destra</translation>
+    </message>
+    <message>
+        <source>Scrolls up</source>
+        <translation>Scorre in alto</translation>
+    </message>
+    <message>
+        <source>Scrolls down</source>
+        <translation>Scorre in basso</translation>
+    </message>
+    <message>
+        <source>Goes back a page</source>
+        <translation>Va indietro di una pagina</translation>
+    </message>
+    <message>
+        <source>Goes to the next page</source>
+        <translation>Va alla pagina successiva</translation>
+    </message>
+</context>
+<context>
+    <name>QAndroidPlatformTheme</name>
+    <message>
+        <source>Yes</source>
+        <translation>Sì</translation>
+    </message>
+    <message>
+        <source>Yes to All</source>
+        <translation>Sì a tutti</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
+        <source>No to All</source>
+        <translation>No a tutti</translation>
+    </message>
+</context>
+<context>
+    <name>QApplication</name>
+    <message>
+        <source>Activate</source>
+        <translation>Attiva</translation>
+    </message>
+    <message>
+        <source>Executable &apos;%1&apos; requires Qt %2, found Qt %3.</source>
+        <translation>L&apos;eseguibile «%1» richiede Qt %2, trovate Qt %3.</translation>
+    </message>
+    <message>
+        <source>Incompatible Qt Library Error</source>
+        <translation>Errore di libreria Qt incompatibile</translation>
+    </message>
+    <message>
+        <source>QT_LAYOUT_DIRECTION</source>
+        <comment>Translate this string to the string &apos;LTR&apos; in left-to-right languages or to &apos;RTL&apos; in right-to-left languages (such as Hebrew and Arabic) to get proper widget layout.</comment>
+        <translation>LTR</translation>
+    </message>
+    <message>
+        <source>Activates the program&apos;s main window</source>
+        <translation>Attiva la finestra principale del programma</translation>
+    </message>
+</context>
+<context>
+    <name>QCheckBox</name>
+    <message>
+        <source>Uncheck</source>
+        <translation>Deseleziona</translation>
+    </message>
+    <message>
+        <source>Check</source>
+        <translation>Seleziona</translation>
+    </message>
+    <message>
+        <source>Toggle</source>
+        <translation>Commuta</translation>
+    </message>
+</context>
+<context>
+    <name>QCocoaMenuItem</name>
+    <message>
+        <source>About Qt</source>
+        <translation>Informazioni su Qt</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Informazioni</translation>
+    </message>
+    <message>
+        <source>Config</source>
+        <translation>Configurazione</translation>
+    </message>
+    <message>
+        <source>Preference</source>
+        <translation>Preferenza</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation>Opzioni</translation>
+    </message>
+    <message>
+        <source>Setting</source>
+        <translation>Impostazione</translation>
+    </message>
+    <message>
+        <source>Setup</source>
+        <translation>Impostazione</translation>
+    </message>
+    <message>
+        <source>Quit</source>
+        <translation>Uscita</translation>
+    </message>
+    <message>
+        <source>Exit</source>
+        <translation>Esci</translation>
+    </message>
+    <message>
+        <source>Cut</source>
+        <translation>Taglia</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation>Incolla</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>QCocoaTheme</name>
+    <message>
+        <source>Don&apos;t Save</source>
+        <translation>Non salvare</translation>
+    </message>
+</context>
+<context>
+    <name>QColorDialog</name>
+    <message>
+        <source>Hu&amp;e:</source>
+        <translation>T&amp;on:</translation>
+    </message>
+    <message>
+        <source>&amp;Sat:</source>
+        <translation>&amp;Sat:</translation>
+    </message>
+    <message>
+        <source>&amp;Val:</source>
+        <translation>&amp;Val:</translation>
+    </message>
+    <message>
+        <source>&amp;Red:</source>
+        <translation>&amp;Rosso:</translation>
+    </message>
+    <message>
+        <source>&amp;Green:</source>
+        <translation>&amp;Verde:</translation>
+    </message>
+    <message>
+        <source>Bl&amp;ue:</source>
+        <translation>Bl&amp;u:</translation>
+    </message>
+    <message>
+        <source>A&amp;lpha channel:</source>
+        <translation>Canale a&amp;lpha:</translation>
+    </message>
+    <message>
+        <source>&amp;Basic colors</source>
+        <translation>Colori di &amp;base</translation>
+    </message>
+    <message>
+        <source>&amp;Custom colors</source>
+        <translation>&amp;Colori personalizzati</translation>
+    </message>
+    <message>
+        <source>&amp;Add to Custom Colors</source>
+        <translation>&amp;Aggiungi ai colori personalizzati</translation>
+    </message>
+    <message>
+        <source>Select color</source>
+        <translation>Seleziona colore</translation>
+    </message>
+    <message>
+        <source>&amp;HTML:</source>
+        <translation>&amp;HTML:</translation>
+    </message>
+    <message>
+        <source>Cursor at %1, %2
+Press ESC to cancel</source>
+        <translation>Cursore su %1, %2
+Premi ESC per annullare</translation>
+    </message>
+    <message>
+        <source>&amp;Pick Screen Color</source>
+        <translation>&amp;Preleva un colore dallo schermo</translation>
+    </message>
+    <message>
+        <source>Cursor at %1, %2, color: %3
+Press ESC to cancel</source>
+        <translation type="vanished">Cursore su %1, %2, colore: %3
+Premi ESC per annullare</translation>
+    </message>
+    <message>
+        <source>Select Color</source>
+        <translation>Seleziona colore</translation>
+    </message>
+    <message>
+        <source>Pick Screen Color</source>
+        <translation type="vanished">Scegli il colore dello schermo</translation>
+    </message>
+</context>
+<context>
+    <name>QComboBox</name>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>False</source>
+        <translation>Falso</translation>
+    </message>
+    <message>
+        <source>True</source>
+        <translation>Vero</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Open the combo box selection popup</source>
+        <translation>Apri il menu a tendina</translation>
+    </message>
+</context>
+<context>
+    <name>QCommandLineParser</name>
+    <message>
+        <source>Displays version information.</source>
+        <translation>Mostra le informazioni sulla versione.</translation>
+    </message>
+    <message>
+        <source>Displays this help.</source>
+        <translation>Mostra questa guida.</translation>
+    </message>
+    <message>
+        <source>Unknown option &apos;%1&apos;.</source>
+        <translation>Opzione sconosciuta &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>Unknown options: %1.</source>
+        <translation>Opzioni sconosciute: %1.</translation>
+    </message>
+    <message>
+        <source>Missing value after &apos;%1&apos;.</source>
+        <translation>Valore mancante dopo &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>Unexpected value after &apos;%1&apos;.</source>
+        <translation>Valore non previsto dopo &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>[options]</source>
+        <translation>[opzioni]</translation>
+    </message>
+    <message>
+        <source>Usage: %1</source>
+        <translation>Utilizzo: %1</translation>
+    </message>
+    <message>
+        <source>Options:</source>
+        <translation>Opzioni:</translation>
+    </message>
+    <message>
+        <source>Arguments:</source>
+        <translation>Parametri:</translation>
+    </message>
+</context>
+<context>
+    <name>QCoreApplication</name>
+    <message>
+        <source>%1: permission denied</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: permesso negato</translation>
+    </message>
+    <message>
+        <source>%1: already exists</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: esiste già</translation>
+    </message>
+    <message>
+        <source>%1: doesn&apos;t exists</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: non esiste</translation>
+    </message>
+    <message>
+        <source>%1: out of resources</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: risorse insufficienti</translation>
+    </message>
+    <message>
+        <source>%1: unknown error %2</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: errore sconosciuto %2</translation>
+    </message>
+    <message>
+        <source>%1: key is empty</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: la chiave è vuota</translation>
+    </message>
+    <message>
+        <source>%1: unable to make key</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: impossibile creare la chiave</translation>
+    </message>
+    <message>
+        <source>%1: ftok failed</source>
+        <comment>QSystemSemaphore</comment>
+        <translation>%1: ftok non riuscito</translation>
+    </message>
+</context>
+<context>
+    <name>QCupsJobWidget</name>
+    <message>
+        <source>Job</source>
+        <translation>Processo</translation>
+    </message>
+    <message>
+        <source>Job Control</source>
+        <translation>Controllo del processo</translation>
+    </message>
+    <message>
+        <source>Scheduled printing:</source>
+        <translation>Pianificazione della stampa:</translation>
+    </message>
+    <message>
+        <source>Billing information:</source>
+        <translation>Informazioni di resoconto:</translation>
+    </message>
+    <message>
+        <source>Job priority:</source>
+        <translation>Priorità del processo:</translation>
+    </message>
+    <message>
+        <source>Banner Pages</source>
+        <translation>Pagine di separazione</translation>
+    </message>
+    <message>
+        <source>End:</source>
+        <comment>Banner page at end</comment>
+        <translation>Fine:</translation>
+    </message>
+    <message>
+        <source>Start:</source>
+        <comment>Banner page at start</comment>
+        <translation>Inizio:</translation>
+    </message>
+    <message>
+        <source>Print Immediately</source>
+        <translation>Stampa immediatamente</translation>
+    </message>
+    <message>
+        <source>Hold Indefinitely</source>
+        <translation>Trattieni indefinitamente</translation>
+    </message>
+    <message>
+        <source>Day (06:00 to 17:59)</source>
+        <translation>Giorno (dalle 06:00 alle 17:59)</translation>
+    </message>
+    <message>
+        <source>Night (18:00 to 05:59)</source>
+        <translation>Notte (dalle 18:00 alle 05:59)</translation>
+    </message>
+    <message>
+        <source>Second Shift (16:00 to 23:59)</source>
+        <translation>Secondo turno (dalle 16:00 alle 23:59)</translation>
+    </message>
+    <message>
+        <source>Third Shift (00:00 to 07:59)</source>
+        <translation>Terzo turno (dalle 00:00 alle 07:59)</translation>
+    </message>
+    <message>
+        <source>Weekend (Saturday to Sunday)</source>
+        <translation>Finesettimana (da sabato a domenica)</translation>
+    </message>
+    <message>
+        <source>Specific Time</source>
+        <translation>Orario specifico</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Unclassified</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Non classificato</translation>
+    </message>
+    <message>
+        <source>Confidential</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Confidenziale</translation>
+    </message>
+    <message>
+        <source>Classified</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Classificato</translation>
+    </message>
+    <message>
+        <source>Secret</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Segreto</translation>
+    </message>
+    <message>
+        <source>Top Secret</source>
+        <comment>CUPS Banner page</comment>
+        <translation>Segretissimo</translation>
+    </message>
+</context>
+<context>
+    <name>QDB2Driver</name>
+    <message>
+        <source>Unable to connect</source>
+        <translation>Impossibile connettersi</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile applicare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to set autocommit</source>
+        <translation>Impossibile impostare l&apos;autocommit</translation>
+    </message>
+</context>
+<context>
+    <name>QDB2Result</name>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind variable</source>
+        <translation>Impossibile associare la variabile</translation>
+    </message>
+    <message>
+        <source>Unable to fetch record %1</source>
+        <translation>Impossibile ottenere il record %1</translation>
+    </message>
+    <message>
+        <source>Unable to fetch next</source>
+        <translation>Impossibile recuperare il prossimo</translation>
+    </message>
+    <message>
+        <source>Unable to fetch first</source>
+        <translation>Impossibile recuperare il primo</translation>
+    </message>
+</context>
+<context>
+    <name>QDBusTrayIcon</name>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
+    <name>QDateTimeEdit</name>
+    <message>
+        <source>AM</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>am</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>PM</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>pm</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QDateTimeParser</name>
+    <message>
+        <source>AM</source>
+        <translation>AM</translation>
+    </message>
+    <message>
+        <source>am</source>
+        <translation>am</translation>
+    </message>
+    <message>
+        <source>PM</source>
+        <translation>PM</translation>
+    </message>
+    <message>
+        <source>pm</source>
+        <translation>pm</translation>
+    </message>
+</context>
+<context>
+    <name>QDial</name>
+    <message>
+        <source>SpeedoMeter</source>
+        <translation>SpeedoMeter</translation>
+    </message>
+    <message>
+        <source>SliderHandle</source>
+        <translation>SliderHandle</translation>
+    </message>
+    <message>
+        <source>QDial</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QDialog</name>
+    <message>
+        <source>What&apos;s This?</source>
+        <translation>Cos&apos;è?</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation>Completato</translation>
+    </message>
+</context>
+<context>
+    <name>QDialogButtonBox</name>
+    <message>
+        <source>OK</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation>Applica</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Don&apos;t Save</source>
+        <translation>Non salvare</translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation>Scarta</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation>&amp;Sì</translation>
+    </message>
+    <message>
+        <source>Yes to &amp;All</source>
+        <translation>Sì &amp;a tutti </translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation>&amp;No</translation>
+    </message>
+    <message>
+        <source>N&amp;o to All</source>
+        <translation>N&amp;o a tutti</translation>
+    </message>
+    <message>
+        <source>Save All</source>
+        <translation>Salva tutto</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation>Interrompi</translation>
+    </message>
+    <message>
+        <source>Retry</source>
+        <translation>Riprova</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <translation>Ignora</translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation>Ripristina valori predefiniti</translation>
+    </message>
+    <message>
+        <source>Close without Saving</source>
+        <translation>Chiudi senza salvare</translation>
+    </message>
+    <message>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation type="vanished">&amp;Salva</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation type="vanished">&amp;Annulla</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="vanished">&amp;Chiudi</translation>
+    </message>
+</context>
+<context>
+    <name>QDirModel</name>
+    <message>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Dimensione</translation>
+    </message>
+    <message>
+        <source>Kind</source>
+        <comment>Match OS X Finder</comment>
+        <translation>Specie</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <comment>All other platforms</comment>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <source>Date Modified</source>
+        <translation>Data di modifica</translation>
+    </message>
+</context>
+<context>
+    <name>QDnsLookup</name>
+    <message>
+        <source>Operation cancelled</source>
+        <translation>Operazione annullata</translation>
+    </message>
+</context>
+<context>
+    <name>QDnsLookupRunnable</name>
+    <message>
+        <source>IPv6 addresses for nameservers are currently not supported</source>
+        <translation>Gli indirizzi IPv6 per i server di risoluzione dei nomi non sono al momento supportati</translation>
+    </message>
+    <message>
+        <source>Invalid domain name</source>
+        <translation>Nome di dominio non valido</translation>
+    </message>
+    <message>
+        <source>Not yet supported on Android</source>
+        <translation>Non ancora supportato su Android</translation>
+    </message>
+    <message>
+        <source>Resolver functions not found</source>
+        <translation>Funzioni di risoluzione non trovate</translation>
+    </message>
+    <message>
+        <source>Resolver initialization failed</source>
+        <translation>Inizializzazione del risolutore non riuscita</translation>
+    </message>
+    <message>
+        <source>IPv6 addresses for nameservers is currently not supported</source>
+        <translation type="vanished">Gli indirizzi IPv6 per i server di risoluzione dei nomi non sono al momento supportati</translation>
+    </message>
+    <message>
+        <source>Server could not process query</source>
+        <translation>Il server non può elaborare la query</translation>
+    </message>
+    <message>
+        <source>Server failure</source>
+        <translation>Errore del server</translation>
+    </message>
+    <message>
+        <source>Non existent domain</source>
+        <translation>Dominio non esistente</translation>
+    </message>
+    <message>
+        <source>Server refused to answer</source>
+        <translation>Il server si è rifiutato di rispondere</translation>
+    </message>
+    <message>
+        <source>Invalid reply received</source>
+        <translation>Ricevuta una risposta non valida</translation>
+    </message>
+    <message>
+        <source>Could not expand domain name</source>
+        <translation>Impossibile espandere il nome del dominio</translation>
+    </message>
+    <message>
+        <source>Invalid IPv4 address record</source>
+        <translation>Record di tipo indirizzo IPv4 non valido</translation>
+    </message>
+    <message>
+        <source>Invalid IPv6 address record</source>
+        <translation>Record di tipo indirizzo IPv6 non valido</translation>
+    </message>
+    <message>
+        <source>Invalid canonical name record</source>
+        <translation>Record di tipo nome canonico non valido</translation>
+    </message>
+    <message>
+        <source>Invalid name server record</source>
+        <translation>Record di tipo nome del server non valido</translation>
+    </message>
+    <message>
+        <source>Invalid pointer record</source>
+        <translation>Record di tipo puntatore non valido</translation>
+    </message>
+    <message>
+        <source>Invalid mail exchange record</source>
+        <translation>Record di tipo mail exchange non valido</translation>
+    </message>
+    <message>
+        <source>Invalid service record</source>
+        <translation>Record di tipo servizio non valido</translation>
+    </message>
+    <message>
+        <source>Invalid text record</source>
+        <translation>Record di tipo testo non valido</translation>
+    </message>
+    <message>
+        <source>Resolver library can&apos;t be loaded: No runtime library loading support</source>
+        <translation>La libreria di risoluzione non può essere caricata. Nessun supporto per il caricamento di librerie</translation>
+    </message>
+    <message>
+        <source>No hostname given</source>
+        <translation>Nessun nome host inserito</translation>
+    </message>
+    <message>
+        <source>Invalid hostname</source>
+        <translation>Nome dell&apos;host non valido</translation>
+    </message>
+    <message>
+        <source>Host %1 could not be found.</source>
+        <translation>L&apos;host %1 non è stato trovato.</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+</context>
+<context>
+    <name>QDockWidget</name>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Dock</source>
+        <translation>Aggancia</translation>
+    </message>
+    <message>
+        <source>Float</source>
+        <translation>Mobile</translation>
+    </message>
+    <message>
+        <source>Undocks and re-attaches the dock widget</source>
+        <translation>Separa e ri-collega l&apos;oggetto contenitore</translation>
+    </message>
+    <message>
+        <source>Closes the dock widget</source>
+        <translation>Chiudi l&apos;oggetto contenitore</translation>
+    </message>
+</context>
+<context>
+    <name>QDoubleSpinBox</name>
+    <message>
+        <source>More</source>
+        <translation>Più</translation>
+    </message>
+    <message>
+        <source>Less</source>
+        <translation>Meno</translation>
+    </message>
+</context>
+<context>
+    <name>QErrorMessage</name>
+    <message>
+        <source>Debug Message:</source>
+        <translation>Messaggio di debug:</translation>
+    </message>
+    <message>
+        <source>Warning:</source>
+        <translation>Avviso:</translation>
+    </message>
+    <message>
+        <source>Fatal Error:</source>
+        <translation>Errore grave:</translation>
+    </message>
+    <message>
+        <source>&amp;Show this message again</source>
+        <translation>Mo&amp;stra ancora questo messaggio</translation>
+    </message>
+    <message>
+        <source>&amp;OK</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QFile</name>
+    <message>
+        <source>Destination file is the same file.</source>
+        <translation>Il file di destinazione è lo stesso file.</translation>
+    </message>
+    <message>
+        <source>Source file does not exist.</source>
+        <translation>Il file di origine non esiste.</translation>
+    </message>
+    <message>
+        <source>Destination file exists</source>
+        <translation>Il file di destinazione esiste</translation>
+    </message>
+    <message>
+        <source>Error while renaming.</source>
+        <translation>Errore durante la rinomina.</translation>
+    </message>
+    <message>
+        <source>Unable to restore from %1: %2</source>
+        <translation>Impossibile ripristinare da %1: %2</translation>
+    </message>
+    <message>
+        <source>Will not rename sequential file using block copy</source>
+        <translation>Impossibile rinominare un file sequenziale usando una copia a blocchi</translation>
+    </message>
+    <message>
+        <source>Cannot remove source file</source>
+        <translation>Impossibile rimuovere il file di origine</translation>
+    </message>
+    <message>
+        <source>Cannot open %1 for input</source>
+        <translation>Impossibile aprire %1 per l&apos;input</translation>
+    </message>
+    <message>
+        <source>Cannot open for output</source>
+        <translation>Impossibile aprire per l&apos;output</translation>
+    </message>
+    <message>
+        <source>Failure to write block</source>
+        <translation>Scrittura del blocco non riuscita</translation>
+    </message>
+    <message>
+        <source>Cannot create %1 for output</source>
+        <translation>Impossibile creare %1 per l&apos;output</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDevice</name>
+    <message>
+        <source>No file engine available or engine does not support UnMapExtension</source>
+        <translation>Nessun file engine disponibile o l&apos;engine non supporta UnMapExtension</translation>
+    </message>
+</context>
+<context>
+    <name>QFileDialog</name>
+    <message>
+        <source>All Files (*)</source>
+        <translation>Tutti i file (*)</translation>
+    </message>
+    <message>
+        <source>Directories</source>
+        <translation>Cartelle</translation>
+    </message>
+    <message>
+        <source>&amp;Open</source>
+        <translation>&amp;Apri</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation>&amp;Salva</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>%1 already exists.
+Do you want to replace it?</source>
+        <translation>%1 già esiste.
+Vuoi sostituirlo?</translation>
+    </message>
+    <message>
+        <source>%1
+File not found.
+Please verify the correct file name was given.</source>
+        <translation>%1
+File non trovato.
+Verifica che sia stato fornito il nome file corretto.</translation>
+    </message>
+    <message>
+        <source>My Computer</source>
+        <translation>Risorse del computer</translation>
+    </message>
+    <message>
+        <source>&amp;Rename</source>
+        <translation>&amp;Rinomina</translation>
+    </message>
+    <message>
+        <source>&amp;Delete</source>
+        <translation>&amp;Elimina</translation>
+    </message>
+    <message>
+        <source>Show &amp;hidden files</source>
+        <translation>Mos&amp;tra file nascosti</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation>Indietro</translation>
+    </message>
+    <message>
+        <source>Parent Directory</source>
+        <translation>Cartella genitrice</translation>
+    </message>
+    <message>
+        <source>List View</source>
+        <translation>Vista a elenco</translation>
+    </message>
+    <message>
+        <source>Detail View</source>
+        <translation>Vista dettagliata</translation>
+    </message>
+    <message>
+        <source>Files of type:</source>
+        <translation>File di tipo:</translation>
+    </message>
+    <message>
+        <source>Directory:</source>
+        <translation>Cartella:</translation>
+    </message>
+    <message>
+        <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+        <translation>%1
+Cartella non trovata.
+Verifica che sia stato fornito il nome corretto della cartella.</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is write protected.
+Do you want to delete it anyway?</source>
+        <translation>«%1» è protetto da scrittura.
+Vuoi eliminarlo comunque?</translation>
+    </message>
+    <message>
+        <source>Are sure you want to delete &apos;%1&apos;?</source>
+        <translation>Sei sicuro di voler eliminare &apos;%1&apos;?</translation>
+    </message>
+    <message>
+        <source>Could not delete directory.</source>
+        <translation>Impossibile eliminare la cartella.</translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation>Salva come</translation>
+    </message>
+    <message>
+        <source>Drive</source>
+        <translation>Disco</translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Sconosciuto</translation>
+    </message>
+    <message>
+        <source>Find Directory</source>
+        <translation>Trova cartella</translation>
+    </message>
+    <message>
+        <source>Show </source>
+        <translation>Mostra</translation>
+    </message>
+    <message>
+        <source>Forward</source>
+        <translation>Avanti</translation>
+    </message>
+    <message>
+        <source>New Folder</source>
+        <translation>Nuova cartella</translation>
+    </message>
+    <message>
+        <source>&amp;New Folder</source>
+        <translation>&amp;Nuova cartella</translation>
+    </message>
+    <message>
+        <source>&amp;Choose</source>
+        <translation>S&amp;cegli</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Rimuovi</translation>
+    </message>
+    <message>
+        <source>File &amp;name:</source>
+        <translation>&amp;Nome file:</translation>
+    </message>
+    <message>
+        <source>Look in:</source>
+        <translation>Cerca in:</translation>
+    </message>
+    <message>
+        <source>Create New Folder</source>
+        <translation>Crea nuova cartella</translation>
+    </message>
+    <message>
+        <source>Go back</source>
+        <translation>Vai indietro</translation>
+    </message>
+    <message>
+        <source>Go forward</source>
+        <translation>Avanti</translation>
+    </message>
+    <message>
+        <source>Go to the parent directory</source>
+        <translation>Vai alla cartella superiore</translation>
+    </message>
+    <message>
+        <source>Create a New Folder</source>
+        <translation>Crea una nuova cartella</translation>
+    </message>
+    <message>
+        <source>Change to list view mode</source>
+        <translation>Passa alla modalità vista a elenco</translation>
+    </message>
+    <message>
+        <source>Change to detail view mode</source>
+        <translation>Passa alla modalità vista dettagliata</translation>
+    </message>
+    <message>
+        <source>Sidebar</source>
+        <translation>Barra laterale</translation>
+    </message>
+    <message>
+        <source>List of places and bookmarks</source>
+        <translation>Lista di risorse e segnalibri</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>All files (*)</source>
+        <translation>Tutti i file (*)</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete &apos;%1&apos;?</source>
+        <translation>Sei sicuro di voler eliminare &apos;%1&apos;?</translation>
+    </message>
+    <message>
+        <source>Recent Places</source>
+        <translation>Risorse recenti</translation>
+    </message>
+    <message>
+        <source>%1 File</source>
+        <extracomment>%1 is a file name suffix, for example txt</extracomment>
+        <translation>File %1</translation>
+    </message>
+    <message>
+        <source>File Folder</source>
+        <comment>Match Windows Explorer</comment>
+        <translation>Cartella di file</translation>
+    </message>
+    <message>
+        <source>Folder</source>
+        <comment>All other platforms</comment>
+        <translation>Cartella</translation>
+    </message>
+    <message>
+        <source>Alias</source>
+        <comment>OS X Finder</comment>
+        <translation>Alias</translation>
+    </message>
+    <message>
+        <source>Alias</source>
+        <comment>Mac OS X Finder</comment>
+        <translation type="vanished">Alias</translation>
+    </message>
+    <message>
+        <source>Shortcut</source>
+        <comment>All other platforms</comment>
+        <translation>Scorciatoia</translation>
+    </message>
+    <message>
+        <source>Alt+Left</source>
+        <translation>Alt+Sinistra</translation>
+    </message>
+    <message>
+        <source>Alt+Right</source>
+        <translation>Alt+Destra</translation>
+    </message>
+    <message>
+        <source>Alt+Up</source>
+        <translation>Alt+Su</translation>
+    </message>
+</context>
+<context>
+    <name>QFileSystemModel</name>
+    <message>
+        <source>Invalid filename</source>
+        <translation>Nome file non valido</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;The name &quot;%1&quot; can not be used.&lt;/b&gt;&lt;p&gt;Try using another name, with fewer characters or no punctuations marks.</source>
+        <translation>&lt;b&gt;Il nome &quot;%1&quot; non può essere utilizzato.&lt;/b&gt;&lt;p&gt;Prova a utilizzare un altro nome, con meno caratteri e nessun segno di punteggiatura.</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Dimensione</translation>
+    </message>
+    <message>
+        <source>Kind</source>
+        <comment>Match OS X Finder</comment>
+        <translation>Specie</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <comment>All other platforms</comment>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <source>Date Modified</source>
+        <translation>Data di modifica</translation>
+    </message>
+    <message>
+        <source>My Computer</source>
+        <translation>Risorse del computer</translation>
+    </message>
+    <message>
+        <source>Computer</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>%1 TB</source>
+        <translation>%1 TB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 bytes</source>
+        <translation>%1 byte</translation>
+    </message>
+    <message>
+        <source>%1 byte(s)</source>
+        <translation>%1 byte</translation>
+    </message>
+</context>
+<context>
+    <name>QFontDatabase</name>
+    <message>
+        <source>Normal</source>
+        <translation>Normale</translation>
+    </message>
+    <message>
+        <source>Bold</source>
+        <translation>Grassetto</translation>
+    </message>
+    <message>
+        <source>Demi Bold</source>
+        <translation>Demi grassetto</translation>
+    </message>
+    <message>
+        <source>Black</source>
+        <translation>Nero</translation>
+    </message>
+    <message>
+        <source>Demi</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Light</source>
+        <translation>Leggero</translation>
+    </message>
+    <message>
+        <source>Italic</source>
+        <translation>Corsivo</translation>
+    </message>
+    <message>
+        <source>Oblique</source>
+        <translation>Obliquo</translation>
+    </message>
+    <message>
+        <source>Any</source>
+        <translation>Qualunque</translation>
+    </message>
+    <message>
+        <source>Latin</source>
+        <translation>Latino</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation>Greco</translation>
+    </message>
+    <message>
+        <source>Cyrillic</source>
+        <translation>Cirillico</translation>
+    </message>
+    <message>
+        <source>Armenian</source>
+        <translation>Armeno</translation>
+    </message>
+    <message>
+        <source>Hebrew</source>
+        <translation>Ebreo</translation>
+    </message>
+    <message>
+        <source>Arabic</source>
+        <translation>Arabo</translation>
+    </message>
+    <message>
+        <source>Syriac</source>
+        <translation>Siriano</translation>
+    </message>
+    <message>
+        <source>Thaana</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Devanagari</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Bengali</source>
+        <translation>Bengalese</translation>
+    </message>
+    <message>
+        <source>Gurmukhi</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Gujarati</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Oriya</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Tamil</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Telugu</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Kannada</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Malayalam</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Sinhala</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Thai</source>
+        <translation>Thai</translation>
+    </message>
+    <message>
+        <source>Lao</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Tibetan</source>
+        <translation>Tibetano</translation>
+    </message>
+    <message>
+        <source>Myanmar</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Georgian</source>
+        <translation>Georgiano</translation>
+    </message>
+    <message>
+        <source>Khmer</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Simplified Chinese</source>
+        <translation>Cinese semplificato</translation>
+    </message>
+    <message>
+        <source>Traditional Chinese</source>
+        <translation>Cinese tradizionale</translation>
+    </message>
+    <message>
+        <source>Japanese</source>
+        <translation>Giapponese</translation>
+    </message>
+    <message>
+        <source>Korean</source>
+        <translation>Coreano</translation>
+    </message>
+    <message>
+        <source>Vietnamese</source>
+        <translation>Vietnamita</translation>
+    </message>
+    <message>
+        <source>Symbol</source>
+        <translation>Simbolo</translation>
+    </message>
+    <message>
+        <source>Ogham</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Runic</source>
+        <translation>Runico</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <comment>The Normal or Regular font weight</comment>
+        <translation>Normale</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <comment>The Medium font weight</comment>
+        <translation>Medio</translation>
+    </message>
+    <message>
+        <source>Thin</source>
+        <translation>Sottile</translation>
+    </message>
+    <message>
+        <source>Extra Light</source>
+        <translation>Chiarissimo</translation>
+    </message>
+    <message>
+        <source>Extra Bold</source>
+        <translation>Nerissimo</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <extracomment>The word for &quot;Extra&quot; as in &quot;Extra Bold, Extra Thin&quot; used as a pattern for string searches</extracomment>
+        <translation>Extra</translation>
+    </message>
+    <message>
+        <source>N&apos;Ko</source>
+        <translation>N&apos;Ko</translation>
+    </message>
+</context>
+<context>
+    <name>QFontDialog</name>
+    <message>
+        <source>&amp;Font</source>
+        <translation>&amp;Carattere</translation>
+    </message>
+    <message>
+        <source>Font st&amp;yle</source>
+        <translation>S&amp;tile del carattere</translation>
+    </message>
+    <message>
+        <source>&amp;Size</source>
+        <translation>Dimen&amp;sione</translation>
+    </message>
+    <message>
+        <source>Effects</source>
+        <translation>Effetti</translation>
+    </message>
+    <message>
+        <source>Stri&amp;keout</source>
+        <translation>S&amp;barrato</translation>
+    </message>
+    <message>
+        <source>&amp;Underline</source>
+        <translation>S&amp;ottolineato</translation>
+    </message>
+    <message>
+        <source>Sample</source>
+        <translation>Esempio</translation>
+    </message>
+    <message>
+        <source>Wr&amp;iting System</source>
+        <translation>S&amp;istema di scrittura</translation>
+    </message>
+    <message>
+        <source>Select Font</source>
+        <translation>Seleziona carattere</translation>
+    </message>
+</context>
+<context>
+    <name>QFtp</name>
+    <message>
+        <source>Not connected</source>
+        <translation>Non connesso</translation>
+    </message>
+    <message>
+        <source>Host %1 not found</source>
+        <translation>Host %1 non trovato</translation>
+    </message>
+    <message>
+        <source>Connection refused to host %1</source>
+        <translation>Connessione all&apos;host %1 rifiutata</translation>
+    </message>
+    <message>
+        <source>Connected to host %1</source>
+        <translation>Connessione all&apos;host %1</translation>
+    </message>
+    <message>
+        <source>Connection refused for data connection</source>
+        <translation>Connessione rifiutata per la connessione dati</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>Connecting to host failed:
+%1</source>
+        <translation>Connessione all&apos;host non riuscita:
+%1</translation>
+    </message>
+    <message>
+        <source>Login failed:
+%1</source>
+        <translation>Accesso non riuscito:
+%1</translation>
+    </message>
+    <message>
+        <source>Listing directory failed:
+%1</source>
+        <translation>Elencazione della cartella non riuscita:
+%1</translation>
+    </message>
+    <message>
+        <source>Changing directory failed:
+%1</source>
+        <translation>Cambiamento cartella non riuscito:
+%1</translation>
+    </message>
+    <message>
+        <source>Downloading file failed:
+%1</source>
+        <translation>Scaricamento file non riuscito:
+%1</translation>
+    </message>
+    <message>
+        <source>Uploading file failed:
+%1</source>
+        <translation>Invio file non riuscito:
+%1</translation>
+    </message>
+    <message>
+        <source>Removing file failed:
+%1</source>
+        <translation>Rimozione file non riuscita:
+%1</translation>
+    </message>
+    <message>
+        <source>Creating directory failed:
+%1</source>
+        <translation>Creazione cartella non riuscita:
+%1</translation>
+    </message>
+    <message>
+        <source>Removing directory failed:
+%1</source>
+        <translation>Rimozione cartella non riuscita:
+%1</translation>
+    </message>
+    <message>
+        <source>Connection closed</source>
+        <translation>Connessione chiusa</translation>
+    </message>
+    <message>
+        <source>Host %1 found</source>
+        <translation>Trovato l&apos;host %1</translation>
+    </message>
+    <message>
+        <source>Connection to %1 closed</source>
+        <translation>Connessione a %1 chiusa</translation>
+    </message>
+    <message>
+        <source>Host found</source>
+        <translation>Host trovato</translation>
+    </message>
+    <message>
+        <source>Connected to host</source>
+        <translation>Connessione all&apos;host</translation>
+    </message>
+    <message>
+        <source>Connection timed out to host %1</source>
+        <translation>Connessione all&apos;host %1 scaduta</translation>
+    </message>
+    <message>
+        <source>Data Connection refused</source>
+        <translation>Connessione dati rifiutata</translation>
+    </message>
+</context>
+<context>
+    <name>QGnomeTheme</name>
+    <message>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation>&amp;Salva</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Annulla</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Chiudi</translation>
+    </message>
+    <message>
+        <source>Close without Saving</source>
+        <translation>Chiudi senza salvare</translation>
+    </message>
+</context>
+<context>
+    <name>QGuiApplication</name>
+    <message>
+        <source>QT_LAYOUT_DIRECTION</source>
+        <comment>Translate this string to the string &apos;LTR&apos; in left-to-right languages or to &apos;RTL&apos; in right-to-left languages (such as Hebrew and Arabic) to get proper widget layout.</comment>
+        <translation>LTR</translation>
+    </message>
+</context>
+<context>
+    <name>QHostInfo</name>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>No host name given</source>
+        <translation>Nessun nome host inserito</translation>
+    </message>
+</context>
+<context>
+    <name>QHostInfoAgent</name>
+    <message>
+        <source>Host not found</source>
+        <translation>Host non trovato</translation>
+    </message>
+    <message>
+        <source>Unknown address type</source>
+        <translation>Tipo di indirizzo sconosciuto</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>No host name given</source>
+        <translation>Nessun nome host inserito</translation>
+    </message>
+    <message>
+        <source>Invalid hostname</source>
+        <translation>Nome dell&apos;host non valido</translation>
+    </message>
+    <message>
+        <source>Unknown error (%1)</source>
+        <translation>Errore sconosciuto (%1)</translation>
+    </message>
+</context>
+<context>
+    <name>QHttp</name>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>Request aborted</source>
+        <translation>Richiesta interrotta</translation>
+    </message>
+    <message>
+        <source>No server set to connect to</source>
+        <translation>Nessun server impostato per la connessione</translation>
+    </message>
+    <message>
+        <source>Wrong content length</source>
+        <translation>Lunghezza del contenuto non corretta</translation>
+    </message>
+    <message>
+        <source>Server closed connection unexpectedly</source>
+        <translation>Il server ha terminato inaspettatamente la connessione</translation>
+    </message>
+    <message>
+        <source>Connection refused</source>
+        <translation>Connessione rifiutata</translation>
+    </message>
+    <message>
+        <source>Host %1 not found</source>
+        <translation>Host %1 non trovato</translation>
+    </message>
+    <message>
+        <source>HTTP request failed</source>
+        <translation>Richiesta HTTP non riuscita</translation>
+    </message>
+    <message>
+        <source>Invalid HTTP response header</source>
+        <translation>Intestazione della risposta HTTP non valida</translation>
+    </message>
+    <message>
+        <source>Invalid HTTP chunked body</source>
+        <translation>Contenuto HTTP spezzettato non valido</translation>
+    </message>
+    <message>
+        <source>Host %1 found</source>
+        <translation>Host %1 trovato</translation>
+    </message>
+    <message>
+        <source>Connected to host %1</source>
+        <translation>Connessione all&apos;host %1</translation>
+    </message>
+    <message>
+        <source>Connection to %1 closed</source>
+        <translation>Connessione a %1 chiusa</translation>
+    </message>
+    <message>
+        <source>Host found</source>
+        <translation>Host trovato</translation>
+    </message>
+    <message>
+        <source>Connected to host</source>
+        <translation>Connessione all&apos;host</translation>
+    </message>
+    <message>
+        <source>Connection closed</source>
+        <translation>Connessione chiusa</translation>
+    </message>
+    <message>
+        <source>Proxy authentication required</source>
+        <translation>Richiesta autenticazione proxy</translation>
+    </message>
+    <message>
+        <source>Authentication required</source>
+        <translation>Autenticazione richiesta</translation>
+    </message>
+    <message>
+        <source>HTTPS connection requested but SSL support not compiled in</source>
+        <translation>Richiesta una connessione HTTPS, ma il supporto SSL non è stato compilato</translation>
+    </message>
+    <message>
+        <source>Connection refused (or timed out)</source>
+        <translation>Connessione rifiutata (o tempo scaduto)</translation>
+    </message>
+    <message>
+        <source>Proxy requires authentication</source>
+        <translation>Il proxy richiede l&apos;autenticazione</translation>
+    </message>
+    <message>
+        <source>Host requires authentication</source>
+        <translation>L&apos;host richiede l&apos;autenticazione</translation>
+    </message>
+    <message>
+        <source>Data corrupted</source>
+        <translation>Dati danneggiati</translation>
+    </message>
+    <message>
+        <source>Unknown protocol specified</source>
+        <translation>Protocollo specificato sconosciuto</translation>
+    </message>
+    <message>
+        <source>SSL handshake failed</source>
+        <translation>Negoziazione SSL non riuscita</translation>
+    </message>
+    <message>
+        <source>Too many redirects</source>
+        <translation>Troppi reindirizzamenti</translation>
+    </message>
+    <message>
+        <source>Insecure redirect</source>
+        <translation>Reindirizzamento non sicuro</translation>
+    </message>
+</context>
+<context>
+    <name>QHttpSocketEngine</name>
+    <message>
+        <source>Authentication required</source>
+        <translation>Autenticazione richiesta</translation>
+    </message>
+    <message>
+        <source>Did not receive HTTP response from proxy</source>
+        <translation>Non è stata ricevuta una risposta HTTP dal proxy</translation>
+    </message>
+    <message>
+        <source>Error parsing authentication request from proxy</source>
+        <translation>Errore analizzando la richiesta di autenticazione ricevuta dal proxy</translation>
+    </message>
+    <message>
+        <source>Proxy denied connection</source>
+        <translation>Il proxy ha rifiutato la connessione</translation>
+    </message>
+    <message>
+        <source>Error communicating with HTTP proxy</source>
+        <translation>Errore di comunicazione con il proxy HTTP</translation>
+    </message>
+    <message>
+        <source>Proxy server not found</source>
+        <translation>Server proxy non trovato</translation>
+    </message>
+    <message>
+        <source>Proxy connection refused</source>
+        <translation>Connessione al proxy rifiutata</translation>
+    </message>
+    <message>
+        <source>Proxy server connection timed out</source>
+        <translation>La connessione al server proxy è scaduta</translation>
+    </message>
+    <message>
+        <source>Proxy connection closed prematurely</source>
+        <translation>La connessione al proxy si è interrotta prematuramente</translation>
+    </message>
+</context>
+<context>
+    <name>QIBaseDriver</name>
+    <message>
+        <source>Error opening database</source>
+        <translation>Errore di apertura del database</translation>
+    </message>
+    <message>
+        <source>Could not start transaction</source>
+        <translation>Impossibile avviare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile applicare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+</context>
+<context>
+    <name>QIBaseResult</name>
+    <message>
+        <source>Unable to create BLOB</source>
+        <translation>Impossibile creare BLOB</translation>
+    </message>
+    <message>
+        <source>Unable to write BLOB</source>
+        <translation>Impossibile scrivere BLOB</translation>
+    </message>
+    <message>
+        <source>Unable to open BLOB</source>
+        <translation>Impossibile aprire BLOB</translation>
+    </message>
+    <message>
+        <source>Unable to read BLOB</source>
+        <translation>Impossibile leggere BLOB</translation>
+    </message>
+    <message>
+        <source>Could not find array</source>
+        <translation>Impossibile trovare il vettore</translation>
+    </message>
+    <message>
+        <source>Could not get array data</source>
+        <translation>Impossibile ottenere il vettore di dati</translation>
+    </message>
+    <message>
+        <source>Could not get query info</source>
+        <translation>Impossibile ottenere informazioni sulla query</translation>
+    </message>
+    <message>
+        <source>Could not start transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile applicare la transazione</translation>
+    </message>
+    <message>
+        <source>Could not allocate statement</source>
+        <translation>Impossibile allocare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Could not prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Could not describe input statement</source>
+        <translation>Impossibile descrivere l&apos;istruzione in ingresso</translation>
+    </message>
+    <message>
+        <source>Could not describe statement</source>
+        <translation>Impossibile descrivere l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to close statement</source>
+        <translation>Impossibile chiudere l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to execute query</source>
+        <translation>Impossibile eseguire la query</translation>
+    </message>
+    <message>
+        <source>Could not fetch next item</source>
+        <translation>Impossibile recuperare il prossimo elemento</translation>
+    </message>
+    <message>
+        <source>Could not get statement info</source>
+        <translation>Impossibile ottenere informazioni sull&apos;istruzione</translation>
+    </message>
+</context>
+<context>
+    <name>QIODevice</name>
+    <message>
+        <source>Permission denied</source>
+        <translation>Permesso negato</translation>
+    </message>
+    <message>
+        <source>Too many open files</source>
+        <translation>Troppi file aperti</translation>
+    </message>
+    <message>
+        <source>No such file or directory</source>
+        <translation>Nessun file o cartella</translation>
+    </message>
+    <message>
+        <source>No space left on device</source>
+        <translation>Spazio insufficiente sul dispositivo</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>file to open is a directory</source>
+        <translation>il file da aprire è una cartella</translation>
+    </message>
+</context>
+<context>
+    <name>QImageReader</name>
+    <message>
+        <source>Invalid device</source>
+        <translation>Dispositivo non valido</translation>
+    </message>
+    <message>
+        <source>File not found</source>
+        <translation>File non trovato</translation>
+    </message>
+    <message>
+        <source>Unsupported image format</source>
+        <translation>Formato di immagine non supportato</translation>
+    </message>
+    <message>
+        <source>Unable to read image data</source>
+        <translation>Impossibile leggere i dati dell&apos;immagine</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+</context>
+<context>
+    <name>QImageWriter</name>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>Device is not set</source>
+        <translation>Il dispositivo non è impostato</translation>
+    </message>
+    <message>
+        <source>Device not writable</source>
+        <translation>Dispositivo non scrivibile</translation>
+    </message>
+    <message>
+        <source>Unsupported image format</source>
+        <translation>Formato di immagine non supportato</translation>
+    </message>
+</context>
+<context>
+    <name>QInputContext</name>
+    <message>
+        <source>XIM input method</source>
+        <translation>Metodo di inserimento XIM</translation>
+    </message>
+    <message>
+        <source>Windows input method</source>
+        <translation>Metodo di inserimento Windows</translation>
+    </message>
+    <message>
+        <source>Mac OS X input method</source>
+        <translation>Metodo di inserimento Mac OS X</translation>
+    </message>
+    <message>
+        <source>XIM</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QInputDialog</name>
+    <message>
+        <source>Enter a value:</source>
+        <translation>Inserisci un valore:</translation>
+    </message>
+</context>
+<context>
+    <name>QJsonParseError</name>
+    <message>
+        <source>no error occurred</source>
+        <translation>nessun errore rilevato</translation>
+    </message>
+    <message>
+        <source>unterminated object</source>
+        <translation>oggetto non terminato</translation>
+    </message>
+    <message>
+        <source>missing name separator</source>
+        <translation>separatore del nome mancante</translation>
+    </message>
+    <message>
+        <source>unterminated array</source>
+        <translation>array non terminato</translation>
+    </message>
+    <message>
+        <source>missing value separator</source>
+        <translation>separatore del valore mancante</translation>
+    </message>
+    <message>
+        <source>illegal value</source>
+        <translation>valore non valido</translation>
+    </message>
+    <message>
+        <source>invalid termination by number</source>
+        <translatorcomment>?</translatorcomment>
+        <translation>terminazione con un numero non valida</translation>
+    </message>
+    <message>
+        <source>illegal number</source>
+        <translation>numero non valido</translation>
+    </message>
+    <message>
+        <source>invalid escape sequence</source>
+        <translation>sequenza di escape non valida</translation>
+    </message>
+    <message>
+        <source>invalid UTF8 string</source>
+        <translation>stringa UTF8 non valida</translation>
+    </message>
+    <message>
+        <source>unterminated string</source>
+        <translation>stringa non terminata</translation>
+    </message>
+    <message>
+        <source>object is missing after a comma</source>
+        <translation>oggetto mancante dopo una virgola</translation>
+    </message>
+    <message>
+        <source>too deeply nested document</source>
+        <translation>documento annidato troppo profondamente</translation>
+    </message>
+    <message>
+        <source>too large document</source>
+        <translation>documento troppo grande</translation>
+    </message>
+    <message>
+        <source>garbage at the end of the document</source>
+        <translation>contenuti spurî alla fine del documento</translation>
+    </message>
+</context>
+<context>
+    <name>QKeySequenceEdit</name>
+    <message>
+        <source>Press shortcut</source>
+        <translation>Premi scorciatoia</translation>
+    </message>
+    <message>
+        <source>%1, ...</source>
+        <extracomment>This text is an &quot;unfinished&quot; shortcut, expands like &quot;Ctrl+A, ...&quot;</extracomment>
+        <translation>%1, ...</translation>
+    </message>
+</context>
+<context>
+    <name>QLibrary</name>
+    <message>
+        <source>QLibrary::load_sys: Cannot load %1 (%2)</source>
+        <translation>QLibrary::load_sys: Impossibile caricare %1 (%2)</translation>
+    </message>
+    <message>
+        <source>QLibrary::unload_sys: Cannot unload %1 (%2)</source>
+        <translation>QLibrary::unload_sys: Impossibile rimuovere %1 (%2)</translation>
+    </message>
+    <message>
+        <source>QLibrary::resolve_sys: Symbol &quot;%1&quot; undefined in %2 (%3)</source>
+        <translation>QLibrary::resolve_sys: Simbolo &quot;%1&quot; non definito in %2 (%3)</translation>
+    </message>
+    <message>
+        <source>Could not mmap &apos;%1&apos;: %2</source>
+        <translation>mmap di &apos;%1&apos; non possibile: %2</translation>
+    </message>
+    <message>
+        <source>Plugin verification data mismatch in &apos;%1&apos;</source>
+        <translation>Mancata corrispondenza dei dati di verifica dell&apos;estensione in &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Could not unmap &apos;%1&apos;: %2</source>
+        <translation>unmap di &apos;%1&apos; non possibile: %2</translation>
+    </message>
+    <message>
+        <source>The plugin &apos;%1&apos; uses incompatible Qt library. (%2.%3.%4) [%5]</source>
+        <translation>Il plugin &apos;%1&apos; utilizza librerie QT non compatibili. (%2.%3.%4) [%5]</translation>
+    </message>
+    <message>
+        <source>The plugin &apos;%1&apos; uses incompatible Qt library. Expected build key &quot;%2&quot;, got &quot;%3&quot;</source>
+        <translation>Il plugin &apos;%1&apos; utilizza librerie QT non compatibili. Versione di compilazione attesa &quot;%2&quot;, ottenuta &quot;%3&quot;</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>The shared library was not found.</source>
+        <translation>La libreria condivisa non è stata trovata.</translation>
+    </message>
+    <message>
+        <source>The file &apos;%1&apos; is not a valid Qt plugin.</source>
+        <translation>Il file &apos;%1&apos; non è un&apos;estensione Qt valida.</translation>
+    </message>
+    <message>
+        <source>The plugin &apos;%1&apos; uses incompatible Qt library. (Cannot mix debug and release libraries.)</source>
+        <translation>L&apos;estensione &apos;%1&apos; utilizza una libreria Qt incompatibile. (Non è possibile mischiare librerie di debug e di rilascio.)</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is not an ELF object (%2)</source>
+        <translation>&apos;%1&apos; non è un oggetto ELF (%2)</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is not an ELF object</source>
+        <translation>&apos;%1&apos; non è un oggetto ELF</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is an invalid ELF object (%2)</source>
+        <translation>&apos;%1&apos; è un oggetto ELF non valido (%2)</translation>
+    </message>
+    <message>
+        <source>Failed to extract plugin meta data from &apos;%1&apos;</source>
+        <translation>Estrazione dei metadati del plugin non riuscita da &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Cannot load library %1: %2</source>
+        <translation>Impossibile caricare la libreria %1: %2</translation>
+    </message>
+    <message>
+        <source>Cannot unload library %1: %2</source>
+        <translation>Impossibile rilasciare la libreria %1: %2</translation>
+    </message>
+    <message>
+        <source>Cannot resolve symbol &quot;%1&quot; in %2: %3</source>
+        <translation>Impossibile risolvere il simbolo &quot;%1&quot; in %2: %3</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is not a valid Mach-O binary (%2)</source>
+        <translation>&apos;%1&apos; è un binario Mach-O non valido (%2)</translation>
+    </message>
+    <message>
+        <source>file is corrupt</source>
+        <translation>il file è danneggiato</translation>
+    </message>
+    <message>
+        <source>file too small</source>
+        <translation>il file è troppo piccolo</translation>
+    </message>
+    <message>
+        <source>no suitable architecture in fat binary</source>
+        <translation>nessuna architettura appropriata nel fat binary</translation>
+    </message>
+    <message>
+        <source>invalid magic %1</source>
+        <translation>magic %1 non valido</translation>
+    </message>
+    <message>
+        <source>wrong architecture</source>
+        <translation>architettura errata</translation>
+    </message>
+    <message>
+        <source>not a dynamic library</source>
+        <translation>non è una libreria dinamica</translation>
+    </message>
+    <message>
+        <source>&apos;%1&apos; is not a Qt plugin</source>
+        <translation>&apos;%1&apos; non è un plugin Qt</translation>
+    </message>
+</context>
+<context>
+    <name>QLineEdit</name>
+    <message>
+        <source>&amp;Undo</source>
+        <translation>A&amp;nnulla</translation>
+    </message>
+    <message>
+        <source>&amp;Redo</source>
+        <translation>&amp;Rifai</translation>
+    </message>
+    <message>
+        <source>Cu&amp;t</source>
+        <translation>&amp;Taglia</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>&amp;Copia</translation>
+    </message>
+    <message>
+        <source>&amp;Paste</source>
+        <translation>&amp;Incolla</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>QLocalServer</name>
+    <message>
+        <source>%1: Name error</source>
+        <translation>%1: Errore nel nome</translation>
+    </message>
+    <message>
+        <source>%1: Permission denied</source>
+        <translation>%1: Permesso negato</translation>
+    </message>
+    <message>
+        <source>%1: Address in use</source>
+        <translation>%1: Indirizzo in uso</translation>
+    </message>
+    <message>
+        <source>%1: Unknown error %2</source>
+        <translation>%1: Errore sconosciuto %2</translation>
+    </message>
+</context>
+<context>
+    <name>QLocalSocket</name>
+    <message>
+        <source>%1: Connection refused</source>
+        <translation>%1: Connessione rifiutata</translation>
+    </message>
+    <message>
+        <source>%1: Remote closed</source>
+        <translation>%1: terminazione remota</translation>
+    </message>
+    <message>
+        <source>%1: Invalid name</source>
+        <translation>%1: Nome non valido</translation>
+    </message>
+    <message>
+        <source>%1: Socket access error</source>
+        <translation>%1: Errore di accesso al socket</translation>
+    </message>
+    <message>
+        <source>%1: Socket resource error</source>
+        <translation>%1: errore risorsa socket</translation>
+    </message>
+    <message>
+        <source>%1: Socket operation timed out</source>
+        <translation>%1: operazione socket scaduta</translation>
+    </message>
+    <message>
+        <source>%1: Datagram too large</source>
+        <translation>%1: Datagramma troppo grande</translation>
+    </message>
+    <message>
+        <source>%1: Connection error</source>
+        <translation>%1: Errore di connessione</translation>
+    </message>
+    <message>
+        <source>%1: The socket operation is not supported</source>
+        <translation>%1: l&apos;operazione di socket non è supportata</translation>
+    </message>
+    <message>
+        <source>%1: Unknown error %2</source>
+        <translation>%1: Errore sconosciuto %2</translation>
+    </message>
+    <message>
+        <source>%1: Operation not permitted when socket is in this state</source>
+        <translation>%1: operazione non permessa quando il socket è in questo stato</translation>
+    </message>
+    <message>
+        <source>%1: Unknown error</source>
+        <translation>%1: errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>%1: Access denied</source>
+        <translation>%1: accesso negato</translation>
+    </message>
+    <message>
+        <source>Trying to connect while connection is in progress</source>
+        <translation>Tentativo di connessione mentre una connessione è ancora in corso</translation>
+    </message>
+</context>
+<context>
+    <name>QMYSQLDriver</name>
+    <message>
+        <source>Unable to open database &apos;</source>
+        <translation>Impossibile aprire il database &apos;</translation>
+    </message>
+    <message>
+        <source>Unable to connect</source>
+        <translation>Impossibile connettersi</translation>
+    </message>
+    <message>
+        <source>Unable to begin transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile effettuare il commit della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to allocate a MYSQL object</source>
+        <translation>Impossibile allocare un oggetto MYSQL</translation>
+    </message>
+    <message>
+        <source>Unable to open database &apos;%1&apos;</source>
+        <translation>Impossibile aprire il database &apos;%1&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>QMYSQLResult</name>
+    <message>
+        <source>Unable to fetch data</source>
+        <translation>Impossibile ottenere i dati</translation>
+    </message>
+    <message>
+        <source>Unable to execute query</source>
+        <translation>Impossibile eseguire la query</translation>
+    </message>
+    <message>
+        <source>Unable to store result</source>
+        <translation>Impossibile memorizzare i risultati</translation>
+    </message>
+    <message>
+        <source>Unable to prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to reset statement</source>
+        <translation>Impossibile ripristinare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind value</source>
+        <translation>Impossibile associare il valore</translation>
+    </message>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind outvalues</source>
+        <translation>Impossibile associare i valori di uscita</translation>
+    </message>
+    <message>
+        <source>Unable to store statement results</source>
+        <translation>Impossibile memorizzare i risultati dell&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to execute next query</source>
+        <translation>Impossibile eseguire la query successiva</translation>
+    </message>
+    <message>
+        <source>Unable to store next result</source>
+        <translation>Impossibile memorizzare il risultato successivo</translation>
+    </message>
+</context>
+<context>
+    <name>QMdiArea</name>
+    <message>
+        <source>(Untitled)</source>
+        <translation>(Senza titolo)</translation>
+    </message>
+</context>
+<context>
+    <name>QMdiSubWindow</name>
+    <message>
+        <source>%1 - [%2]</source>
+        <translation>%1 - [%2]</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Minimizza</translation>
+    </message>
+    <message>
+        <source>Restore Down</source>
+        <translation>Ripristina in basso</translation>
+    </message>
+    <message>
+        <source>&amp;Restore</source>
+        <translation>&amp;Ripristina</translation>
+    </message>
+    <message>
+        <source>&amp;Move</source>
+        <translation>S&amp;posta</translation>
+    </message>
+    <message>
+        <source>&amp;Size</source>
+        <translation>Dimen&amp;sione</translation>
+    </message>
+    <message>
+        <source>Mi&amp;nimize</source>
+        <translation>Mi&amp;nimizza</translation>
+    </message>
+    <message>
+        <source>Ma&amp;ximize</source>
+        <translation>Massimi&amp;zza</translation>
+    </message>
+    <message>
+        <source>Stay on &amp;Top</source>
+        <translation>Sempre in &amp;primo piano</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Chiudi</translation>
+    </message>
+    <message>
+        <source>- [%1]</source>
+        <translation>- [%1]</translation>
+    </message>
+    <message>
+        <source>Maximize</source>
+        <translation>Massimizza</translation>
+    </message>
+    <message>
+        <source>Unshade</source>
+        <translation>Srotola</translation>
+    </message>
+    <message>
+        <source>Shade</source>
+        <translation>Arrotola</translation>
+    </message>
+    <message>
+        <source>Restore</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menu</translation>
+    </message>
+</context>
+<context>
+    <name>QMenu</name>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>Execute</source>
+        <translation>Esegui</translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>About Qt</source>
+        <translation>Informazioni su Qt</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;This program uses Qt version %1.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Questo programma utilizza la versione %1 di Qt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>Show Details...</source>
+        <translation>Mostra dettagli...</translation>
+    </message>
+    <message>
+        <source>Hide Details...</source>
+        <translation>Nascondi dettagli...</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;This program uses Qt Open Source Edition version %1.&lt;/p&gt;&lt;p&gt;Qt Open Source Edition is intended for the development of Open Source applications. You need a commercial Qt license for development of proprietary (closed source) applications.&lt;/p&gt;&lt;p&gt;Please see &lt;a href=&quot;http://www.trolltech.com/company/model/&quot;&gt;www.trolltech.com/company/model/&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Questo programma utilizza la versione Qt Open Source Edition %1.&lt;/p&gt;&lt;p&gt;Qt Open Source Edition è destinata allo sviluppo di applicazioni Open Source. Per lo sviluppo di applicazioni proprietarie (sorgente chiuso) è necessario disporre di una licenza Qt commerciale.&lt;/p&gt;&lt;p&gt;Vedere &lt;a href=&quot;http://www.trolltech.com/company/model/&quot;&gt;www.trolltech.com/company/model/&lt;/a&gt; per una panoramica del sistema di licenze Qt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;About Qt&lt;/h3&gt;%1&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across MS&amp;nbsp;Windows, Mac&amp;nbsp;OS&amp;nbsp;X, Linux, and all major commercial Unix variants. Qt is also available for embedded devices as Qt for Embedded Linux and Qt for Windows CE.&lt;/p&gt;&lt;p&gt;Qt is a Nokia product. See &lt;a href=&quot;http://www.trolltech.com/qt/&quot;&gt;www.trolltech.com/qt/&lt;/a&gt; for more information.&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Informazioni su Qt&lt;/h3&gt;%1&lt;p&gt;Qt è un toolkit C++ per lo sviluppo multipiattaforma di applicazioni.&lt;/p&gt;&lt;p&gt;Qt fornisce la portabilità degli stessi sorgenti tra MS&amp;nbsp;Windows, Mac&amp;nbsp;OS&amp;nbsp;X, Linux e tutte le varianti commerciali di Unix. Qt è disponibile anche per dispositivi integrati come Qt per Linux Embedded e Qt per Windows CE.&lt;/p&gt;&lt;p&gt;Qt è un prodotto Nokia. Vedi &lt;a href=&quot;http://www.trolltech.com/qt/&quot;&gt;www.trolltech.com/qt/&lt;/a&gt; per ulteriori informazioni.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;About Qt&lt;/h3&gt;&lt;p&gt;This program uses Qt version %1.&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Informazioni su Qt&lt;/h3&gt;&lt;p&gt;Questo programma usa la versione %1 di Qt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.&lt;/p&gt;&lt;p&gt;Qt is available under three different licensing options designed to accommodate the needs of our various users.&lt;/p&gt;&lt;p&gt;Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 3 or GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 3 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 3.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Please see &lt;a href=&quot;http://%2/&quot;&gt;%2&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;&lt;p&gt;Copyright (C) %1 The Qt Company Ltd and other contributors.&lt;/p&gt;&lt;p&gt;Qt and the Qt logo are trademarks of The Qt Company Ltd.&lt;/p&gt;&lt;p&gt;Qt is The Qt Company Ltd product developed as an open source project. See &lt;a href=&quot;http://%3/&quot;&gt;%3&lt;/a&gt; for more information.&lt;/p&gt;</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QMultiInputContext</name>
+    <message>
+        <source>Select IM</source>
+        <translation>Seleziona IM</translation>
+    </message>
+</context>
+<context>
+    <name>QMultiInputContextPlugin</name>
+    <message>
+        <source>Multiple input method switcher</source>
+        <translation>Commutatore di metodi di inserimento</translation>
+    </message>
+    <message>
+        <source>Multiple input method switcher that uses the context menu of the text widgets</source>
+        <translation>Commutatore di metodi di inserimento multipli che utilizza il menu contestuale per gli oggetti testuali</translation>
+    </message>
+</context>
+<context>
+    <name>QNativeSocketEngine</name>
+    <message>
+        <source>The remote host closed the connection</source>
+        <translation>L&apos;host remoto ha terminato la connessione</translation>
+    </message>
+    <message>
+        <source>Network operation timed out</source>
+        <translation>Operazione di rete fuori tempo massimo</translation>
+    </message>
+    <message>
+        <source>Out of resources</source>
+        <translation>Risorse insufficienti</translation>
+    </message>
+    <message>
+        <source>Unsupported socket operation</source>
+        <translation>Operazione su socket non supportata</translation>
+    </message>
+    <message>
+        <source>Protocol type not supported</source>
+        <translation>Tipo di protocollo non supportato</translation>
+    </message>
+    <message>
+        <source>Invalid socket descriptor</source>
+        <translation>Descrittore di socket non valido</translation>
+    </message>
+    <message>
+        <source>Network unreachable</source>
+        <translation>Rete non raggiungibile</translation>
+    </message>
+    <message>
+        <source>Permission denied</source>
+        <translation>Permesso negato</translation>
+    </message>
+    <message>
+        <source>Connection timed out</source>
+        <translation>Connessione fuori tempo massimo</translation>
+    </message>
+    <message>
+        <source>Connection refused</source>
+        <translation>Connessione rifiutata</translation>
+    </message>
+    <message>
+        <source>The bound address is already in use</source>
+        <translation>L&apos;indirizzo associato è già utilizzato</translation>
+    </message>
+    <message>
+        <source>The address is not available</source>
+        <translation>L&apos;indirizzo non è disponibile</translation>
+    </message>
+    <message>
+        <source>The address is protected</source>
+        <translation>L&apos;indirizzo è protetto</translation>
+    </message>
+    <message>
+        <source>Unable to send a message</source>
+        <translation>Impossibile inviare un messaggio</translation>
+    </message>
+    <message>
+        <source>Unable to receive a message</source>
+        <translation>Impossibile ricevere un messaggio</translation>
+    </message>
+    <message>
+        <source>Unable to write</source>
+        <translation>Impossibile scrivere</translation>
+    </message>
+    <message>
+        <source>Network error</source>
+        <translation>Errore di rete</translation>
+    </message>
+    <message>
+        <source>Another socket is already listening on the same port</source>
+        <translation>Un altro socket è già in ascolto sulla stessa porta</translation>
+    </message>
+    <message>
+        <source>Unable to initialize non-blocking socket</source>
+        <translation>Impossibile inizializzare il socket asincrono</translation>
+    </message>
+    <message>
+        <source>Unable to initialize broadcast socket</source>
+        <translation>Impossibile inizializzare il socket di trasmissione</translation>
+    </message>
+    <message>
+        <source>Attempt to use IPv6 socket on a platform with no IPv6 support</source>
+        <translation>Tentativo di utilizzare un socket IPv6 su una piattaforma che non supporta IPv6</translation>
+    </message>
+    <message>
+        <source>Host unreachable</source>
+        <translation>Host non raggiungibile</translation>
+    </message>
+    <message>
+        <source>Datagram was too large to send</source>
+        <translation>Datagramma troppo grande per l&apos;invio</translation>
+    </message>
+    <message>
+        <source>Operation on non-socket</source>
+        <translation>Operazione su non-socket</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>The proxy type is invalid for this operation</source>
+        <translation>Il tipo di proxy non è valido per questa operazione</translation>
+    </message>
+    <message>
+        <source>Temporary error</source>
+        <translation>Errore temporaneo</translation>
+    </message>
+    <message>
+        <source>Network dropped connection on reset</source>
+        <translation>Connessione di rete interrotta alla chiusura</translation>
+    </message>
+    <message>
+        <source>Connection reset by peer</source>
+        <translation>Connessione chiusa dalla controparte</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessCacheBackend</name>
+    <message>
+        <source>Error opening %1</source>
+        <translation>Errore durante l&apos;apertura di %1</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessDataBackend</name>
+    <message>
+        <source>Invalid URI: %1</source>
+        <translation>URI non valido: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessDebugPipeBackend</name>
+    <message>
+        <source>Write error writing to %1: %2</source>
+        <translation>Errore di scrittura su %1: %2</translation>
+    </message>
+    <message>
+        <source>Socket error on %1: %2</source>
+        <translation>Errore del socket su %1: %2</translation>
+    </message>
+    <message>
+        <source>Remote host closed the connection prematurely on %1</source>
+        <translation>L&apos;host remoto ha chiuso la connessione prematuramente su %1</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessFileBackend</name>
+    <message>
+        <source>Request for opening non-local file %1</source>
+        <translation>Richiesta di apertura del file non locale %1</translation>
+    </message>
+    <message>
+        <source>Error opening %1: %2</source>
+        <translation>Errore in fase di apertura di %1: %2</translation>
+    </message>
+    <message>
+        <source>Write error writing to %1: %2</source>
+        <translation>Errore in fase di scrittura di %1: %2</translation>
+    </message>
+    <message>
+        <source>Cannot open %1: Path is a directory</source>
+        <translation>Impossibile aprire %1: il percorso è una cartella</translation>
+    </message>
+    <message>
+        <source>Read error reading from %1: %2</source>
+        <translation>Errore di lettura da %1: %2</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessFtpBackend</name>
+    <message>
+        <source>Cannot open %1: is a directory</source>
+        <translation>Impossibile aprire %1: è una cartella</translation>
+    </message>
+    <message>
+        <source>Logging in to %1 failed: authentication required</source>
+        <translation>Accesso a %1 non riuscito: autenticazione richiesta</translation>
+    </message>
+    <message>
+        <source>Error while downloading %1: %2</source>
+        <translation>Errore durante lo scaricamento di %1: %2</translation>
+    </message>
+    <message>
+        <source>Error while uploading %1: %2</source>
+        <translation>Errore durante l&apos;invio di %1: %2</translation>
+    </message>
+    <message>
+        <source>No suitable proxy found</source>
+        <translation>Nessun proxy adatto trovato</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkAccessManager</name>
+    <message>
+        <source>Network access is disabled.</source>
+        <translation>Accesso alla rete disabilitato.</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkReply</name>
+    <message>
+        <source>Error downloading %1 - server replied: %2</source>
+        <translation>Errore durante lo scaricamento di %1 - il server ha risposto: %2</translation>
+    </message>
+    <message>
+        <source>Protocol &quot;%1&quot; is unknown</source>
+        <translation>Il protocollo &quot;%1&quot; è sconosciuto</translation>
+    </message>
+    <message>
+        <source>Background request not allowed.</source>
+        <translation>Richiesta in background non permessa.</translation>
+    </message>
+    <message>
+        <source>Network session error.</source>
+        <translation>Errore della sessione di rete.</translation>
+    </message>
+    <message>
+        <source>backend start error.</source>
+        <translation>errore di avvio del backend.</translation>
+    </message>
+    <message>
+        <source>Temporary network failure.</source>
+        <translation>Errore temporaneo della rete.</translation>
+    </message>
+    <message>
+        <source>Error transferring %1 - server replied: %2</source>
+        <translation>Errore durante il trasferimento di %1 - il server ha risposto: %2</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkReplyHttpImpl</name>
+    <message>
+        <source>Operation canceled</source>
+        <translation>Operazione annullata</translation>
+    </message>
+    <message>
+        <source>No suitable proxy found</source>
+        <translation>Nessun proxy adatto trovato</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkReplyHttpImplPrivate</name>
+    <message>
+        <source>No suitable proxy found</source>
+        <translation type="vanished">Nessun proxy adatto trovato</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkReplyImpl</name>
+    <message>
+        <source>Operation canceled</source>
+        <translation>Operazione annullata</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkSession</name>
+    <message>
+        <source>Invalid configuration.</source>
+        <translation>Configurazione non valida.</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkSessionPrivateImpl</name>
+    <message>
+        <source>Unknown session error.</source>
+        <translation>Errore sconosciuto di sessione.</translation>
+    </message>
+    <message>
+        <source>The session was aborted by the user or system.</source>
+        <translation>La sessione è stata interrotta dall&apos;utente o dal sistema.</translation>
+    </message>
+    <message>
+        <source>The requested operation is not supported by the system.</source>
+        <translation>L&apos;operazione richiesta non è supportata dal sistema.</translation>
+    </message>
+    <message>
+        <source>The specified configuration cannot be used.</source>
+        <translation>La configurazione specificata non può essere utilizzata.</translation>
+    </message>
+    <message>
+        <source>Roaming was aborted or is not possible.</source>
+        <translation>Roaming interrotto o non possibile.</translation>
+    </message>
+</context>
+<context>
+    <name>QOCIDriver</name>
+    <message>
+        <source>Unable to logon</source>
+        <translation>Impossibile accedere</translation>
+    </message>
+    <message>
+        <source>Unable to initialize</source>
+        <comment>QOCIDriver</comment>
+        <translation>Impossibile inizializzare</translation>
+    </message>
+    <message>
+        <source>Unable to begin transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile effettuare il commit della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+</context>
+<context>
+    <name>QOCIResult</name>
+    <message>
+        <source>Unable to bind column for batch execute</source>
+        <translation>Impossibile associare la colonna per l&apos;esecuzione sequenziale</translation>
+    </message>
+    <message>
+        <source>Unable to execute batch statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione sequenziale</translation>
+    </message>
+    <message>
+        <source>Unable to goto next</source>
+        <translation>Impossibile spostarsi al successivo</translation>
+    </message>
+    <message>
+        <source>Unable to alloc statement</source>
+        <translation>Impossibile allocare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind value</source>
+        <translation>Impossibile associare il valore</translation>
+    </message>
+    <message>
+        <source>Unable to execute select statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione di selezione</translation>
+    </message>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to get statement type</source>
+        <translation>Impossibile recuperare il tipo di comando</translation>
+    </message>
+</context>
+<context>
+    <name>QODBCDriver</name>
+    <message>
+        <source>Unable to connect</source>
+        <translation>Impossibile connettersi</translation>
+    </message>
+    <message>
+        <source>Unable to connect - Driver doesn&apos;t support all needed functionality</source>
+        <translation>Impossibile connettersi - Il driver non supporta tutte le funzionalità richieste</translation>
+    </message>
+    <message>
+        <source>Unable to disable autocommit</source>
+        <translation>Impossibile disabilitare l&apos;autocommit</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile effettuare il commit della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to enable autocommit</source>
+        <translation>Impossibile abilitare l&apos;autocommit</translation>
+    </message>
+    <message>
+        <source>Unable to connect - Driver doesn&apos;t support all functionality required</source>
+        <translation>Connessione non riuscita - il driver non supporta tutte le funzionalità richieste</translation>
+    </message>
+</context>
+<context>
+    <name>QODBCResult</name>
+    <message>
+        <source>QODBCResult::reset: Unable to set &apos;SQL_CURSOR_STATIC&apos; as statement attribute. Please check your ODBC driver configuration</source>
+        <translation>QODBCResult::reset: Impossibile impostare &apos;SQL_CURSOR_STATIC&apos; come attributo dell&apos;istruzione. Controlla la configurazione del driver ODBC</translation>
+    </message>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to fetch next</source>
+        <translation>Impossibile recuperare il successivo</translation>
+    </message>
+    <message>
+        <source>Unable to prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind variable</source>
+        <translation>Impossibile associare la variabile</translation>
+    </message>
+    <message>
+        <source>Unable to fetch last</source>
+        <translation>Impossibile recuperare l&apos;ultimo</translation>
+    </message>
+    <message>
+        <source>Unable to fetch</source>
+        <translation>Impossibile recuperare</translation>
+    </message>
+    <message>
+        <source>Unable to fetch first</source>
+        <translation>Impossibile recuperare il primo</translation>
+    </message>
+    <message>
+        <source>Unable to fetch previous</source>
+        <translation>Impossibile recuperare il precedente</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Operation not supported on %1</source>
+        <translation>Operazione non supportata su %1</translation>
+    </message>
+    <message>
+        <source>Invalid URI: %1</source>
+        <translation>URI non valido: %1</translation>
+    </message>
+    <message>
+        <source>Write error writing to %1: %2</source>
+        <translation>Errore di scrittura su %1: %2</translation>
+    </message>
+    <message>
+        <source>Read error reading from %1: %2</source>
+        <translation>Errore di lettura da %1: %2</translation>
+    </message>
+    <message>
+        <source>Socket error on %1: %2</source>
+        <translation>Errore socket su %1: %2</translation>
+    </message>
+    <message>
+        <source>Remote host closed the connection prematurely on %1</source>
+        <translation>L&apos;host remoto ha terminato prematuramente la connessione su %1</translation>
+    </message>
+    <message>
+        <source>Protocol error: packet of size 0 received</source>
+        <translation>Errore di protocollo: ricevuto un pacchetto di dimensione 0</translation>
+    </message>
+</context>
+<context>
+    <name>QPPDOptionsModel</name>
+    <message>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation>Valore</translation>
+    </message>
+</context>
+<context>
+    <name>QPSQLDriver</name>
+    <message>
+        <source>Unable to connect</source>
+        <translation>Impossibile connettersi</translation>
+    </message>
+    <message>
+        <source>Could not begin transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Could not commit transaction</source>
+        <translation>Impossibile effettuare il commit dell&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Could not rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+    <message>
+        <source>Unable to subscribe</source>
+        <translation>Impossibile registrarsi</translation>
+    </message>
+    <message>
+        <source>Unable to unsubscribe</source>
+        <translation>Impossibile cancellarsi</translation>
+    </message>
+</context>
+<context>
+    <name>QPSQLResult</name>
+    <message>
+        <source>Unable to create query</source>
+        <translation>Impossibile creare query</translation>
+    </message>
+    <message>
+        <source>Unable to prepare statement</source>
+        <translation>Impossibile preparare l&apos;istruzione</translation>
+    </message>
+</context>
+<context>
+    <name>QPageSetupWidget</name>
+    <message>
+        <source>Centimeters (cm)</source>
+        <translation>Centimetri (cm)</translation>
+    </message>
+    <message>
+        <source>Millimeters (mm)</source>
+        <translation>Millimetri (mm)</translation>
+    </message>
+    <message>
+        <source>Inches (in)</source>
+        <translation>Pollici (in)</translation>
+    </message>
+    <message>
+        <source>Points (pt)</source>
+        <translation>Punti (pt)</translation>
+    </message>
+    <message>
+        <source>Form</source>
+        <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>Paper</source>
+        <translation>Carta</translation>
+    </message>
+    <message>
+        <source>Page size:</source>
+        <translation>Dimensioni pagina:</translation>
+    </message>
+    <message>
+        <source>Width:</source>
+        <translation>Larghezza:</translation>
+    </message>
+    <message>
+        <source>Height:</source>
+        <translation>Altezza:</translation>
+    </message>
+    <message>
+        <source>Paper source:</source>
+        <translation>Alimentazione carta:</translation>
+    </message>
+    <message>
+        <source>Orientation</source>
+        <translation>Orientamento</translation>
+    </message>
+    <message>
+        <source>Portrait</source>
+        <translation>Verticale</translation>
+    </message>
+    <message>
+        <source>Landscape</source>
+        <translation>Orizzontale</translation>
+    </message>
+    <message>
+        <source>Reverse landscape</source>
+        <translation>Orizzontale inverso</translation>
+    </message>
+    <message>
+        <source>Reverse portrait</source>
+        <translation>Verticale inverso</translation>
+    </message>
+    <message>
+        <source>Margins</source>
+        <translation>Margini</translation>
+    </message>
+    <message>
+        <source>top margin</source>
+        <translation>margine superiore</translation>
+    </message>
+    <message>
+        <source>left margin</source>
+        <translation>margine sinistro</translation>
+    </message>
+    <message>
+        <source>right margin</source>
+        <translation>margine destro</translation>
+    </message>
+    <message>
+        <source>bottom margin</source>
+        <translation>margine inferiore</translation>
+    </message>
+    <message>
+        <source>Pica (P̸)</source>
+        <translation>Pica (P̸)</translation>
+    </message>
+    <message>
+        <source>Didot (DD)</source>
+        <translation>Didot (DD)</translation>
+    </message>
+    <message>
+        <source>Cicero (CC)</source>
+        <translation>Cicero (CC)</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personalizzata</translation>
+    </message>
+    <message>
+        <source>mm</source>
+        <extracomment>Unit &apos;Millimeter&apos;</extracomment>
+        <translation>mm</translation>
+    </message>
+    <message>
+        <source>pt</source>
+        <extracomment>Unit &apos;Points&apos;</extracomment>
+        <translation>pt</translation>
+    </message>
+    <message>
+        <source>in</source>
+        <extracomment>Unit &apos;Inch&apos;</extracomment>
+        <translation>in</translation>
+    </message>
+    <message>
+        <source>P̸</source>
+        <extracomment>Unit &apos;Pica&apos;</extracomment>
+        <translation>P̸</translation>
+    </message>
+    <message>
+        <source>DD</source>
+        <extracomment>Unit &apos;Didot&apos;</extracomment>
+        <translation>DD</translation>
+    </message>
+    <message>
+        <source>CC</source>
+        <extracomment>Unit &apos;Cicero&apos;</extracomment>
+        <translation>CC</translation>
+    </message>
+    <message>
+        <source>Page Layout</source>
+        <translation>Impaginazione</translation>
+    </message>
+    <message>
+        <source>Page order:</source>
+        <translation>Ordine delle pagine:</translation>
+    </message>
+    <message>
+        <source>Pages per sheet:</source>
+        <translation>Pagine per foglio:</translation>
+    </message>
+</context>
+<context>
+    <name>QPageSize</name>
+    <message>
+        <source>Custom (%1mm x %2mm)</source>
+        <extracomment>Custom size name in millimeters</extracomment>
+        <translation>Personalizzata (%1mm x %2mm)</translation>
+    </message>
+    <message>
+        <source>Custom (%1pt x %2pt)</source>
+        <extracomment>Custom size name in points</extracomment>
+        <translation>Personalizzata (%1pt x %2pt)</translation>
+    </message>
+    <message>
+        <source>Custom (%1in x %2in)</source>
+        <extracomment>Custom size name in inches</extracomment>
+        <translation>Personalizzata (%1in x %2in)</translation>
+    </message>
+    <message>
+        <source>Custom (%1pc x %2pc)</source>
+        <extracomment>Custom size name in picas</extracomment>
+        <translation>Personalizzata (%1pc x %2pc)</translation>
+    </message>
+    <message>
+        <source>Custom (%1DD x %2DD)</source>
+        <extracomment>Custom size name in didots</extracomment>
+        <translation>Personalizzata (%1DD x %2DD)</translation>
+    </message>
+    <message>
+        <source>Custom (%1CC x %2CC)</source>
+        <extracomment>Custom size name in ciceros</extracomment>
+        <translation>Personalizzata (%1CC x %2CC)</translation>
+    </message>
+    <message>
+        <source>%1 x %2 in</source>
+        <extracomment>Page size in &apos;Inch&apos;.</extracomment>
+        <translation>%1 x %2 pollici</translation>
+    </message>
+    <message>
+        <source>A0</source>
+        <translation>A0</translation>
+    </message>
+    <message>
+        <source>A1</source>
+        <translation>A1</translation>
+    </message>
+    <message>
+        <source>A2</source>
+        <translation>A2</translation>
+    </message>
+    <message>
+        <source>A3</source>
+        <translation>A3</translation>
+    </message>
+    <message>
+        <source>A4</source>
+        <translation>A4</translation>
+    </message>
+    <message>
+        <source>A5</source>
+        <translation>A5</translation>
+    </message>
+    <message>
+        <source>A6</source>
+        <translation>A6</translation>
+    </message>
+    <message>
+        <source>A7</source>
+        <translation>A7</translation>
+    </message>
+    <message>
+        <source>A8</source>
+        <translation>A8</translation>
+    </message>
+    <message>
+        <source>A9</source>
+        <translation>A9</translation>
+    </message>
+    <message>
+        <source>A10</source>
+        <translation>A10</translation>
+    </message>
+    <message>
+        <source>B0</source>
+        <translation>B0</translation>
+    </message>
+    <message>
+        <source>B1</source>
+        <translation>B1</translation>
+    </message>
+    <message>
+        <source>B2</source>
+        <translation>B2</translation>
+    </message>
+    <message>
+        <source>B3</source>
+        <translation>B3</translation>
+    </message>
+    <message>
+        <source>B4</source>
+        <translation>B4</translation>
+    </message>
+    <message>
+        <source>B5</source>
+        <translation>B5</translation>
+    </message>
+    <message>
+        <source>B6</source>
+        <translation>B6</translation>
+    </message>
+    <message>
+        <source>B7</source>
+        <translation>B7</translation>
+    </message>
+    <message>
+        <source>B8</source>
+        <translation>B8</translation>
+    </message>
+    <message>
+        <source>B9</source>
+        <translation>B9</translation>
+    </message>
+    <message>
+        <source>B10</source>
+        <translation>B10</translation>
+    </message>
+    <message>
+        <source>Executive (7.5 x 10 in)</source>
+        <translation>Esecutivo (7.5 x 10 pollici)</translation>
+    </message>
+    <message>
+        <source>Executive (7.25 x 10.5 in)</source>
+        <translation>Esecutivo (7.25 x 10.5 pollici)</translation>
+    </message>
+    <message>
+        <source>Folio (8.27 x 13 in)</source>
+        <translation>Folio (8.27 x 13 pollici)</translation>
+    </message>
+    <message>
+        <source>Legal</source>
+        <translation>Legale</translation>
+    </message>
+    <message>
+        <source>Letter / ANSI A</source>
+        <translation>Lettera / ANSI A</translation>
+    </message>
+    <message>
+        <source>Tabloid / ANSI B</source>
+        <translation>Tabloid / ANSI B</translation>
+    </message>
+    <message>
+        <source>Ledger / ANSI B</source>
+        <translation>Libro mastro / ANSI B</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personalizzata</translation>
+    </message>
+    <message>
+        <source>A3 Extra</source>
+        <translation>A3 Extra</translation>
+    </message>
+    <message>
+        <source>A4 Extra</source>
+        <translation>A4 Extra</translation>
+    </message>
+    <message>
+        <source>A4 Plus</source>
+        <translation>A4 Plus</translation>
+    </message>
+    <message>
+        <source>A4 Small</source>
+        <translation>A4 Piccolo</translation>
+    </message>
+    <message>
+        <source>A5 Extra</source>
+        <translation>A5 Extra</translation>
+    </message>
+    <message>
+        <source>B5 Extra</source>
+        <translation>B5 Extra</translation>
+    </message>
+    <message>
+        <source>JIS B0</source>
+        <translation>JIS B0</translation>
+    </message>
+    <message>
+        <source>JIS B1</source>
+        <translation>JIS B1</translation>
+    </message>
+    <message>
+        <source>JIS B2</source>
+        <translation>JIS B2</translation>
+    </message>
+    <message>
+        <source>JIS B3</source>
+        <translation>JIS B3</translation>
+    </message>
+    <message>
+        <source>JIS B4</source>
+        <translation>JIS B4</translation>
+    </message>
+    <message>
+        <source>JIS B5</source>
+        <translation>JIS B5</translation>
+    </message>
+    <message>
+        <source>JIS B6</source>
+        <translation>JIS B6</translation>
+    </message>
+    <message>
+        <source>JIS B7</source>
+        <translation>JIS B7</translation>
+    </message>
+    <message>
+        <source>JIS B8</source>
+        <translation>JIS B8</translation>
+    </message>
+    <message>
+        <source>JIS B9</source>
+        <translation>JIS B9</translation>
+    </message>
+    <message>
+        <source>JIS B10</source>
+        <translation>JIS B10</translation>
+    </message>
+    <message>
+        <source>ANSI C</source>
+        <translation>ANSI C</translation>
+    </message>
+    <message>
+        <source>ANSI D</source>
+        <translation>ANSI D</translation>
+    </message>
+    <message>
+        <source>ANSI E</source>
+        <translation>ANSI E</translation>
+    </message>
+    <message>
+        <source>Legal Extra</source>
+        <translation>Legale extra</translation>
+    </message>
+    <message>
+        <source>Letter Extra</source>
+        <translation>Lettera extra</translation>
+    </message>
+    <message>
+        <source>Letter Plus</source>
+        <translation>Lettera plus</translation>
+    </message>
+    <message>
+        <source>Letter Small</source>
+        <translation>Lettera piccola</translation>
+    </message>
+    <message>
+        <source>Tabloid Extra</source>
+        <translation>Tabloid extra</translation>
+    </message>
+    <message>
+        <source>Architect A</source>
+        <translation>Architetto A</translation>
+    </message>
+    <message>
+        <source>Architect B</source>
+        <translation>Architetto B</translation>
+    </message>
+    <message>
+        <source>Architect C</source>
+        <translation>Architetto C</translation>
+    </message>
+    <message>
+        <source>Architect D</source>
+        <translation>Architetto D</translation>
+    </message>
+    <message>
+        <source>Architect E</source>
+        <translation>Architetto E</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation>Nota</translation>
+    </message>
+    <message>
+        <source>Quarto</source>
+        <translation>Quarto</translation>
+    </message>
+    <message>
+        <source>Statement</source>
+        <translation>Dichiarazione</translation>
+    </message>
+    <message>
+        <source>Super A</source>
+        <translation>Super A</translation>
+    </message>
+    <message>
+        <source>Super B</source>
+        <translation>Super B</translation>
+    </message>
+    <message>
+        <source>Postcard</source>
+        <translation>Cartolina</translation>
+    </message>
+    <message>
+        <source>Double Postcard</source>
+        <translation>Cartolina doppia</translation>
+    </message>
+    <message>
+        <source>PRC 16K</source>
+        <translation>PRC 16K</translation>
+    </message>
+    <message>
+        <source>PRC 32K</source>
+        <translation>PRC 32K</translation>
+    </message>
+    <message>
+        <source>PRC 32K Big</source>
+        <translation>PRC 32K Grande</translation>
+    </message>
+    <message>
+        <source>Fan-fold US (14.875 x 11 in)</source>
+        <translation>Pieghevole US (14.875 x 11 pollici)</translation>
+    </message>
+    <message>
+        <source>Fan-fold German (8.5 x 12 in)</source>
+        <translation>Pieghevole tedesco (8.5 x 12 pollici)</translation>
+    </message>
+    <message>
+        <source>Fan-fold German Legal (8.5 x 13 in)</source>
+        <translation>Pieghevole tedesco legale (8.5 x 13 pollici)</translation>
+    </message>
+    <message>
+        <source>Envelope B4</source>
+        <translation>Busta B4</translation>
+    </message>
+    <message>
+        <source>Envelope B5</source>
+        <translation>Busta B5</translation>
+    </message>
+    <message>
+        <source>Envelope B6</source>
+        <translation>Busta B6</translation>
+    </message>
+    <message>
+        <source>Envelope C0</source>
+        <translation>Busta C0</translation>
+    </message>
+    <message>
+        <source>Envelope C1</source>
+        <translation>Busta C1</translation>
+    </message>
+    <message>
+        <source>Envelope C2</source>
+        <translation>Busta C2</translation>
+    </message>
+    <message>
+        <source>Envelope C3</source>
+        <translation>Busta C3</translation>
+    </message>
+    <message>
+        <source>Envelope C4</source>
+        <translation>Busta C4</translation>
+    </message>
+    <message>
+        <source>Envelope C5</source>
+        <translation>Busta C5</translation>
+    </message>
+    <message>
+        <source>Envelope C6</source>
+        <translation>Busta C6</translation>
+    </message>
+    <message>
+        <source>Envelope C65</source>
+        <translation>Busta C65</translation>
+    </message>
+    <message>
+        <source>Envelope C7</source>
+        <translation>Busta C7</translation>
+    </message>
+    <message>
+        <source>Envelope DL</source>
+        <translation>Busta DL</translation>
+    </message>
+    <message>
+        <source>Envelope US 9</source>
+        <translation>Busta US 9</translation>
+    </message>
+    <message>
+        <source>Envelope US 10</source>
+        <translation>Busta US 10</translation>
+    </message>
+    <message>
+        <source>Envelope US 11</source>
+        <translation>Busta US 11</translation>
+    </message>
+    <message>
+        <source>Envelope US 12</source>
+        <translation>Busta US 12</translation>
+    </message>
+    <message>
+        <source>Envelope US 14</source>
+        <translation>Busta US 14</translation>
+    </message>
+    <message>
+        <source>Envelope Monarch</source>
+        <translation>Busta Monarch</translation>
+    </message>
+    <message>
+        <source>Envelope Personal</source>
+        <translation>Busta personale</translation>
+    </message>
+    <message>
+        <source>Envelope Chou 3</source>
+        <translation>Busta Chou 3</translation>
+    </message>
+    <message>
+        <source>Envelope Chou 4</source>
+        <translation>Busta Chou 4</translation>
+    </message>
+    <message>
+        <source>Envelope Invite</source>
+        <translation>Busta invito</translation>
+    </message>
+    <message>
+        <source>Envelope Italian</source>
+        <translation>Busta italiana</translation>
+    </message>
+    <message>
+        <source>Envelope Kaku 2</source>
+        <translation>Busta Kaku 2</translation>
+    </message>
+    <message>
+        <source>Envelope Kaku 3</source>
+        <translation>Busta Kaku 3</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 1</source>
+        <translation>Busta PRC 1</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 2</source>
+        <translation>Busta PRC 2</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 3</source>
+        <translation>Busta PRC 3</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 4</source>
+        <translation>Busta PRC 4</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 5</source>
+        <translation>Busta PRC 5</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 6</source>
+        <translation>Busta PRC 6</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 7</source>
+        <translation>Busta PRC 7</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 8</source>
+        <translation>Busta PRC 8</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 9</source>
+        <translation>Busta PRC 9</translation>
+    </message>
+    <message>
+        <source>Envelope PRC 10</source>
+        <translation>Busta PRC 10</translation>
+    </message>
+    <message>
+        <source>Envelope You 4</source>
+        <translation>Busta You 4</translation>
+    </message>
+</context>
+<context>
+    <name>QPlatformTheme</name>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <source>Save All</source>
+        <translation>Salva tutti</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation>&amp;Sì</translation>
+    </message>
+    <message>
+        <source>Yes to &amp;All</source>
+        <translation>Sì &amp;a tutti</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation>&amp;No</translation>
+    </message>
+    <message>
+        <source>N&amp;o to All</source>
+        <translation>N&amp;o a tutti</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation>Interrompi</translation>
+    </message>
+    <message>
+        <source>Retry</source>
+        <translation>Riprova</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <translation>Ignora</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation>Tralascia</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation>Applica</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation>Ripristina valori predefiniti</translation>
+    </message>
+</context>
+<context>
+    <name>QPluginLoader</name>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>The plugin was not loaded.</source>
+        <translation>L&apos;estensione non è stata caricata.</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintDialog</name>
+    <message>
+        <source>locally connected</source>
+        <translation>connessa localmente</translation>
+    </message>
+    <message>
+        <source>Aliases: %1</source>
+        <translation>Alias: %1</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>sconosciuto</translation>
+    </message>
+    <message>
+        <source>Print To File ...</source>
+        <translation>Stampa su file...</translation>
+    </message>
+    <message>
+        <source>File %1 is not writable.
+Please choose a different file name.</source>
+        <translation>Il file %1 non è scrivibile.
+Scegli un nome file diverso.</translation>
+    </message>
+    <message>
+        <source>%1 already exists.
+Do you want to overwrite it?</source>
+        <translation>%1 esiste già.
+Vuoi sovrascriverlo?</translation>
+    </message>
+    <message>
+        <source>%1 is a directory.
+Please choose a different file name.</source>
+        <translation>%1 è una cartella.
+Scegli un nome diverso.</translation>
+    </message>
+    <message>
+        <source>A0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A1</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A3</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A4</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A5</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A6</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A7</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A8</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>A9</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B1</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B3</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B4</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B5</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B6</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B7</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B8</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B9</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>B10</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>C5E</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>DLE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Executive</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Folio</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Ledger</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Legal</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Letter</source>
+        <translation>Lettera</translation>
+    </message>
+    <message>
+        <source>Tabloid</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>US Common #10 Envelope</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personalizzato</translation>
+    </message>
+    <message>
+        <source>&amp;Options &gt;&gt;</source>
+        <translation>&amp;Opzioni &gt;&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Print</source>
+        <translation>Stam&amp;pa</translation>
+    </message>
+    <message>
+        <source>&amp;Options &lt;&lt;</source>
+        <translation>&amp;Opzioni &lt;&lt;</translation>
+    </message>
+    <message>
+        <source>Print to File (PDF)</source>
+        <translation>Stampa su file (PDF)</translation>
+    </message>
+    <message>
+        <source>Print to File (Postscript)</source>
+        <translation>Stampa su file (Postscript)</translation>
+    </message>
+    <message>
+        <source>Local file</source>
+        <translation>File locale</translation>
+    </message>
+    <message>
+        <source>Write %1 file</source>
+        <translation>Scrivi %1 file</translation>
+    </message>
+    <message>
+        <source>Print</source>
+        <translation>Stampa</translation>
+    </message>
+    <message>
+        <source>Left to Right, Top to Bottom</source>
+        <translation>Da sinistra a destra, dall&apos;alto verso il basso</translation>
+    </message>
+    <message>
+        <source>Left to Right, Bottom to Top</source>
+        <translation>Da sinistra a destra, dal basso verso l&apos;alto</translation>
+    </message>
+    <message>
+        <source>Right to Left, Bottom to Top</source>
+        <translation>Da destra a sinistra, dal basso verso l&apos;alto</translation>
+    </message>
+    <message>
+        <source>Right to Left, Top to Bottom</source>
+        <translation>Da destra a sinistra, dall&apos;alto verso il basso</translation>
+    </message>
+    <message>
+        <source>Bottom to Top, Left to Right</source>
+        <translation>Dal basso verso l&apos;alto, da sinistra a destra</translation>
+    </message>
+    <message>
+        <source>Bottom to Top, Right to Left</source>
+        <translation>Dal basso verso l&apos;alto, da destra a sinistra</translation>
+    </message>
+    <message>
+        <source>Top to Bottom, Left to Right</source>
+        <translation>Dall&apos;alto verso il basso, da sinistra a destra</translation>
+    </message>
+    <message>
+        <source>Top to Bottom, Right to Left</source>
+        <translation>Dall&apos;alto verso il basso, da destra a sinistra</translation>
+    </message>
+    <message>
+        <source>1 (1x1)</source>
+        <translation>1 (1x1)</translation>
+    </message>
+    <message>
+        <source>2 (2x1)</source>
+        <translation>2 (2x1)</translation>
+    </message>
+    <message>
+        <source>4 (2x2)</source>
+        <translation>4 (2x2)</translation>
+    </message>
+    <message>
+        <source>6 (2x3)</source>
+        <translation>6 (2x3)</translation>
+    </message>
+    <message>
+        <source>9 (3x3)</source>
+        <translation>9 (3x3)</translation>
+    </message>
+    <message>
+        <source>16 (4x4)</source>
+        <translation>16 (4x4)</translation>
+    </message>
+    <message>
+        <source>All Pages</source>
+        <translation>Tutte le pagine</translation>
+    </message>
+    <message>
+        <source>Odd Pages</source>
+        <translation>Pagine dispari</translation>
+    </message>
+    <message>
+        <source>Even Pages</source>
+        <translation>Pagine pari</translation>
+    </message>
+    <message>
+        <source>Write PDF file</source>
+        <translation>Scrivi file PDF</translation>
+    </message>
+    <message>
+        <source>Options &apos;Pages Per Sheet&apos; and &apos;Page Set&apos; cannot be used together.
+Please turn one of those options off.</source>
+        <translation>Le opzioni &apos;pagine per foglio&apos; e &apos;insieme di pagine&apos; non possono essere utilizzate insieme.
+Disattiva una di queste opzioni.</translation>
+    </message>
+    <message>
+        <source>The &apos;From&apos; value cannot be greater than the &apos;To&apos; value.</source>
+        <translation>Il valore di &quot;Da&quot; non può essere maggiore del valore di &quot;A&quot;.</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Automatic</source>
+        <translation>Automatico</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintPreviewDialog</name>
+    <message>
+        <source>Page Setup</source>
+        <translation>Impostazioni di pagina</translation>
+    </message>
+    <message>
+        <source>Print Preview</source>
+        <translation>Anteprima di stampa</translation>
+    </message>
+    <message>
+        <source>Next page</source>
+        <translation>Pagina successiva</translation>
+    </message>
+    <message>
+        <source>Previous page</source>
+        <translation>Pagina precedente</translation>
+    </message>
+    <message>
+        <source>First page</source>
+        <translation>Prima pagina</translation>
+    </message>
+    <message>
+        <source>Last page</source>
+        <translation>Ultima pagina</translation>
+    </message>
+    <message>
+        <source>Fit width</source>
+        <translation>Adatta alla larghezza</translation>
+    </message>
+    <message>
+        <source>Fit page</source>
+        <translation>Adatta alla pagina</translation>
+    </message>
+    <message>
+        <source>Zoom in</source>
+        <translation>Aumenta zoom</translation>
+    </message>
+    <message>
+        <source>Zoom out</source>
+        <translation>Riduci zoom</translation>
+    </message>
+    <message>
+        <source>Portrait</source>
+        <translation>Verticale</translation>
+    </message>
+    <message>
+        <source>Landscape</source>
+        <translation>Orizzontale</translation>
+    </message>
+    <message>
+        <source>Show single page</source>
+        <translation>Mostra pagina singola</translation>
+    </message>
+    <message>
+        <source>Show facing pages</source>
+        <translation>Mostra pagine affiancate</translation>
+    </message>
+    <message>
+        <source>Show overview of all pages</source>
+        <translation>Mostra l&apos;anteprima di tutte le pagine</translation>
+    </message>
+    <message>
+        <source>Print</source>
+        <translation>Stampa</translation>
+    </message>
+    <message>
+        <source>Page setup</source>
+        <translation>Impostazioni pagina</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>%1%</source>
+        <translation>%1%</translation>
+    </message>
+    <message>
+        <source>Export to PDF</source>
+        <translation>Esporta come PDF</translation>
+    </message>
+    <message>
+        <source>Export to PostScript</source>
+        <translation type="vanished">Esporta come PostScript</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintPropertiesDialog</name>
+    <message>
+        <source>Printer Properties</source>
+        <translation>Proprietà della stampante</translation>
+    </message>
+    <message>
+        <source>Job Options</source>
+        <translation>Opzioni del processo</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintPropertiesWidget</name>
+    <message>
+        <source>Form</source>
+        <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>Page</source>
+        <translation>Pagina</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation>Avanzate</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintSettingsOutput</name>
+    <message>
+        <source>Form</source>
+        <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>Copies</source>
+        <translation>Copie</translation>
+    </message>
+    <message>
+        <source>Print range</source>
+        <translation>Intervallo di stampa</translation>
+    </message>
+    <message>
+        <source>Print all</source>
+        <translation>Stampa tutto</translation>
+    </message>
+    <message>
+        <source>Pages from</source>
+        <translation>Pagine da</translation>
+    </message>
+    <message>
+        <source>to</source>
+        <translation>a</translation>
+    </message>
+    <message>
+        <source>Selection</source>
+        <translation>Selezione</translation>
+    </message>
+    <message>
+        <source>Output Settings</source>
+        <translation>Impostazioni d&apos;uscita</translation>
+    </message>
+    <message>
+        <source>Copies:</source>
+        <translation>Copie:</translation>
+    </message>
+    <message>
+        <source>Collate</source>
+        <translation>Fascicola</translation>
+    </message>
+    <message>
+        <source>Reverse</source>
+        <translation>Inversa</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation>Opzioni</translation>
+    </message>
+    <message>
+        <source>Color Mode</source>
+        <translation>Modalità colore</translation>
+    </message>
+    <message>
+        <source>Color</source>
+        <translation>Colore</translation>
+    </message>
+    <message>
+        <source>Grayscale</source>
+        <translation>Scala di grigio</translation>
+    </message>
+    <message>
+        <source>Duplex Printing</source>
+        <translation>Stampa fronte/retro</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Nessuna</translation>
+    </message>
+    <message>
+        <source>Long side</source>
+        <translation>Lato lungo</translation>
+    </message>
+    <message>
+        <source>Short side</source>
+        <translation>Lato corto</translation>
+    </message>
+    <message>
+        <source>Current Page</source>
+        <translation>Pagina corrente</translation>
+    </message>
+    <message>
+        <source>Page Set:</source>
+        <translation>Insieme di pagine:</translation>
+    </message>
+</context>
+<context>
+    <name>QPrintWidget</name>
+    <message>
+        <source>Form</source>
+        <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>Printer</source>
+        <translation>Stampante</translation>
+    </message>
+    <message>
+        <source>&amp;Name:</source>
+        <translation>&amp;Nome:</translation>
+    </message>
+    <message>
+        <source>P&amp;roperties</source>
+        <translation>P&amp;roprietà</translation>
+    </message>
+    <message>
+        <source>Location:</source>
+        <translation>Posizione:</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Anteprima</translation>
+    </message>
+    <message>
+        <source>Type:</source>
+        <translation>Tipo:</translation>
+    </message>
+    <message>
+        <source>Output &amp;file:</source>
+        <translation>&amp;File di uscita:</translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+</context>
+<context>
+    <name>QProcess</name>
+    <message>
+        <source>Error reading from process</source>
+        <translation>Errore di lettura dal processo</translation>
+    </message>
+    <message>
+        <source>Error writing to process</source>
+        <translation>Errore di scrittura sul processo</translation>
+    </message>
+    <message>
+        <source>Process crashed</source>
+        <translation>Il processo è andato in crash</translation>
+    </message>
+    <message>
+        <source>Process failed to start</source>
+        <translation>Avvio del processo non riuscito</translation>
+    </message>
+    <message>
+        <source>No program defined</source>
+        <translation>Nessun programma definito</translation>
+    </message>
+    <message>
+        <source>Could not open input redirection for reading</source>
+        <translation>Impossibile aprire la redirezione dell&apos;input per la lettura</translation>
+    </message>
+    <message>
+        <source>Could not open output redirection for writing</source>
+        <translation>Impossibile aprire la redirezione dell&apos;output per la scrittura</translation>
+    </message>
+    <message>
+        <source>Resource error (fork failure): %1</source>
+        <translation>Errore di risorsa (fork non riuscito): %1</translation>
+    </message>
+    <message>
+        <source>Process operation timed out</source>
+        <translation>Operazione del processo scaduta</translation>
+    </message>
+    <message>
+        <source>Process failed to start: %1</source>
+        <translation>Avvio del processo non riuscito: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QProgressDialog</name>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
+    <name>QPushButton</name>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+</context>
+<context>
+    <name>QQnxFileDialogHelper</name>
+    <message>
+        <source>CANCEL</source>
+        <translation type="vanished">ANNULLA</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="vanished">OK</translation>
+    </message>
+    <message>
+        <source>All files (*.*)</source>
+        <translation>Tutti i file (*.*)</translation>
+    </message>
+</context>
+<context>
+    <name>QQnxFilePicker</name>
+    <message>
+        <source>Pick a file</source>
+        <translation>Scegli un file</translation>
+    </message>
+</context>
+<context>
+    <name>QRadioButton</name>
+    <message>
+        <source>Check</source>
+        <translation>Seleziona</translation>
+    </message>
+</context>
+<context>
+    <name>QRegExp</name>
+    <message>
+        <source>no error occurred</source>
+        <translation>non si è verificato alcun errore</translation>
+    </message>
+    <message>
+        <source>disabled feature used</source>
+        <translation>utilizzata una funzionalità disabilitata</translation>
+    </message>
+    <message>
+        <source>bad char class syntax</source>
+        <translation>sintassi della classe di caratteri errata</translation>
+    </message>
+    <message>
+        <source>bad lookahead syntax</source>
+        <translation>sintassi di lookahead non valida</translation>
+    </message>
+    <message>
+        <source>bad repetition syntax</source>
+        <translation>sintassi di ripetizione non valida</translation>
+    </message>
+    <message>
+        <source>invalid octal value</source>
+        <translation>valore ottale non valido</translation>
+    </message>
+    <message>
+        <source>missing left delim</source>
+        <translation>delimitatore sinistro mancante</translation>
+    </message>
+    <message>
+        <source>unexpected end</source>
+        <translation>fine inattesa</translation>
+    </message>
+    <message>
+        <source>met internal limit</source>
+        <translation>raggiunto limite interno</translation>
+    </message>
+    <message>
+        <source>lookbehinds not supported, see QTBUG-2371</source>
+        <translation>ricerca all&apos;indietro non supportata, vedi QTBUG-2371</translation>
+    </message>
+    <message>
+        <source>invalid interval</source>
+        <translation>intervallo non valido</translation>
+    </message>
+    <message>
+        <source>invalid category</source>
+        <translation>categoria non valida</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpression</name>
+    <message>
+        <source>no error</source>
+        <translation>nessun errore</translation>
+    </message>
+    <message>
+        <source>\ at end of pattern</source>
+        <translation>\ alla fine del pattern</translation>
+    </message>
+    <message>
+        <source>\c at end of pattern</source>
+        <translation>\c alla fine del pattern</translation>
+    </message>
+    <message>
+        <source>unrecognized character follows \</source>
+        <translation>carattere non riconosciuto dopo \</translation>
+    </message>
+    <message>
+        <source>numbers out of order in {} quantifier</source>
+        <translation>numeri fuori sequenza nel quantificatore {}</translation>
+    </message>
+    <message>
+        <source>number too big in {} quantifier</source>
+        <translation>numero troppo grande nel quantificatore {}</translation>
+    </message>
+    <message>
+        <source>missing terminating ] for character class</source>
+        <translation>terminatore ] mancante per la classe di caratteri</translation>
+    </message>
+    <message>
+        <source>invalid escape sequence in character class</source>
+        <translation>sequenza di escape non valida nella classe di caratteri</translation>
+    </message>
+    <message>
+        <source>range out of order in character class</source>
+        <translation>intervallo fuori sequenza nella classe di caratteri</translation>
+    </message>
+    <message>
+        <source>nothing to repeat</source>
+        <translation>nulla da ripetere</translation>
+    </message>
+    <message>
+        <source>internal error: unexpected repeat</source>
+        <translation>errore interno: ripetizione imprevista</translation>
+    </message>
+    <message>
+        <source>unrecognized character after (? or (?-</source>
+        <translation>carattere non riconosciuto dopo (? o (?-</translation>
+    </message>
+    <message>
+        <source>POSIX named classes are supported only within a class</source>
+        <translation>le classi di tipo POSIX sono supportate solo all&apos;interno di una classe</translation>
+    </message>
+    <message>
+        <source>missing )</source>
+        <translation>) mancante</translation>
+    </message>
+    <message>
+        <source>reference to non-existent subpattern</source>
+        <translation>riferimento a sotto-pattern non esistente</translation>
+    </message>
+    <message>
+        <source>erroffset passed as NULL</source>
+        <translation>erroffset passato come NULL</translation>
+    </message>
+    <message>
+        <source>unknown option bit(s) set</source>
+        <translation>impostati bit sconosciuti per l&apos;opzione</translation>
+    </message>
+    <message>
+        <source>missing ) after comment</source>
+        <translation>) mancante dopo il commento</translation>
+    </message>
+    <message>
+        <source>regular expression is too large</source>
+        <translation>l&apos;espressione regolare è troppo grande</translation>
+    </message>
+    <message>
+        <source>failed to get memory</source>
+        <translation>impossibile ottenere la memoria</translation>
+    </message>
+    <message>
+        <source>unmatched parentheses</source>
+        <translation>parentesi non corrispondenti</translation>
+    </message>
+    <message>
+        <source>internal error: code overflow</source>
+        <translation>errore interno: overflow del codice</translation>
+    </message>
+    <message>
+        <source>unrecognized character after (?&lt;</source>
+        <translation>carattere non riconosciuto dopo (?&lt;</translation>
+    </message>
+    <message>
+        <source>lookbehind assertion is not fixed length</source>
+        <translation>l&apos;asserzione di ricerca all&apos;indietro non è a lunghezza fissa</translation>
+    </message>
+    <message>
+        <source>malformed number or name after (?(</source>
+        <translation>numero o nome maldefinito dopo (?(</translation>
+    </message>
+    <message>
+        <source>conditional group contains more than two branches</source>
+        <translation>il gruppo condizionale contiene più di due diramazioni</translation>
+    </message>
+    <message>
+        <source>assertion expected after (?(</source>
+        <translation>asserzione prevista dopo (?(</translation>
+    </message>
+    <message>
+        <source>(?R or (?[+-]digits must be followed by )</source>
+        <translation>(?R o (?[+-]cifre devono essere seguite da )</translation>
+    </message>
+    <message>
+        <source>unknown POSIX class name</source>
+        <translation>nome di classe POSIX sconosciuto</translation>
+    </message>
+    <message>
+        <source>POSIX collating elements are not supported</source>
+        <translation>gli elementi POSIX di raccoglimento non sono supportati</translation>
+    </message>
+    <message>
+        <source>this version of PCRE is not compiled with PCRE_UTF8 support</source>
+        <translation>questa versione di PCRE non è compilata con il supporto PCRE_UTF8</translation>
+    </message>
+    <message>
+        <source>character value in \x{...} sequence is too large</source>
+        <translation>il valore del carattere nella sequenza \x{...} è troppo grande</translation>
+    </message>
+    <message>
+        <source>invalid condition (?(0)</source>
+        <translation>condizione (?(0) non valida</translation>
+    </message>
+    <message>
+        <source>\C not allowed in lookbehind assertion</source>
+        <translation>\C non consentito in una asserzione lookbehind</translation>
+    </message>
+    <message>
+        <source>PCRE does not support \L, \l, \N{name}, \U, or \u</source>
+        <translation>PCRE non supporta \L, \l, \N{nome}, \U, o \u</translation>
+    </message>
+    <message>
+        <source>number after (?C is &gt; 255</source>
+        <translation>il numero dopo (?C è &gt; 255</translation>
+    </message>
+    <message>
+        <source>closing ) for (?C expected</source>
+        <translation>prevista ) di chiusura per (?C</translation>
+    </message>
+    <message>
+        <source>recursive call could loop indefinitely</source>
+        <translation>la chiamata ricorsiva potrebbe entrare in un loop infinito</translation>
+    </message>
+    <message>
+        <source>unrecognized character after (?P</source>
+        <translation>carattere non riconosciuto dopo (?P</translation>
+    </message>
+    <message>
+        <source>syntax error in subpattern name (missing terminator)</source>
+        <translation>errore di sintassi nel nome del sotto-pattern (terminatore mancante)</translation>
+    </message>
+    <message>
+        <source>two named subpatterns have the same name</source>
+        <translation>due sotto-pattern con nome hanno lo stesso nome</translation>
+    </message>
+    <message>
+        <source>invalid UTF-8 string</source>
+        <translation>stringa UTF-8 non valida</translation>
+    </message>
+    <message>
+        <source>support for \P, \p, and \X has not been compiled</source>
+        <translation>il supporto per \P, \p e \X non è stato compilato</translation>
+    </message>
+    <message>
+        <source>malformed \P or \p sequence</source>
+        <translation>sequenza \P o \p malformata</translation>
+    </message>
+    <message>
+        <source>unknown property name after \P or \p</source>
+        <translation>nome della proprietà sconosciuto dopo \P o \p</translation>
+    </message>
+    <message>
+        <source>subpattern name is too long (maximum 32 characters)</source>
+        <translation>il nome del sotto-pattern è troppo lungo (massimo 32 caratteri)</translation>
+    </message>
+    <message>
+        <source>too many named subpatterns (maximum 10000)</source>
+        <translation>troppi sotto-pattern con nome (massimo 10000)</translation>
+    </message>
+    <message>
+        <source>octal value is greater than \377 (not in UTF-8 mode)</source>
+        <translation>il valore ottale è maggiore di \377 (non in modalità UTF-8)</translation>
+    </message>
+    <message>
+        <source>internal error: overran compiling workspace</source>
+        <translation>errore interno: sconfinamento nella compilazione dello spazio di lavoro</translation>
+    </message>
+    <message>
+        <source>internal error: previously-checked referenced subpattern not found</source>
+        <translation>errore interno: riferimento non trovato al sotto-modello verificato in precedenza</translation>
+    </message>
+    <message>
+        <source>DEFINE group contains more than one branch</source>
+        <translation>il gruppo DEFINE contiene più di un ramo</translation>
+    </message>
+    <message>
+        <source>repeating a DEFINE group is not allowed</source>
+        <translation>la ripetizione di un gruppo DEFINE non è consentita</translation>
+    </message>
+    <message>
+        <source>inconsistent NEWLINE options</source>
+        <translation>opzioni NEWLINE inconsistenti</translation>
+    </message>
+    <message>
+        <source>\g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number</source>
+        <translation>\g non è seguito da un nome/numero tra parentesi, parentesi graffe o tra virgolette o da un numero semplice</translation>
+    </message>
+    <message>
+        <source>a numbered reference must not be zero</source>
+        <translation>un riferimento numerato non deve essere pari a zero</translation>
+    </message>
+    <message>
+        <source>an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)</source>
+        <translation>un parametro non è consentito per (*ACCEPT), (*FAIL), o (*COMMIT)</translation>
+    </message>
+    <message>
+        <source>(*VERB) not recognized</source>
+        <translation>(*VERBO) non riconosciuto</translation>
+    </message>
+    <message>
+        <source>number is too big</source>
+        <translation>il numero è troppo grande</translation>
+    </message>
+    <message>
+        <source>subpattern name expected</source>
+        <translation>previsto nome del sotto-pattern</translation>
+    </message>
+    <message>
+        <source>digit expected after (?+</source>
+        <translation>cifra prevista dopo (?+</translation>
+    </message>
+    <message>
+        <source>] is an invalid data character in JavaScript compatibility mode</source>
+        <translation>] è un carattere non valido nella modalità di compatibilità JavaScript</translation>
+    </message>
+    <message>
+        <source>different names for subpatterns of the same number are not allowed</source>
+        <translation>nomi diversi per sotto-pattern dello stesso numero non sono consentiti</translation>
+    </message>
+    <message>
+        <source>(*MARK) must have an argument</source>
+        <translation>(*MARK) deve avere un parametro</translation>
+    </message>
+    <message>
+        <source>this version of PCRE is not compiled with PCRE_UCP support</source>
+        <translation>questa versione di PCRE non è compilata con il supporto PCRE_UCP</translation>
+    </message>
+    <message>
+        <source>\c must be followed by an ASCII character</source>
+        <translation>\c deve essere seguito da un carattere ASCII</translation>
+    </message>
+    <message>
+        <source>\k is not followed by a braced, angle-bracketed, or quoted name</source>
+        <translation>\k non è seguito da un nome tra parentesi, parentesi graffe o virgolette</translation>
+    </message>
+    <message>
+        <source>internal error: unknown opcode in find_fixedlength()</source>
+        <translation>errore interno: opcode sconosciuto in find_fixedlength()</translation>
+    </message>
+    <message>
+        <source>\N is not supported in a class</source>
+        <translation>\N non è supportato in una classe</translation>
+    </message>
+    <message>
+        <source>too many forward references</source>
+        <translation>troppi riferimenti in avanti</translation>
+    </message>
+    <message>
+        <source>disallowed Unicode code point (&gt;= 0xd800 &amp;&amp; &lt;= 0xdfff)</source>
+        <translation>code point Unicode non consentito (&gt;= 0xd800 &amp;&amp; &lt;= 0xdfff)</translation>
+    </message>
+    <message>
+        <source>invalid UTF-16 string</source>
+        <translation>stringa UTF-16 non valida</translation>
+    </message>
+    <message>
+        <source>name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)</source>
+        <translation>nome troppo lungo in (*MARK), (*PRUNE), (*SKIP), o (*THEN)</translation>
+    </message>
+    <message>
+        <source>character value in \u.... sequence is too large</source>
+        <translation>valore del carattere troppo grande nella sequenza \u....</translation>
+    </message>
+    <message>
+        <source>invalid UTF-32 string</source>
+        <translation>stringa UTF-32 non valida</translation>
+    </message>
+    <message>
+        <source>setting UTF is disabled by the application</source>
+        <translation>l&apos;impostazione di UTF è stata disabilitata dall&apos;applicazione</translation>
+    </message>
+    <message>
+        <source>non-hex character in \x{} (closing brace missing?)</source>
+        <translation>carattere non esadecimale in \x{} (parentesi chiusa mancante?)</translation>
+    </message>
+    <message>
+        <source>non-octal character in \o{} (closing brace missing?)</source>
+        <translation>carattere non ottale in \o{} (parentesi chiusa mancante?)</translation>
+    </message>
+    <message>
+        <source>missing opening brace after \o</source>
+        <translation>parentesi aperta mancante dopo \o</translation>
+    </message>
+    <message>
+        <source>parentheses are too deeply nested</source>
+        <translation>le parentesi sono annidate troppo profondamente</translation>
+    </message>
+    <message>
+        <source>invalid range in character class</source>
+        <translation>intervallo non valido nella classe di caratteri</translation>
+    </message>
+    <message>
+        <source>group name must start with a non-digit</source>
+        <translation>il nome del gruppo non deve iniziare con una cifra</translation>
+    </message>
+    <message>
+        <source>parentheses are too deeply nested (stack check)</source>
+        <translation>le parentesi sono annidate troppo profondamente (verifica dello stack)</translation>
+    </message>
+    <message>
+        <source>digits missing in \x{} or \o{}</source>
+        <translation>cifre mancanti in \x{} o \o{}</translation>
+    </message>
+</context>
+<context>
+    <name>QSQLite2Driver</name>
+    <message>
+        <source>Error to open database</source>
+        <translation>Errore in fase di apertura del database</translation>
+    </message>
+    <message>
+        <source>Unable to begin transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile applicare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback Transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+    <message>
+        <source>Error opening database</source>
+        <translation>Errore di apertura del database</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile annullare la transazione</translation>
+    </message>
+</context>
+<context>
+    <name>QSQLite2Result</name>
+    <message>
+        <source>Unable to fetch results</source>
+        <translation>Impossibile ottenere risultati</translation>
+    </message>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+</context>
+<context>
+    <name>QSQLiteDriver</name>
+    <message>
+        <source>Error opening database</source>
+        <translation>Errore in fase di apertura del database</translation>
+    </message>
+    <message>
+        <source>Error closing database</source>
+        <translation>Errore in fase di chiusura del database</translation>
+    </message>
+    <message>
+        <source>Unable to begin transaction</source>
+        <translation>Impossibile iniziare la transazione</translation>
+    </message>
+    <message>
+        <source>Unable to commit transaction</source>
+        <translation>Impossibile applicare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to rollback transaction</source>
+        <translation>Impossibile effettuare il rollback della transazione</translation>
+    </message>
+</context>
+<context>
+    <name>QSQLiteResult</name>
+    <message>
+        <source>Unable to fetch row</source>
+        <translation>Impossibile ottenere la riga</translation>
+    </message>
+    <message>
+        <source>Unable to execute statement</source>
+        <translation>Impossibile eseguire l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to reset statement</source>
+        <translation>Impossibile ripristinare l&apos;istruzione</translation>
+    </message>
+    <message>
+        <source>Unable to bind parameters</source>
+        <translation>Impossibile associare i parametri</translation>
+    </message>
+    <message>
+        <source>Parameter count mismatch</source>
+        <translation>Il numero dei parametri non corrisponde</translation>
+    </message>
+    <message>
+        <source>No query</source>
+        <translation>Nessuna query</translation>
+    </message>
+    <message>
+        <source>Unable to execute multiple statements at a time</source>
+        <translation>Impossibile eseguire più comandi alla volta</translation>
+    </message>
+</context>
+<context>
+    <name>QSaveFile</name>
+    <message>
+        <source>Existing file %1 is not writable</source>
+        <translation>Il file esistente %1 non è scrivibile</translation>
+    </message>
+    <message>
+        <source>Filename refers to a directory</source>
+        <translation>Il nome di file fa riferimento ad una cartella</translation>
+    </message>
+    <message>
+        <source>Writing canceled by application</source>
+        <translation>La scrittura è stata annullata dall&apos;applicazione</translation>
+    </message>
+</context>
+<context>
+    <name>QScrollBar</name>
+    <message>
+        <source>Scroll here</source>
+        <translation>Scorri qui</translation>
+    </message>
+    <message>
+        <source>Left edge</source>
+        <translation>Bordo sinistro</translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation>In alto</translation>
+    </message>
+    <message>
+        <source>Right edge</source>
+        <translation>Bordo destro</translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation>In basso</translation>
+    </message>
+    <message>
+        <source>Page left</source>
+        <translation>Pagina sinistra</translation>
+    </message>
+    <message>
+        <source>Page up</source>
+        <translation>Pagina su</translation>
+    </message>
+    <message>
+        <source>Page right</source>
+        <translation>Pagina destra</translation>
+    </message>
+    <message>
+        <source>Page down</source>
+        <translation>Pagina giù</translation>
+    </message>
+    <message>
+        <source>Scroll left</source>
+        <translation>Scorrimento a sinistra</translation>
+    </message>
+    <message>
+        <source>Scroll up</source>
+        <translation>Scorrimento in alto</translation>
+    </message>
+    <message>
+        <source>Scroll right</source>
+        <translation>Scorrimento a destra</translation>
+    </message>
+    <message>
+        <source>Scroll down</source>
+        <translation>Scorrimento in basso</translation>
+    </message>
+    <message>
+        <source>Line up</source>
+        <translation>Allinea in alto</translation>
+    </message>
+    <message>
+        <source>Position</source>
+        <translation>Posizione</translation>
+    </message>
+    <message>
+        <source>Line down</source>
+        <translation>Allinea in basso</translation>
+    </message>
+</context>
+<context>
+    <name>QSharedMemory</name>
+    <message>
+        <source>%1: unable to set key on lock</source>
+        <translation>%1: impossibile impostare la chiave sul blocco</translation>
+    </message>
+    <message>
+        <source>%1: create size is less then 0</source>
+        <translation>%1: la dimensione di creazione è minore di 0</translation>
+    </message>
+    <message>
+        <source>%1: unable to lock</source>
+        <translation>%1: impossibile bloccare</translation>
+    </message>
+    <message>
+        <source>%1: unable to unlock</source>
+        <translation>%1: impossibile sbloccare</translation>
+    </message>
+    <message>
+        <source>%1: permission denied</source>
+        <translation>%1: permesso negato</translation>
+    </message>
+    <message>
+        <source>%1: already exists</source>
+        <translation>%1: esiste già</translation>
+    </message>
+    <message>
+        <source>%1: doesn&apos;t exists</source>
+        <translation>%1: non esiste</translation>
+    </message>
+    <message>
+        <source>%1: out of resources</source>
+        <translation>%1: risorse insufficienti</translation>
+    </message>
+    <message>
+        <source>%1: unknown error %2</source>
+        <translation>%1: errore sconosciuto %2</translation>
+    </message>
+    <message>
+        <source>%1: key is empty</source>
+        <translation>%1: la chiave è vuota</translation>
+    </message>
+    <message>
+        <source>%1: unix key file doesn&apos;t exists</source>
+        <translation>%1: il file della chiave UNIX non esiste</translation>
+    </message>
+    <message>
+        <source>%1: ftok failed</source>
+        <translation>%1: ftok non riuscito</translation>
+    </message>
+    <message>
+        <source>%1: unable to make key</source>
+        <translation>%1: impossibile creare la chiave</translation>
+    </message>
+    <message>
+        <source>%1: system-imposed size restrictions</source>
+        <translation>%1: restrizione delle dimensioni imposte dal sistema</translation>
+    </message>
+    <message>
+        <source>%1: not attached</source>
+        <translation>%1: non collegato</translation>
+    </message>
+    <message>
+        <source>%1: doesn&apos;t exist</source>
+        <translation>%1: non esiste</translation>
+    </message>
+    <message>
+        <source>%1: bad name</source>
+        <translation>%1: nome non valido</translation>
+    </message>
+    <message>
+        <source>%1: UNIX key file doesn&apos;t exist</source>
+        <translation>%1: il file della chiave UNIX non esiste</translation>
+    </message>
+    <message>
+        <source>%1: invalid size</source>
+        <translation>%1: dimensione non valida</translation>
+    </message>
+    <message>
+        <source>%1: key error</source>
+        <translation>%1: errore della chiave</translation>
+    </message>
+    <message>
+        <source>%1: size query failed</source>
+        <translation>%1: query della dimensione non riuscita</translation>
+    </message>
+</context>
+<context>
+    <name>QShortcut</name>
+    <message>
+        <source>Space</source>
+        <translation>Spazio</translation>
+    </message>
+    <message>
+        <source>Esc</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Backtab</source>
+        <translation>Tab inverso</translation>
+    </message>
+    <message>
+        <source>Backspace</source>
+        <translation>Backspace</translation>
+    </message>
+    <message>
+        <source>Return</source>
+        <translation>Invio</translation>
+    </message>
+    <message>
+        <source>Enter</source>
+        <translation>Invio</translation>
+    </message>
+    <message>
+        <source>Ins</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation>Canc</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pausa</translation>
+    </message>
+    <message>
+        <source>Print</source>
+        <translation>Stamp</translation>
+    </message>
+    <message>
+        <source>SysReq</source>
+        <translation>R sist</translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation>Home</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation>Fine</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Sinistra</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>Su</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Destra</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Giù</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>PagSu</translation>
+    </message>
+    <message>
+        <source>PgDown</source>
+        <translation>PagGiù</translation>
+    </message>
+    <message>
+        <source>CapsLock</source>
+        <translation>BlocMaiusc</translation>
+    </message>
+    <message>
+        <source>NumLock</source>
+        <translation>BlocNum</translation>
+    </message>
+    <message>
+        <source>ScrollLock</source>
+        <translation>BlocScorr</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation>Indietro</translation>
+    </message>
+    <message>
+        <source>Forward</source>
+        <translation>Avanti</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation>Ferma</translation>
+    </message>
+    <message>
+        <source>Refresh</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message>
+        <source>Volume Down</source>
+        <translation>Riduci volume</translation>
+    </message>
+    <message>
+        <source>Volume Mute</source>
+        <translation>Silenzia volume</translation>
+    </message>
+    <message>
+        <source>Volume Up</source>
+        <translation>Aumenta volume</translation>
+    </message>
+    <message>
+        <source>Bass Boost</source>
+        <translation>Esalta bassi</translation>
+    </message>
+    <message>
+        <source>Bass Up</source>
+        <translation>Aumenta bassi</translation>
+    </message>
+    <message>
+        <source>Bass Down</source>
+        <translation>Riduci bassi</translation>
+    </message>
+    <message>
+        <source>Treble Up</source>
+        <translation>Aumenta alti</translation>
+    </message>
+    <message>
+        <source>Treble Down</source>
+        <translation>Riduci alti</translation>
+    </message>
+    <message>
+        <source>Media Play</source>
+        <translation>Media Riproduci</translation>
+    </message>
+    <message>
+        <source>Media Stop</source>
+        <translation>Media Ferma</translation>
+    </message>
+    <message>
+        <source>Media Previous</source>
+        <translation>Media Precedente</translation>
+    </message>
+    <message>
+        <source>Media Next</source>
+        <translation>Media Successivo</translation>
+    </message>
+    <message>
+        <source>Media Record</source>
+        <translation>Media Registra</translation>
+    </message>
+    <message>
+        <source>Favorites</source>
+        <translation>Preferiti</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation>Cerca</translation>
+    </message>
+    <message>
+        <source>Standby</source>
+        <translation>Standby</translation>
+    </message>
+    <message>
+        <source>Open URL</source>
+        <translation>Apri URL</translation>
+    </message>
+    <message>
+        <source>Launch Mail</source>
+        <translation>Avvia Posta</translation>
+    </message>
+    <message>
+        <source>Launch Media</source>
+        <translation>Avvia Media</translation>
+    </message>
+    <message>
+        <source>Launch (0)</source>
+        <translation>Avvia (0)</translation>
+    </message>
+    <message>
+        <source>Launch (1)</source>
+        <translation>Avvia (1)</translation>
+    </message>
+    <message>
+        <source>Launch (2)</source>
+        <translation>Avvia (2)</translation>
+    </message>
+    <message>
+        <source>Launch (3)</source>
+        <translation>Avvia (3)</translation>
+    </message>
+    <message>
+        <source>Launch (4)</source>
+        <translation>Avvia (4)</translation>
+    </message>
+    <message>
+        <source>Launch (5)</source>
+        <translation>Avvia (5)</translation>
+    </message>
+    <message>
+        <source>Launch (6)</source>
+        <translation>Avvia (6)</translation>
+    </message>
+    <message>
+        <source>Launch (7)</source>
+        <translation>Avvia (7)</translation>
+    </message>
+    <message>
+        <source>Launch (8)</source>
+        <translation>Avvia (8)</translation>
+    </message>
+    <message>
+        <source>Launch (9)</source>
+        <translation>Avvia (9)</translation>
+    </message>
+    <message>
+        <source>Launch (A)</source>
+        <translation>Avvia (A)</translation>
+    </message>
+    <message>
+        <source>Launch (B)</source>
+        <translation>Avvia (B)</translation>
+    </message>
+    <message>
+        <source>Launch (C)</source>
+        <translation>Avvia (C)</translation>
+    </message>
+    <message>
+        <source>Launch (D)</source>
+        <translation>Avvia (D)</translation>
+    </message>
+    <message>
+        <source>Launch (E)</source>
+        <translation>Avvia (E)</translation>
+    </message>
+    <message>
+        <source>Launch (F)</source>
+        <translation>Avvia (F)</translation>
+    </message>
+    <message>
+        <source>Print Screen</source>
+        <translation>Stampa schermo</translation>
+    </message>
+    <message>
+        <source>Page Up</source>
+        <translation>Pag Su</translation>
+    </message>
+    <message>
+        <source>Page Down</source>
+        <translation>Pag Giù</translation>
+    </message>
+    <message>
+        <source>Caps Lock</source>
+        <translation>Bloc Maiusc</translation>
+    </message>
+    <message>
+        <source>Num Lock</source>
+        <translation>Blocc Num</translation>
+    </message>
+    <message>
+        <source>Number Lock</source>
+        <translation>Blocco tast numerico</translation>
+    </message>
+    <message>
+        <source>Scroll Lock</source>
+        <translation>Bloc Scorr</translation>
+    </message>
+    <message>
+        <source>Insert</source>
+        <translation>Ins</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Canc</translation>
+    </message>
+    <message>
+        <source>Escape</source>
+        <translation>Esc</translation>
+    </message>
+    <message>
+        <source>System Request</source>
+        <translation>R sist</translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <translation>Seleziona</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Sì</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Context1</source>
+        <translation>Contesto1</translation>
+    </message>
+    <message>
+        <source>Context2</source>
+        <translation>Contesto2</translation>
+    </message>
+    <message>
+        <source>Context3</source>
+        <translation>Contesto3</translation>
+    </message>
+    <message>
+        <source>Context4</source>
+        <translation>Contesto4</translation>
+    </message>
+    <message>
+        <source>Call</source>
+        <translation>Chiama</translation>
+    </message>
+    <message>
+        <source>Hangup</source>
+        <translation>Riaggancia</translation>
+    </message>
+    <message>
+        <source>Flip</source>
+        <translation>Ribalta</translation>
+    </message>
+    <message>
+        <source>Ctrl</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Shift</source>
+        <translation>Maiusc</translation>
+    </message>
+    <message>
+        <source>Alt</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Meta</source>
+        <translation>Meta</translation>
+    </message>
+    <message>
+        <source>+</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>F%1</source>
+        <translation>F%1</translation>
+    </message>
+    <message>
+        <source>Home Page</source>
+        <translation>Pagina iniziale</translation>
+    </message>
+    <message>
+        <source>Media Pause</source>
+        <extracomment>Media player pause button</extracomment>
+        <translation>Pausa</translation>
+    </message>
+    <message>
+        <source>Toggle Media Play/Pause</source>
+        <extracomment>Media player button to toggle between playing and paused</extracomment>
+        <translation>Pausa/riproduci</translation>
+    </message>
+    <message>
+        <source>Monitor Brightness Up</source>
+        <translation>Aumenta luminosità dello schermo</translation>
+    </message>
+    <message>
+        <source>Monitor Brightness Down</source>
+        <translation>Diminuisci luminosità dello schermo</translation>
+    </message>
+    <message>
+        <source>Keyboard Light On/Off</source>
+        <translation>Attiva/disattiva illuminazione tastiera</translation>
+    </message>
+    <message>
+        <source>Keyboard Brightness Up</source>
+        <translation>Aumenta luminosità della tastiera</translation>
+    </message>
+    <message>
+        <source>Keyboard Brightness Down</source>
+        <translation>Diminuisci luminosità della tastiera</translation>
+    </message>
+    <message>
+        <source>Power Off</source>
+        <translation>Spegni</translation>
+    </message>
+    <message>
+        <source>Wake Up</source>
+        <translation>Risveglia</translation>
+    </message>
+    <message>
+        <source>Eject</source>
+        <translation>Espelli</translation>
+    </message>
+    <message>
+        <source>Screensaver</source>
+        <translation>Salvaschermo</translation>
+    </message>
+    <message>
+        <source>WWW</source>
+        <translation>WWW</translation>
+    </message>
+    <message>
+        <source>Sleep</source>
+        <translation>Sospendi</translation>
+    </message>
+    <message>
+        <source>LightBulb</source>
+        <translation>Lampadina</translation>
+    </message>
+    <message>
+        <source>Shop</source>
+        <translation>Negozio</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>Cronologia</translation>
+    </message>
+    <message>
+        <source>Add Favorite</source>
+        <translation>Aggiungi preferito</translation>
+    </message>
+    <message>
+        <source>Hot Links</source>
+        <translation>Collegamenti</translation>
+    </message>
+    <message>
+        <source>Adjust Brightness</source>
+        <translation>Regola luminosità</translation>
+    </message>
+    <message>
+        <source>Finance</source>
+        <translation>Finanza</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <translation>Comunità</translation>
+    </message>
+    <message>
+        <source>Audio Rewind</source>
+        <translation type="vanished">Riavvolgi audio</translation>
+    </message>
+    <message>
+        <source>Back Forward</source>
+        <translation>Indietro veloce</translation>
+    </message>
+    <message>
+        <source>Application Left</source>
+        <translation>Applicazione a sinistra</translation>
+    </message>
+    <message>
+        <source>Application Right</source>
+        <translation>Applicazione a destra</translation>
+    </message>
+    <message>
+        <source>Book</source>
+        <translation>Libro</translation>
+    </message>
+    <message>
+        <source>CD</source>
+        <translation>CD</translation>
+    </message>
+    <message>
+        <source>Calculator</source>
+        <translation>Calcolatrice</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>Pulisci</translation>
+    </message>
+    <message>
+        <source>Clear Grab</source>
+        <translation>Pulisci cattura</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <source>Cut</source>
+        <translation>Taglia</translation>
+    </message>
+    <message>
+        <source>Display</source>
+        <translation>Mostra</translation>
+    </message>
+    <message>
+        <source>DOS</source>
+        <translation>DOS</translation>
+    </message>
+    <message>
+        <source>Documents</source>
+        <translation>Documenti</translation>
+    </message>
+    <message>
+        <source>Spreadsheet</source>
+        <translation>Foglio di calcolo</translation>
+    </message>
+    <message>
+        <source>Browser</source>
+        <translation>Browser</translation>
+    </message>
+    <message>
+        <source>Game</source>
+        <translation>Gioco</translation>
+    </message>
+    <message>
+        <source>Go</source>
+        <translation>Vai</translation>
+    </message>
+    <message>
+        <source>iTouch</source>
+        <translation>iTouch</translation>
+    </message>
+    <message>
+        <source>Logoff</source>
+        <translation>Termina sessione</translation>
+    </message>
+    <message>
+        <source>Market</source>
+        <translation>Market</translation>
+    </message>
+    <message>
+        <source>Meeting</source>
+        <translation>Riunione</translation>
+    </message>
+    <message>
+        <source>Keyboard Menu</source>
+        <translation>Menu della tastiera</translation>
+    </message>
+    <message>
+        <source>Menu PB</source>
+        <translation>Menu PB</translation>
+    </message>
+    <message>
+        <source>My Sites</source>
+        <translation>I miei siti</translation>
+    </message>
+    <message>
+        <source>News</source>
+        <translation>Notizie</translation>
+    </message>
+    <message>
+        <source>Home Office</source>
+        <translation>Ufficio</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation>Opzione</translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation>Incolla</translation>
+    </message>
+    <message>
+        <source>Phone</source>
+        <translation>Telefono</translation>
+    </message>
+    <message>
+        <source>Reply</source>
+        <translation>Rispondi</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation>Ricarica</translation>
+    </message>
+    <message>
+        <source>Rotate Windows</source>
+        <translation>Ruota finestre</translation>
+    </message>
+    <message>
+        <source>Rotation PB</source>
+        <translation>Rotazione PB</translation>
+    </message>
+    <message>
+        <source>Rotation KB</source>
+        <translation>Rotazione KB</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation>Invia</translation>
+    </message>
+    <message>
+        <source>Spellchecker</source>
+        <translation>Controllo ortografico</translation>
+    </message>
+    <message>
+        <source>Split Screen</source>
+        <translation>Dividi schermo</translation>
+    </message>
+    <message>
+        <source>Support</source>
+        <translation>Supporto</translation>
+    </message>
+    <message>
+        <source>Task Panel</source>
+        <translation>Pannello attività</translation>
+    </message>
+    <message>
+        <source>Terminal</source>
+        <translation>Terminale</translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation>Strumenti</translation>
+    </message>
+    <message>
+        <source>Travel</source>
+        <translation>Viaggi</translation>
+    </message>
+    <message>
+        <source>Video</source>
+        <translation>Video</translation>
+    </message>
+    <message>
+        <source>Word Processor</source>
+        <translation>Elaboratore di testi</translation>
+    </message>
+    <message>
+        <source>XFer</source>
+        <translation>XFer</translation>
+    </message>
+    <message>
+        <source>Zoom In</source>
+        <translation>Ingrandisci</translation>
+    </message>
+    <message>
+        <source>Zoom Out</source>
+        <translation>Rimpicciolisci</translation>
+    </message>
+    <message>
+        <source>Away</source>
+        <translation>Assente</translation>
+    </message>
+    <message>
+        <source>Messenger</source>
+        <translation>Messenger</translation>
+    </message>
+    <message>
+        <source>WebCam</source>
+        <translation>WebCam</translation>
+    </message>
+    <message>
+        <source>Mail Forward</source>
+        <translation>Inoltra messaggio di posta</translation>
+    </message>
+    <message>
+        <source>Pictures</source>
+        <translation>Immagini</translation>
+    </message>
+    <message>
+        <source>Music</source>
+        <translation>Musica</translation>
+    </message>
+    <message>
+        <source>Battery</source>
+        <translation>Batteria</translation>
+    </message>
+    <message>
+        <source>Bluetooth</source>
+        <translation>Bluetooth</translation>
+    </message>
+    <message>
+        <source>Wireless</source>
+        <translation>Wireless</translation>
+    </message>
+    <message>
+        <source>Ultra Wide Band</source>
+        <translation>Banda ultra larga</translation>
+    </message>
+    <message>
+        <source>Audio Forward</source>
+        <translation type="vanished">Avanzamento audio</translation>
+    </message>
+    <message>
+        <source>Audio Repeat</source>
+        <translation>Ripeti audio</translation>
+    </message>
+    <message>
+        <source>Audio Random Play</source>
+        <translation>Riproduzione audio casuale</translation>
+    </message>
+    <message>
+        <source>Subtitle</source>
+        <translation>Sottotitolo</translation>
+    </message>
+    <message>
+        <source>Audio Cycle Track</source>
+        <translation>Ripeti in ciclo le tracce audio</translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation>Ora</translation>
+    </message>
+    <message>
+        <source>View</source>
+        <translation>Vista</translation>
+    </message>
+    <message>
+        <source>Top Menu</source>
+        <translation>Menu principale</translation>
+    </message>
+    <message>
+        <source>Suspend</source>
+        <translation>Sospensione</translation>
+    </message>
+    <message>
+        <source>Hibernate</source>
+        <translation>Ibernazione</translation>
+    </message>
+    <message>
+        <source>Media Rewind</source>
+        <translation>Riavvolgi media</translation>
+    </message>
+    <message>
+        <source>Media Fast Forward</source>
+        <translation>Avanti veloce media</translation>
+    </message>
+    <message>
+        <source>Power Down</source>
+        <translation>Spegni</translation>
+    </message>
+    <message>
+        <source>Microphone Mute</source>
+        <translation>Microfono muto</translation>
+    </message>
+    <message>
+        <source>Red</source>
+        <translation>Rosso</translation>
+    </message>
+    <message>
+        <source>Green</source>
+        <translation>Verde</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <translation>Giallo</translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation>Blu</translation>
+    </message>
+    <message>
+        <source>Channel Up</source>
+        <translation>Canale su</translation>
+    </message>
+    <message>
+        <source>Channel Down</source>
+        <translation>Canale giù</translation>
+    </message>
+    <message>
+        <source>Guide</source>
+        <translation>Guida</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Impostazioni</translation>
+    </message>
+    <message>
+        <source>Microphone Volume Up</source>
+        <translation>Aumenta il volume del microfono</translation>
+    </message>
+    <message>
+        <source>Microphone Volume Down</source>
+        <translation>Diminuisci il volume del microfono</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation>Nuovo</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <source>Find</source>
+        <translation>Trova</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation>Rifai</translation>
+    </message>
+    <message>
+        <source>Toggle Call/Hangup</source>
+        <extracomment>Button that will hang up if we&apos;re in call, or make a call if we&apos;re not.</extracomment>
+        <translation>Chiama/riaggancia</translation>
+    </message>
+    <message>
+        <source>Voice Dial</source>
+        <extracomment>Button to trigger voice dialing</extracomment>
+        <translation>Composizione vocale</translation>
+    </message>
+    <message>
+        <source>Last Number Redial</source>
+        <extracomment>Button to redial the last number called</extracomment>
+        <translation>Richiama l&apos;ultimo numero</translation>
+    </message>
+    <message>
+        <source>Camera Shutter</source>
+        <extracomment>Button to trigger the camera shutter (take a picture)</extracomment>
+        <translation>Scatta</translation>
+    </message>
+    <message>
+        <source>Camera Focus</source>
+        <extracomment>Button to focus the camera</extracomment>
+        <translation>Metti a fuoco</translation>
+    </message>
+    <message>
+        <source>Kanji</source>
+        <translation>Kanji</translation>
+    </message>
+    <message>
+        <source>Muhenkan</source>
+        <translation>Muhenkan</translation>
+    </message>
+    <message>
+        <source>Henkan</source>
+        <translation>Henkan</translation>
+    </message>
+    <message>
+        <source>Romaji</source>
+        <translation>Romaji</translation>
+    </message>
+    <message>
+        <source>Hiragana</source>
+        <translation>Hiragana</translation>
+    </message>
+    <message>
+        <source>Katakana</source>
+        <translation>Katakana</translation>
+    </message>
+    <message>
+        <source>Hiragana Katakana</source>
+        <translation>Hiragana Katakana</translation>
+    </message>
+    <message>
+        <source>Zenkaku</source>
+        <translation>Zenkaku</translation>
+    </message>
+    <message>
+        <source>Hankaku</source>
+        <translation>Hankaku</translation>
+    </message>
+    <message>
+        <source>Zenkaku Hankaku</source>
+        <translation>Zenkaku Hankaku</translation>
+    </message>
+    <message>
+        <source>Touroku</source>
+        <translation>Touroku</translation>
+    </message>
+    <message>
+        <source>Massyo</source>
+        <translation>Massyo</translation>
+    </message>
+    <message>
+        <source>Kana Lock</source>
+        <translation>Blocca Kana</translation>
+    </message>
+    <message>
+        <source>Kana Shift</source>
+        <translation>Shift Kana</translation>
+    </message>
+    <message>
+        <source>Eisu Shift</source>
+        <translation>Shift Eisu</translation>
+    </message>
+    <message>
+        <source>Eisu toggle</source>
+        <translation>Commuta Eisu</translation>
+    </message>
+    <message>
+        <source>Code input</source>
+        <translation>Immissione codice</translation>
+    </message>
+    <message>
+        <source>Multiple Candidate</source>
+        <translation>Candidati multipli</translation>
+    </message>
+    <message>
+        <source>Previous Candidate</source>
+        <translation>Candidato precedente</translation>
+    </message>
+    <message>
+        <source>Hangul</source>
+        <translation>Hangul</translation>
+    </message>
+    <message>
+        <source>Hangul Start</source>
+        <translation>Avvio Hangul</translation>
+    </message>
+    <message>
+        <source>Hangul End</source>
+        <translation>Fine Hangul</translation>
+    </message>
+    <message>
+        <source>Hangul Hanja</source>
+        <translation>Hangul Hanja</translation>
+    </message>
+    <message>
+        <source>Hangul Jamo</source>
+        <translation>Hangul Jamo</translation>
+    </message>
+    <message>
+        <source>Hangul Romaja</source>
+        <translation>Hangul Romaja</translation>
+    </message>
+    <message>
+        <source>Hangul Jeonja</source>
+        <translation>Hangul Jeonja</translation>
+    </message>
+    <message>
+        <source>Hangul Banja</source>
+        <translation>Hangul Banja</translation>
+    </message>
+    <message>
+        <source>Hangul PreHanja</source>
+        <translation>Hangul PreHanja</translation>
+    </message>
+    <message>
+        <source>Hangul PostHanja</source>
+        <translation>Hangul PostHanja</translation>
+    </message>
+    <message>
+        <source>Hangul Special</source>
+        <translation>Hangul speciale</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Printer</source>
+        <translation>Stampante</translation>
+    </message>
+    <message>
+        <source>Execute</source>
+        <translation>Esegui</translation>
+    </message>
+    <message>
+        <source>Play</source>
+        <translation>Riproduci</translation>
+    </message>
+    <message>
+        <source>Zoom</source>
+        <translation>Ingrandisci</translation>
+    </message>
+    <message>
+        <source>Exit</source>
+        <translation>Esci</translation>
+    </message>
+    <message>
+        <source>Touchpad Toggle</source>
+        <translation>Commuta Touchpad</translation>
+    </message>
+    <message>
+        <source>Touchpad On</source>
+        <translation>Touchpad attivato</translation>
+    </message>
+    <message>
+        <source>Touchpad Off</source>
+        <translation>Touchpad disattivato</translation>
+    </message>
+    <message>
+        <source>Num</source>
+        <translation>Num</translation>
+    </message>
+</context>
+<context>
+    <name>QSlider</name>
+    <message>
+        <source>Page left</source>
+        <translation>Pagina sinistra</translation>
+    </message>
+    <message>
+        <source>Page up</source>
+        <translation>Pagina su</translation>
+    </message>
+    <message>
+        <source>Position</source>
+        <translation>Posizione</translation>
+    </message>
+    <message>
+        <source>Page right</source>
+        <translation>Pagina destra</translation>
+    </message>
+    <message>
+        <source>Page down</source>
+        <translation>Pagina giù</translation>
+    </message>
+</context>
+<context>
+    <name>QSocks5SocketEngine</name>
+    <message>
+        <source>Socks5 timeout error connecting to socks server</source>
+        <translation>Connessione al server Socks5 fuori tempo massimo</translation>
+    </message>
+    <message>
+        <source>Network operation timed out</source>
+        <translation>Operazione di rete fuori tempo massimo</translation>
+    </message>
+    <message>
+        <source>Connection to proxy refused</source>
+        <translation>Connessione al proxy rifiutata</translation>
+    </message>
+    <message>
+        <source>Connection to proxy closed prematurely</source>
+        <translation>La connessione al proxy si è interrotta prematuramente</translation>
+    </message>
+    <message>
+        <source>Proxy host not found</source>
+        <translation>Host proxy non trovato</translation>
+    </message>
+    <message>
+        <source>Connection to proxy timed out</source>
+        <translation>Connessione al proxy scaduta</translation>
+    </message>
+    <message>
+        <source>Proxy authentication failed</source>
+        <translation>Autenticazione al proxy non riuscita</translation>
+    </message>
+    <message>
+        <source>Proxy authentication failed: %1</source>
+        <translation>Autenticazione al proxy non riuscita: %1</translation>
+    </message>
+    <message>
+        <source>SOCKS version 5 protocol error</source>
+        <translation>Errore del protocollo SOCKS versione 5</translation>
+    </message>
+    <message>
+        <source>General SOCKSv5 server failure</source>
+        <translation>Errore generico del server SOCKv5</translation>
+    </message>
+    <message>
+        <source>Connection not allowed by SOCKSv5 server</source>
+        <translation>Connessione non consentita dal server SOCKSv5</translation>
+    </message>
+    <message>
+        <source>TTL expired</source>
+        <translation>TTL scaduto</translation>
+    </message>
+    <message>
+        <source>SOCKSv5 command not supported</source>
+        <translation>Comando SOCKSv5 non supportato</translation>
+    </message>
+    <message>
+        <source>Address type not supported</source>
+        <translation>Tipo di indirizzo non supportato</translation>
+    </message>
+    <message>
+        <source>Unknown SOCKSv5 proxy error code 0x%1</source>
+        <translation>Codice di errore proxy SOCKSv5 0x%1 sconosciuto</translation>
+    </message>
+</context>
+<context>
+    <name>QSpiAccessibleBridge</name>
+    <message>
+        <source>invalid role</source>
+        <extracomment>Role of an accessible object - the object is in an invalid state or could not be constructed</extracomment>
+        <translation>ruolo non valido</translation>
+    </message>
+    <message>
+        <source>title bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra del titolo</translation>
+    </message>
+    <message>
+        <source>menu bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra del menu</translation>
+    </message>
+    <message>
+        <source>scroll bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra di scorrimento</translation>
+    </message>
+    <message>
+        <source>grip</source>
+        <extracomment>Role of an accessible object - the grip is usually used for resizing another object</extracomment>
+        <translation>maniglia</translation>
+    </message>
+    <message>
+        <source>sound</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>suono</translation>
+    </message>
+    <message>
+        <source>cursor</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>cursore</translation>
+    </message>
+    <message>
+        <source>text caret</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>cursore del testo</translation>
+    </message>
+    <message>
+        <source>alert message</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>messaggio di avviso</translation>
+    </message>
+    <message>
+        <source>window</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation type="vanished">finestra</translation>
+    </message>
+    <message>
+        <source>filler</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>riempitore</translation>
+    </message>
+    <message>
+        <source>popup menu</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>menu a comparsa</translation>
+    </message>
+    <message>
+        <source>menu item</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>voce di menu</translation>
+    </message>
+    <message>
+        <source>tool tip</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>suggerimento</translation>
+    </message>
+    <message>
+        <source>application</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>applicazione</translation>
+    </message>
+    <message>
+        <source>document</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>documento</translation>
+    </message>
+    <message>
+        <source>panel</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pannello</translation>
+    </message>
+    <message>
+        <source>chart</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>grafico</translation>
+    </message>
+    <message>
+        <source>dialog</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>finestra di dialogo</translation>
+    </message>
+    <message>
+        <source>frame</source>
+        <extracomment>Role of an accessible object: a window with frame and title
+----------
+Role of an accessible object</extracomment>
+        <translation>cornice</translation>
+    </message>
+    <message>
+        <source>separator</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>separatore</translation>
+    </message>
+    <message>
+        <source>tool bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra degli strumenti</translation>
+    </message>
+    <message>
+        <source>status bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra di stato</translation>
+    </message>
+    <message>
+        <source>table</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>tabella</translation>
+    </message>
+    <message>
+        <source>column header</source>
+        <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation>intestazione della colonna</translation>
+    </message>
+    <message>
+        <source>row header</source>
+        <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation>intestazione della riga</translation>
+    </message>
+    <message>
+        <source>column</source>
+        <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation>colonna</translation>
+    </message>
+    <message>
+        <source>row</source>
+        <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation>riga</translation>
+    </message>
+    <message>
+        <source>cell</source>
+        <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation>cella</translation>
+    </message>
+    <message>
+        <source>link</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>collegamento</translation>
+    </message>
+    <message>
+        <source>help balloon</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>fumetto di aiuto</translation>
+    </message>
+    <message>
+        <source>assistant</source>
+        <extracomment>Role of an accessible object - a helper dialog</extracomment>
+        <translation>assistente</translation>
+    </message>
+    <message>
+        <source>list</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>lista</translation>
+    </message>
+    <message>
+        <source>list item</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>elemento della lista</translation>
+    </message>
+    <message>
+        <source>tree</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>albero</translation>
+    </message>
+    <message>
+        <source>tree item</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>elemento dell&apos;albero</translation>
+    </message>
+    <message>
+        <source>page tab</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>scheda</translation>
+    </message>
+    <message>
+        <source>property page</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pagina delle proprietà</translation>
+    </message>
+    <message>
+        <source>indicator</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>indicatore</translation>
+    </message>
+    <message>
+        <source>graphic</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>grafico</translation>
+    </message>
+    <message>
+        <source>label</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>etichetta</translation>
+    </message>
+    <message>
+        <source>text</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>testo</translation>
+    </message>
+    <message>
+        <source>push button</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pulsante</translation>
+    </message>
+    <message>
+        <source>check box</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>casella di spunta</translation>
+    </message>
+    <message>
+        <source>radio button</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>casella a scelta singola</translation>
+    </message>
+    <message>
+        <source>combo box</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>casella combinata</translation>
+    </message>
+    <message>
+        <source>progress bar</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>barra di avanzamento</translation>
+    </message>
+    <message>
+        <source>dial</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>quadrante</translation>
+    </message>
+    <message>
+        <source>hotkey field</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>campo di scorciatoia</translation>
+    </message>
+    <message>
+        <source>slider</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>regolatore</translation>
+    </message>
+    <message>
+        <source>spin box</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>casella numerica</translation>
+    </message>
+    <message>
+        <source>canvas</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>superficie</translation>
+    </message>
+    <message>
+        <source>animation</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>animazione</translation>
+    </message>
+    <message>
+        <source>equation</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>equazione</translation>
+    </message>
+    <message>
+        <source>button with drop down</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pulsante con elenco a comparsa</translation>
+    </message>
+    <message>
+        <source>button menu</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pulsante con menu</translation>
+    </message>
+    <message>
+        <source>button with drop down grid</source>
+        <extracomment>Role of an accessible object - a button that expands a grid.</extracomment>
+        <translation>pulsante con griglia a comparsa</translation>
+    </message>
+    <message>
+        <source>space</source>
+        <extracomment>Role of an accessible object - blank space between other objects.</extracomment>
+        <translation>spazio</translation>
+    </message>
+    <message>
+        <source>page tab list</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>lista schede della pagina</translation>
+    </message>
+    <message>
+        <source>clock</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>orologio</translation>
+    </message>
+    <message>
+        <source>splitter</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>divisore</translation>
+    </message>
+    <message>
+        <source>layered pane</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>pannello stratificato</translation>
+    </message>
+    <message>
+        <source>web document</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>documento web</translation>
+    </message>
+    <message>
+        <source>paragraph</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>paragrafo</translation>
+    </message>
+    <message>
+        <source>section</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>sezione</translation>
+    </message>
+    <message>
+        <source>color chooser</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>selettore di colore</translation>
+    </message>
+    <message>
+        <source>footer</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>piè di pagina</translation>
+    </message>
+    <message>
+        <source>form</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>modulo</translation>
+    </message>
+    <message>
+        <source>heading</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>intestazione</translation>
+    </message>
+    <message>
+        <source>note</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>nota</translation>
+    </message>
+    <message>
+        <source>complementary content</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>contenuto complementare</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <extracomment>Role of an accessible object</extracomment>
+        <translation>sconosciuto</translation>
+    </message>
+</context>
+<context>
+    <name>QSpinBox</name>
+    <message>
+        <source>More</source>
+        <translation>Più</translation>
+    </message>
+    <message>
+        <source>Less</source>
+        <translation>Meno</translation>
+    </message>
+</context>
+<context>
+    <name>QSql</name>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <source>Delete this record?</source>
+        <translation>Eliminare questa registrazione?</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Sì</translation>
+    </message>
+    <message>
+        <source>Insert</source>
+        <translation>Inserisci</translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message>
+        <source>Save edits?</source>
+        <translation>Salvare le modifiche?</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Confirm</source>
+        <translation>Conferma</translation>
+    </message>
+    <message>
+        <source>Cancel your edits?</source>
+        <translation>Annullare le modifiche?</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QSslSocket</name>
+    <message>
+        <source>Unable to write data: %1</source>
+        <translation>Impossibile scrivere i dati: %1</translation>
+    </message>
+    <message>
+        <source>Error while reading: %1</source>
+        <translation>Errore in fase di lettura: %1</translation>
+    </message>
+    <message>
+        <source>Error during SSL handshake: %1</source>
+        <translation>Errore durante l&apos;handshake SSL: %1</translation>
+    </message>
+    <message>
+        <source>Error creating SSL context (%1)</source>
+        <translation>Errore in fase di creazione del contesto SSL (%1)</translation>
+    </message>
+    <message>
+        <source>Invalid or empty cipher list (%1)</source>
+        <translation>Elenco dei cifrari non valido o vuoto (%1)</translation>
+    </message>
+    <message>
+        <source>Error creating SSL session, %1</source>
+        <translation>Errore durante la creazione della sessione SSL, %1</translation>
+    </message>
+    <message>
+        <source>Error creating SSL session: %1</source>
+        <translation>Errore durante la creazione della sessione SSL: %1</translation>
+    </message>
+    <message>
+        <source>Cannot provide a certificate with no key, %1</source>
+        <translation>Impossibile fornire un certificato senza chiave, %1</translation>
+    </message>
+    <message>
+        <source>Error loading local certificate, %1</source>
+        <translation>Errore di caricamento del certificato locale, %1</translation>
+    </message>
+    <message>
+        <source>Error loading private key, %1</source>
+        <translation>Errore di caricamento della chiave privata, %1</translation>
+    </message>
+    <message>
+        <source>Private key does not certificate public key, %1</source>
+        <translation>La chiave privata non certifica la chiave pubblica, %1</translation>
+    </message>
+    <message>
+        <source>No error</source>
+        <translation>Nessun errore</translation>
+    </message>
+    <message>
+        <source>The issuer certificate could not be found</source>
+        <translation>Il certificato dell&apos;emittente non è stato trovato</translation>
+    </message>
+    <message>
+        <source>The certificate signature could not be decrypted</source>
+        <translation>La firma del certificato non può essere decifrata</translation>
+    </message>
+    <message>
+        <source>The public key in the certificate could not be read</source>
+        <translation>La chiave pubblica del certificato non può essere letta</translation>
+    </message>
+    <message>
+        <source>The signature of the certificate is invalid</source>
+        <translation>La firma del certificato non è valida</translation>
+    </message>
+    <message>
+        <source>The certificate is not yet valid</source>
+        <translation>Il certificato non è ancora valido</translation>
+    </message>
+    <message>
+        <source>The certificate has expired</source>
+        <translation>Il certificato è scaduto</translation>
+    </message>
+    <message>
+        <source>The certificate&apos;s notBefore field contains an invalid time</source>
+        <translation>Il campo notBefore del certificato contiene una data non valida</translation>
+    </message>
+    <message>
+        <source>The certificate&apos;s notAfter field contains an invalid time</source>
+        <translation>Il campo notAfter del certificato contiene una data non valida</translation>
+    </message>
+    <message>
+        <source>The certificate is self-signed, and untrusted</source>
+        <translation>Il certificato è auto-firmato e non affidabile</translation>
+    </message>
+    <message>
+        <source>The root certificate of the certificate chain is self-signed, and untrusted</source>
+        <translation>Il certificato principale della catena di certificati è auto-firmato e non affidabile</translation>
+    </message>
+    <message>
+        <source>The issuer certificate of a locally looked up certificate could not be found</source>
+        <translation>Il certificato dell&apos;emittente di un certificato cercato localmente non può essere trovato</translation>
+    </message>
+    <message>
+        <source>No certificates could be verified</source>
+        <translation>Nessun certificato può essere verificato</translation>
+    </message>
+    <message>
+        <source>One of the CA certificates is invalid</source>
+        <translation>Uno dei certificati dell&apos;autorità di certificazione non è valido</translation>
+    </message>
+    <message>
+        <source>The basicConstraints path length parameter has been exceeded</source>
+        <translation>La lunghezza del percorso del parametro basicConstraints è stata superata</translation>
+    </message>
+    <message>
+        <source>The supplied certificate is unsuitable for this purpose</source>
+        <translation>Il certificato fornito non è adatto per questo scopo</translation>
+    </message>
+    <message>
+        <source>The root CA certificate is not trusted for this purpose</source>
+        <translation>Il certificato principale dell&apos;autorità di certificazione non è affidabile per questo scopo</translation>
+    </message>
+    <message>
+        <source>The root CA certificate is marked to reject the specified purpose</source>
+        <translation>Il certificato principale dell&apos;autorità di certificazione è contrassegnato per rifiutare lo scopo specifico</translation>
+    </message>
+    <message>
+        <source>The current candidate issuer certificate was rejected because its subject name did not match the issuer name of the current certificate</source>
+        <translation>Il certificato dell&apos;emittente attualmente candidato è stato rifiutato perché il nome del suo oggetto non corrisponde al nome dell&apos;emittente del certificato attuale</translation>
+    </message>
+    <message>
+        <source>The current candidate issuer certificate was rejected because its issuer name and serial number was present and did not match the authority key identifier of the current certificate</source>
+        <translation>Il certificato dell&apos;emittente attualmente candidato è stato rifiutato perché erano presenti il nome dell&apos;emittente e il numero di serie, e non corrispondevano all&apos;identificativo della chiave di autorità del certificato attuale</translation>
+    </message>
+    <message>
+        <source>The peer did not present any certificate</source>
+        <translation>La controparte non ha presentato alcun certificato</translation>
+    </message>
+    <message>
+        <source>The host name did not match any of the valid hosts for this certificate</source>
+        <translation>Il nome dell&apos;host non coincide con nessuno degli host validi per questo certificato</translation>
+    </message>
+    <message>
+        <source>The peer certificate is blacklisted</source>
+        <translation>Il certificato della controparte è nella lista nera</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>Error when setting the elliptic curves (%1)</source>
+        <translation>Errore durante l&apos;impostazione delle curve ellittiche (%1)</translation>
+    </message>
+    <message>
+        <source>unsupported protocol</source>
+        <translation>protocollo non supportato</translation>
+    </message>
+    <message>
+        <source>Private key does not certify public key, %1</source>
+        <translation>La chiave privata non certifica la chiave pubblica %1</translation>
+    </message>
+    <message>
+        <source>OpenSSL version too old, need at least v1.0.2</source>
+        <translation>Versione di OpenSSL troppo vecchia, è richiesta almeno v1.0.2</translation>
+    </message>
+    <message>
+        <source>Unable to init Ssl Context: %1</source>
+        <translation type="vanished">Impossibile inizializzare il contesto SSL: %1</translation>
+    </message>
+    <message>
+        <source>Unable to init SSL Context: %1</source>
+        <translation>Impossibile inizializzare il contesto SSL: %1</translation>
+    </message>
+    <message>
+        <source>Unable to decrypt data: %1</source>
+        <translation>Impossibile decifrare i dati: %1</translation>
+    </message>
+    <message>
+        <source>The TLS/SSL connection has been closed</source>
+        <translation>La connessione TLS/SSL è stata chiusa</translation>
+    </message>
+</context>
+<context>
+    <name>QStandardPaths</name>
+    <message>
+        <source>Desktop</source>
+        <translation>Scrivania</translation>
+    </message>
+    <message>
+        <source>Documents</source>
+        <translation>Documenti</translation>
+    </message>
+    <message>
+        <source>Fonts</source>
+        <translation>Caratteri</translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation>Applicazioni</translation>
+    </message>
+    <message>
+        <source>Music</source>
+        <translation>Musica</translation>
+    </message>
+    <message>
+        <source>Movies</source>
+        <translation>Video</translation>
+    </message>
+    <message>
+        <source>Pictures</source>
+        <translation>Immagini</translation>
+    </message>
+    <message>
+        <source>Temporary Directory</source>
+        <translation>Cartella temporanea</translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation>Home</translation>
+    </message>
+    <message>
+        <source>Application Data</source>
+        <translation>Dati dell&apos;applicazione</translation>
+    </message>
+    <message>
+        <source>Application Configuration</source>
+        <translation>Configurazione dell&apos;applicazione</translation>
+    </message>
+    <message>
+        <source>Cache</source>
+        <translation>Cache</translation>
+    </message>
+    <message>
+        <source>Shared Data</source>
+        <translation>Dati condivisi</translation>
+    </message>
+    <message>
+        <source>Runtime</source>
+        <translation>Esecuzione</translation>
+    </message>
+    <message>
+        <source>Configuration</source>
+        <translation>Configurazione</translation>
+    </message>
+    <message>
+        <source>Shared Configuration</source>
+        <translation>Configurazione condivisa</translation>
+    </message>
+    <message>
+        <source>Shared Cache</source>
+        <translation>Cache condivisa</translation>
+    </message>
+    <message>
+        <source>Download</source>
+        <translation>Scaricati</translation>
+    </message>
+</context>
+<context>
+    <name>QStateMachine</name>
+    <message>
+        <source>Missing initial state in compound state &apos;%1&apos;</source>
+        <translation>Stato iniziale mancante nello stato composito &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Missing default state in history state &apos;%1&apos;</source>
+        <translation>Stato predefinito mancante nello stato storico &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>No common ancestor for targets and source of transition from state &apos;%1&apos;</source>
+        <translation>Nessun antenato comune per le destinazioni e l&apos;origine della transizione dallo stato &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+</context>
+<context>
+    <name>QSystemSemaphore</name>
+    <message>
+        <source>%1: permission denied</source>
+        <translation>%1: permesso negato</translation>
+    </message>
+    <message>
+        <source>%1: already exists</source>
+        <translation>%1: esiste già</translation>
+    </message>
+    <message>
+        <source>%1: does not exist</source>
+        <translation>%1: non esiste</translation>
+    </message>
+    <message>
+        <source>%1: out of resources</source>
+        <translation>%1: risorse esaurite</translation>
+    </message>
+    <message>
+        <source>%1: unknown error %2</source>
+        <translation>%1: errore sconosciuto %2</translation>
+    </message>
+</context>
+<context>
+    <name>QTDSDriver</name>
+    <message>
+        <source>Unable to open connection</source>
+        <translation>Impossibile aprire la connessione</translation>
+    </message>
+    <message>
+        <source>Unable to use database</source>
+        <translation>Impossibile utilizzare il database</translation>
+    </message>
+</context>
+<context>
+    <name>QTabBar</name>
+    <message>
+        <source>Scroll Left</source>
+        <translation>Scorrimento a sinistra</translation>
+    </message>
+    <message>
+        <source>Scroll Right</source>
+        <translation>Scorrimento a destra</translation>
+    </message>
+</context>
+<context>
+    <name>QTcpServer</name>
+    <message>
+        <source>Operation on socket is not supported</source>
+        <translation>Operazione sul socket non supportata</translation>
+    </message>
+</context>
+<context>
+    <name>QTextControl</name>
+    <message>
+        <source>&amp;Undo</source>
+        <translation>A&amp;nnulla</translation>
+    </message>
+    <message>
+        <source>&amp;Redo</source>
+        <translation>&amp;Rifai</translation>
+    </message>
+    <message>
+        <source>Cu&amp;t</source>
+        <translation>&amp;Taglia</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>&amp;Copia</translation>
+    </message>
+    <message>
+        <source>Copy &amp;Link Location</source>
+        <translation>Copia posizione del co&amp;llegamento</translation>
+    </message>
+    <message>
+        <source>&amp;Paste</source>
+        <translation>&amp;Incolla</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>QTgaFile</name>
+    <message>
+        <source>Could not read image data</source>
+        <translation type="vanished">Impossibile leggere i dati dell&apos;immagine</translation>
+    </message>
+    <message>
+        <source>Sequential device (eg socket) for image read not supported</source>
+        <translation type="vanished">Il dispositivo sequenziale (ad es. socket) per la lettura dell&apos;immagine non è supportato</translation>
+    </message>
+    <message>
+        <source>Seek file/device for image read failed</source>
+        <translation type="vanished">La ricerca su file/dispositivo per la lettura dell&apos;immagine non è riuscita</translation>
+    </message>
+    <message>
+        <source>Image header read failed</source>
+        <translation type="vanished">La lettura dell&apos;intestazione dell&apos;immagine non è riuscita</translation>
+    </message>
+    <message>
+        <source>Image type not supported</source>
+        <translation type="vanished">Tipo di immagine non supportato</translation>
+    </message>
+    <message>
+        <source>Image depth not valid</source>
+        <translation type="vanished">La profondità dell&apos;immagine non è valida</translation>
+    </message>
+    <message>
+        <source>Could not seek to image read footer</source>
+        <translation type="vanished">Impossibile saltare al fondo del file dell&apos;immagine</translation>
+    </message>
+    <message>
+        <source>Could not read footer</source>
+        <translation type="vanished">Impossibile leggere il fondo</translation>
+    </message>
+    <message>
+        <source>Image type (non-TrueVision 2.0) not supported</source>
+        <translation type="vanished">Il tipo di immagine (non-TrueVision 2.0) non è supportato</translation>
+    </message>
+    <message>
+        <source>Could not reset to read data</source>
+        <translation type="vanished">Impossibile reinizializzare per la lettura dei dati</translation>
+    </message>
+</context>
+<context>
+    <name>QToolButton</name>
+    <message>
+        <source>Press</source>
+        <translation>Premi</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Apri</translation>
+    </message>
+</context>
+<context>
+    <name>QUdpSocket</name>
+    <message>
+        <source>This platform does not support IPv6</source>
+        <translation>Questa piattaforma non supporta IPv6</translation>
+    </message>
+</context>
+<context>
+    <name>QUndoGroup</name>
+    <message>
+        <source>Undo</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation>Rifai</translation>
+    </message>
+    <message>
+        <source>Undo %1</source>
+        <translation>Annulla %1</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <comment>Default text for undo action</comment>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Redo %1</source>
+        <translation>Rifai %1</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <comment>Default text for redo action</comment>
+        <translation>Rifai</translation>
+    </message>
+</context>
+<context>
+    <name>QUndoModel</name>
+    <message>
+        <source>&lt;empty&gt;</source>
+        <translation>&lt;vuoto&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>QUndoStack</name>
+    <message>
+        <source>Undo</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation>Rifai</translation>
+    </message>
+    <message>
+        <source>Undo %1</source>
+        <translation>Annulla %1</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <comment>Default text for undo action</comment>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>Redo %1</source>
+        <translation>Rifai %1</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <comment>Default text for redo action</comment>
+        <translation>Rifai</translation>
+    </message>
+</context>
+<context>
+    <name>QUnicodeControlCharacterMenu</name>
+    <message>
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Contrassegno sinistra-destra</translation>
+    </message>
+    <message>
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Contrassegno destra-sinistra</translation>
+    </message>
+    <message>
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Spazio di unione a larghezza nulla</translation>
+    </message>
+    <message>
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Spazio non di unione a larghezza nulla</translation>
+    </message>
+    <message>
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Spazio a larghezza nulla</translation>
+    </message>
+    <message>
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Inserimento sinistra-destra</translation>
+    </message>
+    <message>
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Inserimento destra-sinistra</translation>
+    </message>
+    <message>
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Forza sinistra-destra</translation>
+    </message>
+    <message>
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Forza destra-sinistra</translation>
+    </message>
+    <message>
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Cattura formattazione direzionale</translation>
+    </message>
+    <message>
+        <source>Insert Unicode control character</source>
+        <translation>Inserisci carattere di controllo Unicode</translation>
+    </message>
+    <message>
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Left-to-right isolate</translation>
+    </message>
+    <message>
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Right-to-left isolate</translation>
+    </message>
+    <message>
+        <source>FSI First strong isolate</source>
+        <translation>FSI First strong isolate</translation>
+    </message>
+    <message>
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Pop directional isolate</translation>
+    </message>
+</context>
+<context>
+    <name>QWebFrame</name>
+    <message>
+        <source>Request cancelled</source>
+        <translation>Richiesta annullata</translation>
+    </message>
+    <message>
+        <source>Request blocked</source>
+        <translation>Richiesta bloccata</translation>
+    </message>
+    <message>
+        <source>Cannot show URL</source>
+        <translation>Impossibile visualizzare l&apos;URL</translation>
+    </message>
+    <message>
+        <source>Frame load interruped by policy change</source>
+        <translation>Caricamento frame interrotto da un cambiamento di regole</translation>
+    </message>
+    <message>
+        <source>Cannot show mimetype</source>
+        <translation>Impossibile visualizzare il tipo mime</translation>
+    </message>
+    <message>
+        <source>File does not exist</source>
+        <translation>Il file non esiste</translation>
+    </message>
+</context>
+<context>
+    <name>QWebPage</name>
+    <message>
+        <source>Bad HTTP request</source>
+        <translation>Richiesta HTTP non valida</translation>
+    </message>
+    <message>
+        <source>Submit</source>
+        <comment>default label for Submit buttons in forms on web pages</comment>
+        <translation>Invia</translation>
+    </message>
+    <message>
+        <source>Submit</source>
+        <comment>Submit (input element) alt text for &lt;input&gt; elements with no alt, title, or value</comment>
+        <translation>Invia</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <comment>default label for Reset buttons in forms on web pages</comment>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>This is a searchable index. Enter search keywords: </source>
+        <comment>text that appears at the start of nearly-obsolete web pages in the form of a &apos;searchable index&apos;</comment>
+        <translation>Questo è l&apos;indice ricercabile. Digita la parola chiave di ricerca: </translation>
+    </message>
+    <message>
+        <source>Choose File</source>
+        <comment>title for file button used in HTML forms</comment>
+        <translation>Scegli file</translation>
+    </message>
+    <message>
+        <source>No file selected</source>
+        <comment>text to display in file button used in HTML forms when no file is selected</comment>
+        <translation>Nessun file selezionato</translation>
+    </message>
+    <message>
+        <source>Open in New Window</source>
+        <comment>Open in New Window context menu item</comment>
+        <translation>Apri in una nuova finestra</translation>
+    </message>
+    <message>
+        <source>Save Link...</source>
+        <comment>Download Linked File context menu item</comment>
+        <translation>Salva collegamento...</translation>
+    </message>
+    <message>
+        <source>Copy Link</source>
+        <comment>Copy Link context menu item</comment>
+        <translation>Copia collegamento</translation>
+    </message>
+    <message>
+        <source>Open Image</source>
+        <comment>Open Image in New Window context menu item</comment>
+        <translation>Apri immagine</translation>
+    </message>
+    <message>
+        <source>Save Image</source>
+        <comment>Download Image context menu item</comment>
+        <translation>Salva immagine</translation>
+    </message>
+    <message>
+        <source>Copy Image</source>
+        <comment>Copy Link context menu item</comment>
+        <translation>Copia immagine</translation>
+    </message>
+    <message>
+        <source>Open Frame</source>
+        <comment>Open Frame in New Window context menu item</comment>
+        <translation>Apri riquadro</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <comment>Copy context menu item</comment>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <source>Go Back</source>
+        <comment>Back context menu item</comment>
+        <translation>Indietro</translation>
+    </message>
+    <message>
+        <source>Go Forward</source>
+        <comment>Forward context menu item</comment>
+        <translation>Avanti</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <comment>Stop context menu item</comment>
+        <translation>Ferma</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <comment>Reload context menu item</comment>
+        <translation>Ricarica</translation>
+    </message>
+    <message>
+        <source>Cut</source>
+        <comment>Cut context menu item</comment>
+        <translation>Taglia</translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <comment>Paste context menu item</comment>
+        <translation>Incolla</translation>
+    </message>
+    <message>
+        <source>No Guesses Found</source>
+        <comment>No Guesses Found context menu item</comment>
+        <translation>Nessuna stima trovata</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <comment>Ignore Spelling context menu item</comment>
+        <translation>Ignora</translation>
+    </message>
+    <message>
+        <source>Add To Dictionary</source>
+        <comment>Learn Spelling context menu item</comment>
+        <translation>Aggiungi al dizionario</translation>
+    </message>
+    <message>
+        <source>Search The Web</source>
+        <comment>Search The Web context menu item</comment>
+        <translation>Cerca nel Web</translation>
+    </message>
+    <message>
+        <source>Look Up In Dictionary</source>
+        <comment>Look Up in Dictionary context menu item</comment>
+        <translation>Cerca nel dizionario</translation>
+    </message>
+    <message>
+        <source>Open Link</source>
+        <comment>Open Link context menu item</comment>
+        <translation>Apri collegamento</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <comment>Ignore Grammar context menu item</comment>
+        <translation>Ignora</translation>
+    </message>
+    <message>
+        <source>Spelling</source>
+        <comment>Spelling and Grammar context sub-menu item</comment>
+        <translation>Ortografia</translation>
+    </message>
+    <message>
+        <source>Show Spelling and Grammar</source>
+        <comment>menu item title</comment>
+        <translation>Mostra ortografia e grammatica</translation>
+    </message>
+    <message>
+        <source>Hide Spelling and Grammar</source>
+        <comment>menu item title</comment>
+        <translation>Nascondi ortografia e grammatica</translation>
+    </message>
+    <message>
+        <source>Check Spelling</source>
+        <comment>Check spelling context menu item</comment>
+        <translation>Controlla ortografia</translation>
+    </message>
+    <message>
+        <source>Check Spelling While Typing</source>
+        <comment>Check spelling while typing context menu item</comment>
+        <translation>Controlla l&apos;ortografia durante la digitazione</translation>
+    </message>
+    <message>
+        <source>Check Grammar With Spelling</source>
+        <comment>Check grammar with spelling context menu item</comment>
+        <translation>Controlla grammatica durante il controllo ortografico</translation>
+    </message>
+    <message>
+        <source>Fonts</source>
+        <comment>Font context sub-menu item</comment>
+        <translation>Caratteri</translation>
+    </message>
+    <message>
+        <source>Bold</source>
+        <comment>Bold context menu item</comment>
+        <translation>Grassetto</translation>
+    </message>
+    <message>
+        <source>Italic</source>
+        <comment>Italic context menu item</comment>
+        <translation>Corsivo</translation>
+    </message>
+    <message>
+        <source>Underline</source>
+        <comment>Underline context menu item</comment>
+        <translation>Sottolineato</translation>
+    </message>
+    <message>
+        <source>Outline</source>
+        <comment>Outline context menu item</comment>
+        <translation>Bordatura</translation>
+    </message>
+    <message>
+        <source>Direction</source>
+        <comment>Writing direction context sub-menu item</comment>
+        <translation>Direzione</translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <comment>Default writing direction context menu item</comment>
+        <translation>Predefinita</translation>
+    </message>
+    <message>
+        <source>LTR</source>
+        <comment>Left to Right context menu item</comment>
+        <translation>Da sinistra a destra</translation>
+    </message>
+    <message>
+        <source>RTL</source>
+        <comment>Right to Left context menu item</comment>
+        <translation>Da destra a sinistra</translation>
+    </message>
+    <message>
+        <source>Inspect</source>
+        <comment>Inspect Element context menu item</comment>
+        <translation>Ispeziona</translation>
+    </message>
+    <message>
+        <source>No recent searches</source>
+        <comment>Label for only item in menu that appears when clicking on the search field image, when no searches have been performed</comment>
+        <translation>Nessuna ricerca recente</translation>
+    </message>
+    <message>
+        <source>Recent searches</source>
+        <comment>label for first item in the menu that appears when clicking on the search field image, used as embedded menu title</comment>
+        <translation>Ricerche recenti</translation>
+    </message>
+    <message>
+        <source>Clear recent searches</source>
+        <comment>menu item in Recent Searches menu that empties menu&apos;s contents</comment>
+        <translation>Cancella le ricerche recenti</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <comment>Unknown filesize FTP directory listing item</comment>
+        <translation>Sconosciuta</translation>
+    </message>
+    <message>
+        <source>%1 (%2x%3 pixels)</source>
+        <comment>Title string for images</comment>
+        <translation>%1 (%2x%3 pixel)</translation>
+    </message>
+    <message>
+        <source>Web Inspector - %2</source>
+        <translation>Analizzatore web - %2</translation>
+    </message>
+</context>
+<context>
+    <name>QWhatsThisAction</name>
+    <message>
+        <source>What&apos;s This?</source>
+        <translation>Cos&apos;è?</translation>
+    </message>
+</context>
+<context>
+    <name>QWidget</name>
+    <message>
+        <source>*</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QWidgetTextControl</name>
+    <message>
+        <source>&amp;Undo</source>
+        <translation>Ann&amp;ulla</translation>
+    </message>
+    <message>
+        <source>&amp;Redo</source>
+        <translation>&amp;Rifai</translation>
+    </message>
+    <message>
+        <source>Cu&amp;t</source>
+        <translation>&amp;Taglia</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>&amp;Copia</translation>
+    </message>
+    <message>
+        <source>Copy &amp;Link Location</source>
+        <translation>Copia il co&amp;llegamento</translation>
+    </message>
+    <message>
+        <source>&amp;Paste</source>
+        <translation>&amp;Incolla</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+</context>
+<context>
+    <name>QWindowsDirect2DIntegration</name>
+    <message>
+        <source>Qt cannot load the direct2d platform plugin because the Direct2D version on this system is too old. The minimum system requirement for this platform plugin is Windows 7 SP1 with Platform Update.
+
+The minimum Direct2D version required is %1.%2.%3.%4. The Direct2D version on this system is %5.%6.%7.%8.</source>
+        <translation>Qt non può caricare il plugin di piattaforma direct2d perché la versione di Direct2D nel sistema è troppo vecchia. Il requisito minimo per questo plugin di piattaforma è Windows 7 SP1 con Platform Update.
+
+La versione minima di Direct2D richiesta è %1.%2.%3.%4. La versione di Direct2D in questo sistema è %5.%6.%7.%8.</translation>
+    </message>
+    <message>
+        <source>Cannot load direct2d platform plugin</source>
+        <translation>Impossibile caricare il plugin di piattaforma direct2d</translation>
+    </message>
+</context>
+<context>
+    <name>QWizard</name>
+    <message>
+        <source>Go Back</source>
+        <translation>Indietro</translation>
+    </message>
+    <message>
+        <source>Continue</source>
+        <translation>Continua</translation>
+    </message>
+    <message>
+        <source>Commit</source>
+        <translation>Applica</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation>Completato</translation>
+    </message>
+    <message>
+        <source>Quit</source>
+        <translation>Esci</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>&lt; &amp;Back</source>
+        <translation>&lt; &amp;Indietro</translation>
+    </message>
+    <message>
+        <source>&amp;Finish</source>
+        <translation>&amp;Fine</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Ai&amp;uto</translation>
+    </message>
+    <message>
+        <source>&amp;Next</source>
+        <translation>Ava&amp;nti</translation>
+    </message>
+    <message>
+        <source>&amp;Next &gt;</source>
+        <translation>Ava&amp;nti &gt;</translation>
+    </message>
+</context>
+<context>
+    <name>QWorkspace</name>
+    <message>
+        <source>&amp;Restore</source>
+        <translation>&amp;Ripristina</translation>
+    </message>
+    <message>
+        <source>&amp;Move</source>
+        <translation>&amp;Sposta</translation>
+    </message>
+    <message>
+        <source>&amp;Size</source>
+        <translation>&amp;Dimensioni</translation>
+    </message>
+    <message>
+        <source>Mi&amp;nimize</source>
+        <translation>Mi&amp;nimizza</translation>
+    </message>
+    <message>
+        <source>Ma&amp;ximize</source>
+        <translation>Ma&amp;ssimizza</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Chiudi</translation>
+    </message>
+    <message>
+        <source>Stay on &amp;Top</source>
+        <translation>Sempre in &amp;primo piano</translation>
+    </message>
+    <message>
+        <source>Sh&amp;ade</source>
+        <translation>&amp;Arrotola</translation>
+    </message>
+    <message>
+        <source>%1 - [%2]</source>
+        <translation>%1 - [%2]</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Minimizza</translation>
+    </message>
+    <message>
+        <source>Restore Down</source>
+        <translation>Ripristina in basso</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <source>&amp;Unshade</source>
+        <translation>&amp;Srotola</translation>
+    </message>
+</context>
+<context>
+    <name>QXml</name>
+    <message>
+        <source>no error occurred</source>
+        <translation>non si è verificato alcun errore</translation>
+    </message>
+    <message>
+        <source>error triggered by consumer</source>
+        <translation>errore innescato da utente</translation>
+    </message>
+    <message>
+        <source>unexpected end of file</source>
+        <translation>fine file inattesa</translation>
+    </message>
+    <message>
+        <source>more than one document type definition</source>
+        <translation>più di una definizione del tipo di documento</translation>
+    </message>
+    <message>
+        <source>error occurred while parsing element</source>
+        <translation>riscontrato errore durante l&apos;analisi dell&apos;elemento</translation>
+    </message>
+    <message>
+        <source>tag mismatch</source>
+        <translation>tag non corrispondente</translation>
+    </message>
+    <message>
+        <source>error occurred while parsing content</source>
+        <translation>riscontrato errore durante l&apos;analisi del contenuto</translation>
+    </message>
+    <message>
+        <source>unexpected character</source>
+        <translation>carattere inatteso</translation>
+    </message>
+    <message>
+        <source>invalid name for processing instruction</source>
+        <translation>nome dell&apos;istruzione di elaborazione non valido</translation>
+    </message>
+    <message>
+        <source>version expected while reading the XML declaration</source>
+        <translation>versione attesa durante la lettura della dichiarazione XML</translation>
+    </message>
+    <message>
+        <source>wrong value for standalone declaration</source>
+        <translation>valore errato per la dichiarazione autonoma</translation>
+    </message>
+    <message>
+        <source>encoding declaration or standalone declaration expected while reading the XML declaration</source>
+        <translation>dichiarazione di codifica o dichiarazione autonoma attesa durante la lettura della dichiarazione XML</translation>
+    </message>
+    <message>
+        <source>standalone declaration expected while reading the XML declaration</source>
+        <translation>dichiarazione autonoma attesa durante la lettura della dichiarazione XML</translation>
+    </message>
+    <message>
+        <source>error occurred while parsing document type definition</source>
+        <translation>riscontrato errore durante l&apos;analisi della definizione del tipo di documento</translation>
+    </message>
+    <message>
+        <source>letter is expected</source>
+        <translation>lettera attesa</translation>
+    </message>
+    <message>
+        <source>error occurred while parsing comment</source>
+        <translation>riscontrato errore durante l&apos;analisi del commento</translation>
+    </message>
+    <message>
+        <source>error occurred while parsing reference</source>
+        <translation>riscontrato errore durante l&apos;analisi dei riferimenti</translation>
+    </message>
+    <message>
+        <source>internal general entity reference not allowed in DTD</source>
+        <translation>riferimento interno a entità generica non consentito in DTD</translation>
+    </message>
+    <message>
+        <source>external parsed general entity reference not allowed in attribute value</source>
+        <translation>riferimento esterno a entità generale analizzata non consentito nel valore dell&apos;attributo</translation>
+    </message>
+    <message>
+        <source>external parsed general entity reference not allowed in DTD</source>
+        <translation>riferimento esterno a entità generale analizzata non consentito in DTD</translation>
+    </message>
+    <message>
+        <source>unparsed entity reference in wrong context</source>
+        <translation>riferimento entità non analizzata nel contesto errato</translation>
+    </message>
+    <message>
+        <source>recursive entities</source>
+        <translation>entità ricorsive</translation>
+    </message>
+    <message>
+        <source>error in the text declaration of an external entity</source>
+        <translation>errore nella dichiarazione di testo di un&apos;entità esterna</translation>
+    </message>
+</context>
+<context>
+    <name>QXmlStream</name>
+    <message>
+        <source>Extra content at end of document.</source>
+        <translation>Contenuto aggiuntivo alla fine del documento.</translation>
+    </message>
+    <message>
+        <source>Invalid entity value.</source>
+        <translation>Valore dell&apos;entità non valido.</translation>
+    </message>
+    <message>
+        <source>Invalid XML character.</source>
+        <translation>Carattere XML non valido.</translation>
+    </message>
+    <message>
+        <source>Sequence &apos;]]&gt;&apos; not allowed in content.</source>
+        <translation>Sequenza &apos;]]&gt;&apos; non consentita nel  contenuto.</translation>
+    </message>
+    <message>
+        <source>Namespace prefix &apos;%1&apos; not declared</source>
+        <translation>Prefisso di spazio dei nomi &apos;%1&apos; non dichiarato</translation>
+    </message>
+    <message>
+        <source>Attribute redefined.</source>
+        <translation>Attributo ridefinito.</translation>
+    </message>
+    <message>
+        <source>Unexpected character &apos;%1&apos; in public id literal.</source>
+        <translation>Carattere inatteso &apos;%1&apos; in letterale identificativo pubblico.</translation>
+    </message>
+    <message>
+        <source>Invalid XML version string.</source>
+        <translation>Stringa di versione XML non valida.</translation>
+    </message>
+    <message>
+        <source>Unsupported XML version.</source>
+        <translation>Versione XML non supportata.</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid encoding name.</source>
+        <translation>%1 è un nome di codifica non valido.</translation>
+    </message>
+    <message>
+        <source>Encoding %1 is unsupported</source>
+        <translation>La codifica %1 non è supportata</translation>
+    </message>
+    <message>
+        <source>Standalone accepts only yes or no.</source>
+        <translation>Standalone accetta solo yes o no.</translation>
+    </message>
+    <message>
+        <source>Invalid attribute in XML declaration.</source>
+        <translation>Attributo non valido nella dichiarazione XML.</translation>
+    </message>
+    <message>
+        <source>Premature end of document.</source>
+        <translation>Fine imprevista del documento.</translation>
+    </message>
+    <message>
+        <source>Invalid document.</source>
+        <translation>Documento non valido.</translation>
+    </message>
+    <message>
+        <source>Expected </source>
+        <translation>Atteso </translation>
+    </message>
+    <message>
+        <source>, but got &apos;</source>
+        <translation>, ma ricevuto &apos;</translation>
+    </message>
+    <message>
+        <source>Unexpected &apos;</source>
+        <translation>Inatteso &apos;</translation>
+    </message>
+    <message>
+        <source>Expected character data.</source>
+        <translation>Dati di carattere inattesi.</translation>
+    </message>
+    <message>
+        <source>Recursive entity detected.</source>
+        <translation>Rilevata entità ricorsiva.</translation>
+    </message>
+    <message>
+        <source>Start tag expected.</source>
+        <translation>Atteso tag iniziale.</translation>
+    </message>
+    <message>
+        <source>XML declaration not at start of document.</source>
+        <translation>La dichiarazione XML non è all&apos;inizio del documento.</translation>
+    </message>
+    <message>
+        <source>NDATA in parameter entity declaration.</source>
+        <translation>NDATA nella dichiarazione dell&apos;entità del parametro.</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid processing instruction name.</source>
+        <translation>%1 non è un nome valido dell&apos;istruzione di elaborazione.</translation>
+    </message>
+    <message>
+        <source>Invalid processing instruction name.</source>
+        <translation>Nome dell&apos;istruzione di elaborazione non valido.</translation>
+    </message>
+    <message>
+        <source>Illegal namespace declaration.</source>
+        <translation>Dichiarazione dello spazio dei nomi non consentita.</translation>
+    </message>
+    <message>
+        <source>Invalid XML name.</source>
+        <translation>Nome XML non valido.</translation>
+    </message>
+    <message>
+        <source>Opening and ending tag mismatch.</source>
+        <translation>Mancata corrispondenza tra tag di apertura e chiusura.</translation>
+    </message>
+    <message>
+        <source>Reference to unparsed entity &apos;%1&apos;.</source>
+        <translation>Riferimento all&apos;identità non analizzata &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>Entity &apos;%1&apos; not declared.</source>
+        <translation>Entità &apos;%1&apos; non dichiarata.</translation>
+    </message>
+    <message>
+        <source>Reference to external entity &apos;%1&apos; in attribute value.</source>
+        <translation>Riferimento all&apos;entità esterna &apos;%1&apos; nel valore dell&apos;attributo.</translation>
+    </message>
+    <message>
+        <source>Invalid character reference.</source>
+        <translation>Riferimento di carattere non valido.</translation>
+    </message>
+    <message>
+        <source>Encountered incorrectly encoded content.</source>
+        <translation>Riscontrato contenuto non codificato correttamente.</translation>
+    </message>
+    <message>
+        <source>The standalone pseudo attribute must appear after the encoding.</source>
+        <translation>Lo pseudo-attributo standalone deve comparire dopo la codifica.</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid PUBLIC identifier.</source>
+        <translation>%1 è un identificatore PUBLIC non valido.</translation>
+    </message>
+    <message>
+        <source>Attribute &apos;%1&apos; redefined.</source>
+        <translation>Attributo &apos;%1&apos; ridefinito.</translation>
+    </message>
+</context>
+<context>
+    <name>QtXmlPatterns</name>
+    <message>
+        <source>An %1-attribute with value %2 has already been declared.</source>
+        <translation>Un attributo %1 con valore %2 è già stato dichiarato.</translation>
+    </message>
+    <message>
+        <source>An %1-attribute must have a valid %2 as value, which %3 isn&apos;t.</source>
+        <translation>Un valore %1 deve avere un %2 valido come valore, che %3 non rappresenta.</translation>
+    </message>
+    <message>
+        <source>Network timeout.</source>
+        <translation>Timeout di rete.</translation>
+    </message>
+    <message>
+        <source>Year %1 is invalid because it begins with %2.</source>
+        <translation>L&apos;anno %1 non è valido poiché inizia con %2.</translation>
+    </message>
+    <message>
+        <source>Day %1 is outside the range %2..%3.</source>
+        <translation>Il giorno %1 è fuori dall&apos;intervallo %2..%3.</translation>
+    </message>
+    <message>
+        <source>Month %1 is outside the range %2..%3.</source>
+        <translation>Il mese %1 è fuori dall&apos;intervallo %2..%3.</translation>
+    </message>
+    <message>
+        <source>Overflow: Can&apos;t represent date %1.</source>
+        <translation>Overflow: impossibile rappresentare la data %1.</translation>
+    </message>
+    <message>
+        <source>Day %1 is invalid for month %2.</source>
+        <translation>Il giorno %1 non è valido per il mese %2.</translation>
+    </message>
+    <message>
+        <source>Time %1:%2:%3.%4 is invalid.</source>
+        <translation>L&apos;ora %1:%2:%3.%4 non è valida.</translation>
+    </message>
+    <message>
+        <source>Overflow: Date can&apos;t be represented.</source>
+        <translation>Overflow: la data non può essere rappresentata.</translation>
+    </message>
+    <message>
+        <source>At least one component must be present.</source>
+        <translation>Deve essere presente almeno un componente.</translation>
+    </message>
+    <message>
+        <source>At least one time component must appear after the %1-delimiter.</source>
+        <translation>Almeno un componente deve apparire dopo il delimitatore %1.</translation>
+    </message>
+    <message>
+        <source>No operand in an integer division, %1, can be %2.</source>
+        <translation>Nessun operando in una divisione intera, %1, può essere %2.</translation>
+    </message>
+    <message>
+        <source>The first operand in an integer division, %1, cannot be infinity (%2).</source>
+        <translation>Il primo operando in una divisione intera, %1, non può essere infinito (%2).</translation>
+    </message>
+    <message>
+        <source>The second operand in a division, %1, cannot be zero (%2).</source>
+        <translation>Il secondo operando in una divisione, %1, non può essere zero (%2).</translation>
+    </message>
+    <message>
+        <source>%1 is not a valid value of type %2.</source>
+        <translation>%1 non è un valore valido di tipo %2.</translation>
+    </message>
+    <message>
+        <source>When casting to %1 from %2, the source value cannot be %3.</source>
+        <translation>Quando si esegue il cast da %1 a %2, il valore di origine non può essere %3.</translation>
+    </message>
+    <message>
+        <source>Integer division (%1) by zero (%2) is undefined.</source>
+        <translation>La divisione intera (%1) per zero (%2) non è definita.</translation>
+    </message>
+    <message>
+        <source>Division (%1) by zero (%2) is undefined.</source>
+        <translation>La divisione (%1) per zero (%2) non è definita.</translation>
+    </message>
+    <message>
+        <source>Modulus division (%1) by zero (%2) is undefined.</source>
+        <translation>La divisione del modulo (%1) per zero (%2) non è definita.</translation>
+    </message>
+    <message>
+        <source>Dividing a value of type %1 by %2 (not-a-number) is not allowed.</source>
+        <translation>La divisione di un valore di tipo %1 per %2 (non un numero) non è consentita.</translation>
+    </message>
+    <message>
+        <source>Dividing a value of type %1 by %2 or %3 (plus or minus zero) is not allowed.</source>
+        <translation>La divisione di un valore di tipo %1 per %2 o%3 (più o meno zero) non è consentita.</translation>
+    </message>
+    <message>
+        <source>Multiplication of a value of type %1 by %2 or %3 (plus or minus infinity) is not allowed.</source>
+        <translation>La moltiplicazione di un valore di tipo %1 per %2 o%3 (più o meno infinito) non è consentita.</translation>
+    </message>
+    <message>
+        <source>A value of type %1 cannot have an Effective Boolean Value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value %1 of type %2 exceeds maximum (%3).</source>
+        <translation>Il valore %1 di tipo %2 supera il massimo (%3).</translation>
+    </message>
+    <message>
+        <source>Value %1 of type %2 is below minimum (%3).</source>
+        <translation>Il valore %1 di tipo %2 è sotto il minimo (%3).</translation>
+    </message>
+    <message>
+        <source>A value of type %1 must contain an even number of digits. The value %2 does not.</source>
+        <translation>Un valore di tipo %1 deve contenere un numero di cifre pari. Il valore %2 non è corretto.</translation>
+    </message>
+    <message>
+        <source>%1 is not valid as a value of type %2.</source>
+        <translation>%1 non è un valore valido di tipo %2.</translation>
+    </message>
+    <message>
+        <source>Operator %1 cannot be used on type %2.</source>
+        <translation>L&apos;operatore %1 non può essere utilizzato per il tipo %2.</translation>
+    </message>
+    <message>
+        <source>Operator %1 cannot be used on atomic values of type %2 and %3.</source>
+        <translation>L&apos;operatore %1 non può essere utilizzato su valori atomici di tipo %2 e %3.</translation>
+    </message>
+    <message>
+        <source>The namespace URI in the name for a computed attribute cannot be %1.</source>
+        <translation>L&apos;URI dello spazio dei nomi nel nome per un attributo calcolato non può essere %1.</translation>
+    </message>
+    <message>
+        <source>Type error in cast, expected %1, received %2.</source>
+        <translation>Errore di tipo nel cast, atteso %1, ricevuto %2.</translation>
+    </message>
+    <message>
+        <source>No casting is possible with %1 as the target type.</source>
+        <translation>Non è possibile alcun cast con %1 come tipo di destinazione.</translation>
+    </message>
+    <message>
+        <source>It is not possible to cast from %1 to %2.</source>
+        <translation>Impossibile eseguire il cast da %1 a %2.</translation>
+    </message>
+    <message>
+        <source>It&apos;s not possible to cast the value %1 of type %2 to %3</source>
+        <translation>Impossibile effettuare il cast di un valore %1 del tipo %2 in %3</translation>
+    </message>
+    <message>
+        <source>Failure when casting from %1 to %2: %3</source>
+        <translation>Problema durante il cast di %1 in %2: %3</translation>
+    </message>
+    <message>
+        <source>A comment cannot contain %1</source>
+        <translation>Un commento non può contenere %1</translation>
+    </message>
+    <message>
+        <source>A comment cannot end with a %1.</source>
+        <translation>Un commento non può terminare con un %1.</translation>
+    </message>
+    <message>
+        <source>No comparisons can be done involving the type %1.</source>
+        <translation>Non è possibile alcuna comparazione che includa il tipo %1.</translation>
+    </message>
+    <message>
+        <source>Operator %1 is not available between atomic values of type %2 and %3.</source>
+        <translation>L&apos;operatore %1 non è disponibile tra i valori atomici di tipo %2 e %3.</translation>
+    </message>
+    <message>
+        <source>A library module cannot be evaluated directly. It must be imported from a main module.</source>
+        <translation>Un modulo di libreria non può essere valutato direttamente. Deve essere importato da un modulo principale.</translation>
+    </message>
+    <message>
+        <source>%1 is not a valid target name in a processing instruction. It must be a %2 value, e.g. %3.</source>
+        <translation>%1 non è un valore di destinazione valido in un&apos;istruzione di elaborazione. Deve essere un valore %2, ad es. %3.</translation>
+    </message>
+    <message>
+        <source>The last step in a path must contain either nodes or atomic values. It cannot be a mixture between the two.</source>
+        <translation>L&apos;ultimo passo in un percorso deve contenere nodi o valori atomici. Non può essere un misto dei due.</translation>
+    </message>
+    <message>
+        <source>The data of a processing instruction cannot contain the string %1</source>
+        <translation>I dati dell&apos;istruzione di elaborazione non possono contenere la stringa %1</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid %2</source>
+        <translation>%1 è un %2 non valido</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 takes at most %n argument(s). %2 is therefore invalid.</source>
+        <translation>
+            <numerusform>%1 richiede almeno un argomento. %2 non è perciò valido.</numerusform>
+            <numerusform>%1 richiede almeno %n argomenti. %2 non è perciò valido.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 requires at least %n argument(s). %2 is therefore invalid.</source>
+        <translation>
+            <numerusform>%1 richiede almeno un argomento. %2 non è perciò valido.</numerusform>
+            <numerusform>%1 richiede almeno %n argomenti. %2 non è perciò valido.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>The first argument to %1 cannot be of type %2. It must be a numeric type, xs:yearMonthDuration or xs:dayTimeDuration.</source>
+        <translation>Il primo argomento di %1 non può essere di tipo %2. Deve essere un tipo numerico, xs:yearMonthDuration o xs:dayTimeDuration.</translation>
+    </message>
+    <message>
+        <source>The first argument to %1 cannot be of type %2. It must be of type %3, %4, or %5.</source>
+        <translation>Il primo argomento di %1 non può essere di tipo %2. Deve essere di tipo%3, %4, o %5.</translation>
+    </message>
+    <message>
+        <source>The second argument to %1 cannot be of type %2. It must be of type %3, %4, or %5.</source>
+        <translation>Il secondo argomento di %1 non può essere di tipo %2. Deve essere di tipo%3, %4, o %5.</translation>
+    </message>
+    <message>
+        <source>%1 is not a valid XML 1.0 character.</source>
+        <translation>%1 non è un carattere XML 1.0 valido.</translation>
+    </message>
+    <message>
+        <source>The first argument to %1 cannot be of type %2.</source>
+        <translation>Il primo argomento di %1 non può essere di tipo %2.</translation>
+    </message>
+    <message>
+        <source>%1 was called.</source>
+        <translation>%1 è stato invocato.</translation>
+    </message>
+    <message>
+        <source>%1 must be followed by %2 or %3, not at the end of the replacement string.</source>
+        <translation>%1 deve essere seguito da %2 o %3, non alla fine della stringa di sostituzione.</translation>
+    </message>
+    <message>
+        <source>In the replacement string, %1 must be followed by at least one digit when not escaped.</source>
+        <translation>Nella stringa di sostituzione, %1 deve essere seguito da almeno una cifra se non è presente un carattere di escape.</translation>
+    </message>
+    <message>
+        <source>In the replacement string, %1 can only be used to escape itself or %2, not %3</source>
+        <translation>Nella stringa di sostituzione, %1 può essere utilizzato come sequenza di escape di se stesso o %2, non %3</translation>
+    </message>
+    <message>
+        <source>%1 matches newline characters</source>
+        <translation>%1 verifica i caratteri di fine riga</translation>
+    </message>
+    <message>
+        <source>%1 and %2 match the start and end of a line.</source>
+        <translation>%1 e %2 corrispondo all&apos;inizio e alla fine di una riga.</translation>
+    </message>
+    <message>
+        <source>Matches are case insensitive</source>
+        <translation>Le corrispondenze non tengono conto delle maiuscole</translation>
+    </message>
+    <message>
+        <source>Whitespace characters are removed, except when they appear in character classes</source>
+        <translation>I caratteri di spaziatura sono rimossi, eccetto quando compaiono in classi di caratteri</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid regular expression pattern: %2</source>
+        <translation>%1 è un modello di espressione regolare non valido: %2</translation>
+    </message>
+    <message>
+        <source>It will not be possible to retrieve %1.</source>
+        <translation>Non sarà possibile recuperare %1.</translation>
+    </message>
+    <message>
+        <source>The default collection is undefined</source>
+        <translation>La raccolta predefinita non è specificata</translation>
+    </message>
+    <message>
+        <source>%1 cannot be retrieved</source>
+        <translation>%1 non può essere recuperato</translation>
+    </message>
+    <message>
+        <source>%1 is not a whole number of minutes.</source>
+        <translation>%1 non è un numero intero di minuti.</translation>
+    </message>
+    <message>
+        <source>Required cardinality is %1; got cardinality %2.</source>
+        <translation>La cardinalità richiesta è %1, la cardinalità ottenuta è %2.</translation>
+    </message>
+    <message>
+        <source>The item %1 did not match the required type %2.</source>
+        <translation>L&apos;elemento %1 non corrisponde al tipo %2 richiesto.</translation>
+    </message>
+    <message>
+        <source>%1 is an unknown schema type.</source>
+        <translation>%1 è un tipo di schema sconosciuto.</translation>
+    </message>
+    <message>
+        <source>The initialization of variable %1 depends on itself</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No variable by name %1 exists</source>
+        <translation>Non esiste alcuna variabile con il nome %1</translation>
+    </message>
+    <message>
+        <source>The variable %1 is unused</source>
+        <translation>La variabile %1 è inutilizzata</translation>
+    </message>
+    <message>
+        <source>Version %1 is not supported. The supported XQuery version is 1.0.</source>
+        <translation>La versione %1 non è supportata. La versione di XQuery supportata è la 1.0.</translation>
+    </message>
+    <message>
+        <source>The encoding %1 is invalid. It must contain Latin characters only, must not contain whitespace, and must match the regular expression %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No function with signature %1 is available</source>
+        <translation>Non è disponibile alcuna funzione con firma &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>It is not possible to redeclare prefix %1.</source>
+        <translation>Non è possibile dichiarare nuovamente il prefisso %1.</translation>
+    </message>
+    <message>
+        <source>The target namespace of a %1 cannot be empty.</source>
+        <translation>Lo spazio dei nomi di destinazione di un %1 non può essere vuoto.</translation>
+    </message>
+    <message>
+        <source>The module import feature is not supported</source>
+        <translation>La funzione di importazione dei moduli non è supportata</translation>
+    </message>
+    <message>
+        <source>No value is available for the external variable by name %1.</source>
+        <translation>Non è disponibile alcun valore per la variabile esterna con nome %1.</translation>
+    </message>
+    <message>
+        <source>A function already exists with the signature %1.</source>
+        <translation>Una funzione con firma %1 esiste già.</translation>
+    </message>
+    <message>
+        <source>An argument by name %1 has already been declared. Every argument name must be unique.</source>
+        <translation>Un argomento con nome %1 è già stato dichiarato. Ogni nome di argomento deve essere unico.</translation>
+    </message>
+    <message>
+        <source>The %1-axis is unsupported in XQuery</source>
+        <translation>L&apos;asse %1 non è supportato in XQuery</translation>
+    </message>
+    <message>
+        <source>No function by name %1 is available.</source>
+        <translation>Non è disponibile alcuna variabile con il nome %1.</translation>
+    </message>
+    <message>
+        <source>%1 is an invalid namespace URI.</source>
+        <translation>%1 è un URI di spazio dei nomi non valido.</translation>
+    </message>
+    <message>
+        <source>It is not possible to bind to the prefix %1</source>
+        <translation>Impossibile associare al prefisso %1</translation>
+    </message>
+    <message>
+        <source>The name %1 does not refer to any schema type.</source>
+        <translation>Il nome %1 non si riferisce a nessun tipo di schema.</translation>
+    </message>
+    <message>
+        <source>%1 is not an atomic type. Casting is only possible to atomic types.</source>
+        <translation>%1 non è un tipo atomico. Il cast è possibile solo con tipi atomici.</translation>
+    </message>
+    <message>
+        <source>The name of an extension expression must be in a namespace.</source>
+        <translation>Il nome di un&apos;espressione di estensione deve essere in uno spazio dei nomi.</translation>
+    </message>
+    <message>
+        <source>empty</source>
+        <translation>vuoto</translation>
+    </message>
+    <message>
+        <source>zero or one</source>
+        <translation>zero o uno</translation>
+    </message>
+    <message>
+        <source>exactly one</source>
+        <translation>esattamente uno</translation>
+    </message>
+    <message>
+        <source>one or more</source>
+        <translation>uno o più</translation>
+    </message>
+    <message>
+        <source>zero or more</source>
+        <translation>zero o più</translation>
+    </message>
+    <message>
+        <source>Required type is %1, but %2 was found.</source>
+        <translation>Il tipo richiesto è «%1», ma è stato trovato %2.</translation>
+    </message>
+    <message>
+        <source>Promoting %1 to %2 may cause loss of precision.</source>
+        <translation>La promozione di %1 a %2 potrebbe causare una perdita di precisione.</translation>
+    </message>
+    <message>
+        <source>The focus is undefined.</source>
+        <translation>Il fuoco non è definito.</translation>
+    </message>
+    <message>
+        <source>It&apos;s not possible to add attributes after any other kind of node.</source>
+        <translation>Non è possibile aggiungere attributi dopo qualsiasi altro tipo di nodo.</translation>
+    </message>
+    <message>
+        <source>An attribute by name %1 has already been created.</source>
+        <translation>Un attributo con nome %1 è già stato creato.</translation>
+    </message>
+    <message>
+        <source>Element %1 can&apos;t be serialized because it appears outside the document element.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attribute %1 can&apos;t be serialized because it appears at the top level.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and milliseconds are not all 0; </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Effective Boolean Value cannot be calculated for a sequence containing two or more atomic values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The name for a computed attribute cannot have the namespace URI %1 with the local name %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When casting to %1 or types derived from it, the source value must be of the same type, or it must be a string literal. Type %2 is not allowed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Casting to %1 is not possible because it is an abstract type, and can therefore never be instantiated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An attribute node cannot be a child of a document node. Therefore, the attribute %1 is out of place.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A value of type %1 cannot be a predicate. A predicate must have either a numeric type or an Effective Boolean Value type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A positional predicate must evaluate to a single numeric value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The target name in a processing instruction cannot be %1 in any combination of upper and lower case. Therefore, is %2 invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No namespace binding exists for the prefix %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No namespace binding exists for the prefix %1 in %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If both values have zone offsets, they must have the same zone offset. %1 and %2 are not the same.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is an invalid flag for regular expressions. Valid flags are:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If the first argument is the empty sequence or a zero-length string (no namespace), a prefix cannot be specified. Prefix %1 was specified.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The root node of the second argument to function %1 must be a document node. %2 is not a document node.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The normalization form %1 is unsupported. The supported forms are %2, %3, %4, and %5, and none, i.e. the empty string (no normalization).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A zone offset must be in the range %1..%2 inclusive. %3 is out of range.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only one %1 declaration can occur in the query prolog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A default namespace declaration must occur before function, variable, and option declarations.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Namespace declarations must occur before function, variable, and option declarations.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Module imports must occur before function, variable, and option declarations.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only the prefix %1 can be declared to bind the namespace %2. By default, it is already bound to the prefix %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefix %1 is already declared in the prolog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The name of an option must have a prefix. There is no default namespace for options.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Schema Import feature is not supported, and therefore %1 declarations cannot occur.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A variable by name %1 has already been declared in the prolog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The namespace for a user defined function cannot be empty (try the predefined prefix %1 which exists for cases like this)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The namespace %1 is reserved; therefore user defined functions may not use it. Try the predefined prefix %2, which exists for these cases.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The namespace of a user defined function in a library module must be equivalent to the module namespace. In other words, it should be %1 instead of %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No external functions are supported. All supported functions can be used directly, without first declaring them as external</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The name of a variable bound in a for-expression must be different from the positional variable. Hence, the two variables named %1 collide.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Schema Validation Feature is not supported. Hence, %1-expressions may not be used.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None of the pragma expressions are supported. Therefore, a fallback expression must be present</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is not a valid numeric literal.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The namespace URI cannot be the empty string when binding to a prefix, %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Namespace %1 can only be bound to %2 (and it is, in either case, pre-declared).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefix %1 can only be bound to %2 (and it is, in either case, pre-declared).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Two namespace declaration attributes have the same name: %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The namespace URI must be a constant and cannot use enclosed expressions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An attribute by name %1 has already appeared on this element.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A direct element constructor is not well-formed. %1 is ended with %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is an complex type. Casting to complex types is not possible. However, casting to atomic types such as %2 works.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is not a valid name for a processing-instruction. Therefore this name test will never match.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is not in the in-scope attribute declarations. Note that the schema import feature is not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only the Unicode Codepoint Collation is supported(%1). %2 is unsupported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VolumeSlider</name>
+    <message>
+        <source>Muted</source>
+        <translation>Silenziato</translation>
+    </message>
+    <message>
+        <source>Volume: %1%</source>
+        <translation>Volume: %1%</translation>
+    </message>
+</context>
+<context>
+    <name>WebCore::PlatformScrollbar</name>
+    <message>
+        <source>Scroll here</source>
+        <translation>Scorri qui</translation>
+    </message>
+    <message>
+        <source>Left edge</source>
+        <translation>Bordo sinistro</translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation>In alto</translation>
+    </message>
+    <message>
+        <source>Right edge</source>
+        <translation>Bordo destro</translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation>In basso</translation>
+    </message>
+    <message>
+        <source>Page left</source>
+        <translation>Pagina sinistra</translation>
+    </message>
+    <message>
+        <source>Page up</source>
+        <translation>Pagina su</translation>
+    </message>
+    <message>
+        <source>Page right</source>
+        <translation>Pagina destra</translation>
+    </message>
+    <message>
+        <source>Page down</source>
+        <translation>Pagina giù</translation>
+    </message>
+    <message>
+        <source>Scroll left</source>
+        <translation>Scorri a sinistra</translation>
+    </message>
+    <message>
+        <source>Scroll up</source>
+        <translation>Scorri in alto</translation>
+    </message>
+    <message>
+        <source>Scroll right</source>
+        <translation>Scorri a destra</translation>
+    </message>
+    <message>
+        <source>Scroll down</source>
+        <translation>Scorri in basso</translation>
+    </message>
+</context>
+</TS>
