@@ -1,9 +1,9 @@
 @echo off
 
 cd /d %~dp0
-for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_MAJOR =" Config.kmk') do SET VBOX_VER_MJ=%%i
-for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_MINOR =" Config.kmk') do SET VBOX_VER_MN=%%i
-for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_BUILD =" Config.kmk') do SET VBOX_VER_BLD=%%i
+for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_MAJOR =" Version.kmk') do SET VBOX_VER_MJ=%%i
+for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_MINOR =" Version.kmk') do SET VBOX_VER_MN=%%i
+for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_VERSION_BUILD =" Version.kmk') do SET VBOX_VER_BLD=%%i
 for /f "tokens=6" %%i in ('findstr /C:"$Rev: " Config.kmk') do SET VBOX_REV=%%i
 for /f "tokens=3" %%i in ('findstr /B /C:"VBOX_BUILD_PUBLISHER :=" LocalConfig.kmk') do SET VBOX_VER_PUB=%%i
 
@@ -22,7 +22,7 @@ echo echo.>> build-tmp.cmd
 echo echo ### %VERSION%: BUILDING x64 VERSION ###>> build-tmp.cmd
 echo echo.>> build-tmp.cmd
 echo set BUILD_TARGET_ARCH=amd64>> build-tmp.cmd
-echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x64 --with-openssl=C:\Programs\OpenSSL\x64 --with-openssl32=C:\Programs\OpenSSL\x32 --with-libcurl=C:\Programs\curl\x64 --with-libcurl32=C:\Programs\curl\x32 --with-Qt5=C:\Programs\Qt\5.6.2-x64 --with-python=C:/Programs/Python>> build-tmp.cmd
+echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x64 --with-openssl=C:\Programs\OpenSSL\x64 --with-openssl32=C:\Programs\OpenSSL\x32 --with-libcurl=C:\Programs\curl\x64 --with-libcurl32=C:\Programs\curl\x32 --with-Qt5=C:\Programs\Qt\5.6.3-x64 --with-python=C:/Programs/Python>> build-tmp.cmd
 echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
 echo call env.bat>> build-tmp.cmd
 echo kmk>> build-tmp.cmd
@@ -42,7 +42,7 @@ echo echo.>> build-tmp.cmd
 echo echo ### %VERSION%: BUILDING x32 VERSION ###>> build-tmp.cmd
 echo echo.>> build-tmp.cmd
 echo set BUILD_TARGET_ARCH=x86>> build-tmp.cmd
-echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x32 --with-openssl=C:\Programs\OpenSSL\x32 --with-libcurl=C:\Programs\curl\x32 --with-Qt5=C:\Programs\Qt\5.6.2-x32 --with-python=C:/Programs/Python>> build-tmp.cmd
+echo cscript configure.vbs --with-DDK=C:\WinDDK\7600.16385.1 --with-MinGW-w64=C:\Programs\mingw64 --with-MinGW32=C:\Programs\mingw32 --with-libSDL=C:\Programs\SDL\x32 --with-openssl=C:\Programs\OpenSSL\x32 --with-libcurl=C:\Programs\curl\x32 --with-Qt5=C:\Programs\Qt\5.6.3-x32 --with-python=C:/Programs/Python>> build-tmp.cmd
 echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
 echo call env.bat>> build-tmp.cmd
 echo kmk>> build-tmp.cmd
