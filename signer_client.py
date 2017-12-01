@@ -2,28 +2,24 @@
 
 import sys
 import os
+import re
 import argparse
 import uuid
 import httplib
 import msvcrt
 import time
 
-__all__ = ['sign', 'sign_impl']
+__all__ = ['sign', 'sign_impl', 'getcerts']
 
 ################################################################################
 # Global configuration
 
 # Signer server URL
 signerAddr = '10.28.28.192:8765'
-# Name of the certificate to use for signing
-certName = 'Parallels International Gmbh'
-# Thumbprint of the certificate
-# (in case there are several certificates with the same name)
-certThumbprint = 'ce de 1d bd 3f d3 b6 bc c5 dd f6 95 a3 24 4c 7a 38 3f ce 70'
 # URL of the SHA-1 timestamp server
-tsURL_sha1 = 'http://timestamp.geotrust.com/tsa'
+tsURL_sha1 = 'http://timestamp.globalsign.com/scripts/timestamp.dll'
 # URL of the SHA-256 timestamp server
-tsURL_sha2 = 'http://sha256timestamp.ws.symantec.com/sha256/timestamp'
+tsURL_sha2 = 'http://rfc3161timestamp.globalsign.com/advanced'
 
 
 ################################################################################
@@ -80,55 +76,53 @@ def cs_leave():
     lockfh = None
 
 ################################################################################
-# Signing functions
+# Exported functions
 
-# User-friendly implementation for signing a file using the most common parameters.
+# User-friendly implementation for signing a file.
+# It translates the selected hash algorithm into command line arguments and
+# adds the timestamping using the default predefined URLs. Otherwise, it's
+# the same as sign_impl().
 # Input:
-#   passwd   - (str) EV token password
-#   sha1     - (bool) whether to sign using SHA-1 algorithm
-#   sha2     - (bool) whether to sign using SHA-2 algorithm (used by default if
-#               both sha1 and sha2 set to False; dual-signing is supported)
-#   cross    - (bool) whether to use cross-certificate
-#   args     - (array) additional signtool command line arguments
-#   filepath - (str) path to the file to be signed, will be replaced
+#   basic_params - (list) sequence of dicts, each with parameters for single signing:
+#       cert     - (str) thumbprint of the certificate to sign with
+#       passwd   - (str) password for the selected certificate's token
+#       cross    - (bool) whether to use cross-certificate
+#       hash     - (str) hash algorithm for signature (sha1 or sha2)
+#       args     - (list) list of additional arguments for signtool
+#   filepath     - (str) path to the file to be signed, will be replaced
 # Output:
 #   True if signing was successful; False otherwise. Error message (if any) is
 #   printed to standard output.
-def sign(passwd, sha1, sha2, cross, args, filepath):
-    # Construct list of signtool arguments for sha1/sha2 signing
-    params = []
-    args_str = ''
-    if args:
-        for a in args:
-            args_str += ' "' + a + '"'
-    certThumbprintArg = certThumbprint.replace(' ', '')
-    if sha1:
-        params.append('/n "%s" /sha1 %s /fd sha1 /td sha1 /tr %s%s' % (certName, certThumbprintArg, tsURL_sha1, args_str))
-    if sha2 or (not sha1 and not sha2):
-        params.append('/n "%s" /sha1 %s /fd sha256 /td sha256 /tr %s%s' % (certName, certThumbprintArg, tsURL_sha2, args_str))
-    if len(params) < 2:
-        params.append('')
-    return sign_impl(passwd, params[0], cross, params[1], cross, filepath)
+def sign(basic_params, filepath):
+    sign_params = basic_params[:]
+    for sp in sign_params:
+        if sp['hash'] == 'sha1':
+            sp['args'] += ['/fd', 'sha1', '/t', tsURL_sha1]
+        else:
+            sp['args'] += ['/fd', 'sha256', '/td', 'sha256', '/tr', tsURL_sha2]
+    return sign_impl(sign_params, filepath)
 
 # Low-level signing function that represents a front-end for the HTML form procided by the signer server.
 # Input:
-#   passwd   - (str) EV token password
-#   args1    - (str) first list of arguments for signtool (mandatory)
-#   cross1   - (bool) whether to use cross-certificate for the first signing
-#   args2    - (str) second list of arguments for signtool (optional)
-#   cross2   - (bool) whether to use cross-certificate for the second signing
-#   filepath - (str) path to the file to be signed, will be replaced
+#   sign_params - (list) sequence of dicts, each with parameters for single signing:
+#       cert    - (str) thumbprint of the certificate to sign with
+#       passwd  - (str) password for the selected certificate's token
+#       cross   - (bool) whether to use cross-certificate
+#       args    - (list) list of arguments for signtool
+#   filepath    - (str) path to the file to be signed, will be replaced
 # Output:
 #   True if signing was successful; False otherwise. Error message (if any) is
 #   printed to standard output.
-def sign_impl(passwd, args1, cross1, args2, cross2, filepath):
+def sign_impl(sign_params, filepath):
     # Prepare list of fields for formatting multipart body
-    fields = {'passwd': passwd,
-              'args':   args1,
-              'cross':  'on' if cross1 else 'off',
-              'args2':  args2,
-              'cross2': 'on' if cross2 else 'off'
-             }
+    fields = {}
+    for i in range(len(sign_params)):
+        fields.update({
+            'cert%d'   % i : sign_params[i]['cert'],
+            'passwd%d' % i : sign_params[i]['passwd'],
+            'args%d'   % i : ' '.join(map(lambda s: ('"' + s + '"'), sign_params[i]['args'])),
+            'cross%d'  % i : 'on' if sign_params[i]['cross'] else 'off'
+        })
     files = {'filedata': filepath}
 
     res = False
@@ -159,24 +153,117 @@ def sign_impl(passwd, args1, cross1, args2, cross2, filepath):
     cs_leave()
     return res
 
+# Lists all available certificates from the signer server.
+# Input:
+#   None
+# Output:
+#   List of dicts describing each certificate:
+#       name       - (str) subject name
+#       hash       - (str) hash algorithm
+#       thumbprint - (str) thumbprint
+def getcerts():
+    conn = httplib.HTTPConnection(signerAddr)
+    conn.request('GET', '/certlist')
+    response = conn.getresponse()
+    if response.status == httplib.OK:
+        res = []
+        re_cert_line = re.compile('^(\S+)\s+(.*)\s+\(([a-z0-9/]+)\)$', re.I)
+        for ln in response.read().split("\n"):
+            if ln == '':
+                continue
+            m = re_cert_line.match(ln)
+            if not m:
+                print "Failed to parse server output: '%s'" % ln
+                continue
+            res.append({
+                'name': m.group(2),
+                'hash': m.group(3),
+                'thumbprint': m.group(1)
+            })
+    else:
+        # Something went wrong; print what server has to tell about this
+        print 'Failed to obtain the list of certificates, server returned: %s %s' % (response.status, response.reason)
+        print response.read()
+        res = None
+    conn.close()
+    return res
+
 
 ################################################################################
 # Command line interface
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', dest='cross', action = 'store_true',
-                        help = 'Sign with cross-certificate')
-    parser.add_argument('--sha1', action = 'store_true',
-                        help = 'Use sha1 signing (may be combined with sha2)')
-    parser.add_argument('--sha2', action = 'store_true',
-                        help = 'Use sha256 signing (default; may be combined with sha1)')
-    parser.add_argument('-p', dest='passwd', action = 'store', required = True,
-                        help = 'Token password')
-    parser.add_argument('-a', dest='params', action = 'append',
-                        help = 'Additional arguments (can be supplied multiple times)')
-    parser.add_argument('file', nargs = 1,
-                        help = 'File to sign (output will be saved to file with suffix "-signed" added to the name)')
+    subparsers = parser.add_subparsers(dest = 'cmd')
+
+    list_parser = subparsers.add_parser('list', help = 'List available certificates (thumbprint, name, hash algorithm)')
+
+    sign_parser = subparsers.add_parser('sign', help = 'Sign the file')
+
+    sign1 = sign_parser.add_argument_group('First signature')
+    sign1.add_argument('--tcert1', action = 'store', required = True,
+                       help = 'Thumbprint of the certificate to use')
+    sign1.add_argument('--passwd1', action = 'store', required = True,
+                       help = 'Token password for the certificate')
+    sign1.add_argument('--cross1', action = 'store_true',
+                       help = 'Sign with cross-certificate')
+    sign1.add_argument('--hash1', action = 'store', choices = ['sha1', 'sha2'],
+                       help = 'Algorithm for the signature; default: sha2 for single-sign, sha1 for dual-sign')
+    sign1.add_argument('--args1', action = 'append',
+                       help = 'Additional arguments (can be supplied multiple times)')
+
+    sign2 = sign_parser.add_argument_group('Second signature (for dual-signing)')
+    sign2.add_argument('--tcert2', action = 'store',
+                       help = 'Thumbprint of the certificate to use')
+    sign2.add_argument('--passwd2', action = 'store',
+                       help = 'Token password for the certificate')
+    sign2.add_argument('--cross2', action = 'store_true',
+                       help = 'Sign with cross-certificate')
+    sign2.add_argument('--hash2', action = 'store', choices = ['sha1', 'sha2'], default = 'sha2',
+                       help = 'Algorithm for the signature; default: sha2')
+    sign2.add_argument('--args2', action = 'append',
+                       help = 'Additional arguments (can be supplied multiple times)')
+
+    sign_parser.add_argument('file', nargs = 1,
+                             help = 'File to sign (will be replaced)')
+
     args = parser.parse_args()
-    res = sign(args.passwd, args.sha1, args.sha2, args.cross, args.params, args.file[0])
+    if args.cmd == 'list':
+        certs = getcerts()
+        if certs:
+            for c in certs:
+                print '%(thumbprint)s %(name)s (%(hash)s)' % c
+            res = True
+        else:
+            res = False
+    else:
+        # Configure the conditional default for hash1
+        if not getattr(args, 'hash1', None):
+            if getattr(args, 'tcert2', None):
+                args.hash1 = 'sha1'
+            else:
+                args.hash1 = 'sha2'
+        # Prepare parameters for sign()
+        basic_params = []
+        n = 1
+        while True:
+            s = {
+                'cert'   : getattr(args, 'tcert%d'  % n, None),
+                'passwd' : getattr(args, 'passwd%d' % n, None),
+                'cross'  : getattr(args, 'cross%d'  % n, False),
+                'hash'   : getattr(args, 'hash%d'   % n, None),
+                'args'   : getattr(args, 'args%d'   % n, None)
+            }
+            if not s['cert']:
+                break
+            if not s['passwd']:
+                print 'Password for certificate No.%d cannot be empty.' % n
+                exit(1)
+            if not s['args']:
+                s['args'] = []
+            basic_params.append(s)
+            n += 1
+
+        res = sign(basic_params, args.file[0])
+
     exit(0 if res else 1)
