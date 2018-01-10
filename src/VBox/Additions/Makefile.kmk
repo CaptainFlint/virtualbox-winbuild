@@ -276,7 +276,7 @@ endif
 #
 ifndef VBOX_WITHOUT_ADDITIONS_ISO
 $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso:
-	$(VBOX_RETRY) $(TOOL_WGET_FETCH) http://download.virtualbox.org/virtualbox/$(VBOX_VERSION_STRING_RAW)/VBoxGuestAdditions_$(VBOX_VERSION_STRING_RAW).iso -O $@
+	$(VBOX_RETRY) $(TOOL_CURL_FETCH) http://download.virtualbox.org/virtualbox/$(VBOX_VERSION_STRING_RAW)/VBoxGuestAdditions_$(VBOX_VERSION_STRING_RAW).iso -o $@
 
 $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.zip: $(VBOX_PATH_ADDITIONS_ISO)/VBoxGuestAdditions.iso
 	$(call MSG_L1,Zipping image $@)

@@ -7,22 +7,10 @@ VBOX_WITH_COMBINED_PACKAGE := 1
 VBOX_WITH_QT_PAYLOAD := 1
 VBOX_WITH_QTGUI_V5 := 1
 VBOX_SIGNING_MODE := release
-VBOX_CERTIFICATE_SUBJECT_NAME := Parallels International GmbH
-VBOX_CERTIFICATE_SHA2_SUBJECT_NAME :=
-## Sign file function replacement for auto-sign
-# @param 1  The file to sign.
-# @param 2  File description. Optional.
-# @param 3  Additional parameters. Optional.
-VBOX_PFX_PASSWD := $(shell cmd /c type vzcert256-passwd)
-if "$(VBOX_PFX_PASSWD)" == ""
- $(error ERROR! PFX password in not specified. Save it into file 'vzcert256-passwd')
-endif
-VBOX_SIGN_FILE_FN = $(VBOX_RETRY) C:\Programs\DevKits\8.1\bin\x64\signtool.exe sign /f c:\Devel\vzcert256.pfx /p $(VBOX_PFX_PASSWD) /tr http://timestamp.digicert.com /fd sha256 /td sha256 /ac c:\Devel\MSCV-VSClass3.cer \
-	$(if $(strip $(2)), /d "$(strip $(2))",) \
-	$(if $(strip $(3)), "$(strip $(3))",) \
-	$(1)
+VBOX_PATH_SIGN_TOOLS := C:\Programs\DevKits\8.1\bin\x64
 VBOX_PATH_SELFSIGN := C:\WinDDK\7600.16385.1\bin\selfsign
 VBOX_PATH_WISUMINFO := "C:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\sysmgmt\msi\scripts\WiSumInf.vbs"
+VBOX_PATH_WISUBSTG  := "C:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\sysmgmt\msi\scripts\WiSubStg.vbs"
 VBOX_WITH_DOCS := 1
 VBOX_WITH_DOCS_CHM := 1
 VBOX_WITH_DOCS_PACKING := 1
@@ -34,7 +22,7 @@ VBOX_XML_CATALOG_DOCBOOK := $(PATH_TARGET)/manual/docbook
 VBOX_PATH_HTML_HELP_WORKSHOP := "C:\Program Files (x86)\HTML Help Workshop"
 VBOX_PDFLATEX := C:\Programs\MiKTeX\miktex\bin\pdflatex.exe
 VBOX_PDFLATEX_CMD := $(VBOX_PDFLATEX) -halt-on-error -interaction batchmode
-TOOL_WGET_FETCH := C:\Programs\wget\bin\wget.exe
+TOOL_CURL_FETCH := C:\Programs\curl\x64\curl.exe
 PATH_TOOL_NASM := C:/Programs/nasm
 VBOX_INSTALLER_LANGUAGES := en_US
 VBOX_WITH_TESTCASES :=
