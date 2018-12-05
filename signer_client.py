@@ -17,9 +17,9 @@ __all__ = ['sign', 'sign_impl', 'getcerts']
 # Signer server URL
 signerAddr = '10.28.28.192:8765'
 # URL of the SHA-1 timestamp server
-tsURL_sha1 = 'http://timestamp.globalsign.com/scripts/timestamp.dll'
+tsURL_sha1 = 'http://timestamp.digicert.com/'
 # URL of the SHA-256 timestamp server
-tsURL_sha2 = 'http://rfc3161timestamp.globalsign.com/advanced'
+tsURL_sha2 = 'http://timestamp.digicert.com/'
 
 
 ################################################################################
