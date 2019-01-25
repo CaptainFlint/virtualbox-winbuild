@@ -3,17 +3,22 @@
 import sys
 import os
 import re
+import copy
 import argparse
 import uuid
 import httplib
 import msvcrt
 import time
+from datetime import datetime
+
 
 __all__ = ['sign', 'sign_impl', 'getcerts']
 
 ################################################################################
 # Global configuration
 
+# Command line arguments
+cmdlineArgs = {}
 # Signer server URL
 signerAddr = '10.28.28.192:8765'
 # URL of the SHA-1 timestamp server
@@ -21,9 +26,59 @@ tsURL_sha1 = 'http://timestamp.digicert.com/'
 # URL of the SHA-256 timestamp server
 tsURL_sha2 = 'http://timestamp.digicert.com/'
 
+# Alternative URLs
+#tsURL_sha1 = 'http://timestamp.globalsign.com/scripts/timestamp.dll'
+#tsURL_sha2 = 'http://rfc3161timestamp.globalsign.com/advanced'
+
 
 ################################################################################
 # Auxiliary functions
+
+def dbg_print(s):
+    global cmdlineArgs
+    if not cmdlineArgs.debug:
+        return
+    sys.stdout.flush()
+    print s
+    sys.stdout.flush()
+
+lockfile = __file__ + '.lock'
+lockfh = None
+
+# Starts critical section for multiprocess sync; waits infinitely until the lock is acquired
+# Input:
+#   filepath - file name being processed in the CS (used for debugging prints only)
+# Output:
+#   None
+def cs_enter(filepath):
+    global cmdlineArgs, lockfile, lockfh
+    if cmdlineArgs.skip_lock:
+        return
+    dbg_print('SIGNLOCK: cs_enter on file %s' % (filepath))
+    lockfh = open(lockfile, 'w')
+    while True:
+        try:
+            msvcrt.locking(lockfh.fileno(), msvcrt.LK_NBRLCK, 1)
+            dbg_print('SIGNLOCK: lock acquired on file %s' % (filepath))
+            break
+        except IOError:
+            time.sleep(1)
+
+# Exits the critical section
+# Input:
+#   filepath - file name being processed in the CS (used for debugging prints only)
+# Output:
+#   None
+def cs_leave(filepath):
+    global cmdlineArgs, lockfile, lockfh
+    if cmdlineArgs.skip_lock:
+        return
+    dbg_print('SIGNLOCK: cs_leave on file %s' % (filepath))
+    msvcrt.locking(lockfh.fileno(), msvcrt.LK_UNLCK, 1)
+    dbg_print('SIGNLOCK: unlocked file %s' % (filepath))
+    lockfh.close()
+    dbg_print('SIGNLOCK: closed lock on file %s' % (filepath))
+    lockfh = None
 
 # Creates HTTP POST request body from the specified fields.
 # Input:
@@ -51,30 +106,6 @@ def encode_multipart_formdata(fields, files, boundary):
     lines.append('')
     return '\r\n'.join(lines)
 
-lockfile = __file__ + '.lock'
-lockfh = None
-def cs_enter():
-    global lockfile, lockfh
-    #print 'cs_enter'
-    lockfh = open(lockfile, 'w')
-    #print 'opened %s' % lockfh
-    while True:
-        try:
-            msvcrt.locking(lockfh.fileno(), msvcrt.LK_NBRLCK, 1)
-            #print 'locked'
-            break
-        except IOError:
-            time.sleep(1)
-
-def cs_leave():
-    global lockfile, lockfh
-    #print 'cs_leave, lfh: %s, file: %s' % (lockfh, lockfile)
-    msvcrt.locking(lockfh.fileno(), msvcrt.LK_UNLCK, 1)
-    #print 'unlocked'
-    lockfh.close()
-    #print 'closed'
-    lockfh = None
-
 ################################################################################
 # Exported functions
 
@@ -94,7 +125,7 @@ def cs_leave():
 #   True if signing was successful; False otherwise. Error message (if any) is
 #   printed to standard output.
 def sign(basic_params, filepath):
-    sign_params = basic_params[:]
+    sign_params = copy.deepcopy(basic_params)
     for sp in sign_params:
         if sp['hash'] == 'sha1':
             sp['args'] += ['/fd', 'sha1', '/t', tsURL_sha1]
@@ -114,6 +145,7 @@ def sign(basic_params, filepath):
 #   True if signing was successful; False otherwise. Error message (if any) is
 #   printed to standard output.
 def sign_impl(sign_params, filepath):
+    global cmdlineArgs
     # Prepare list of fields for formatting multipart body
     fields = {}
     for i in range(len(sign_params)):
@@ -126,12 +158,12 @@ def sign_impl(sign_params, filepath):
     files = {'filedata': filepath}
 
     res = False
-    cs_enter()
+    cs_enter(filepath)
     try:
         # Random boundary that will hardly appear in our data
         boundary = '----------' + uuid.uuid4().hex
         req_body = encode_multipart_formdata(fields, files, boundary)
-        conn = httplib.HTTPConnection(signerAddr)
+        conn = httplib.HTTPConnection(signerAddr, timeout = cmdlineArgs.timeout)
         conn.request('POST', '/', req_body, {'Content-Type': 'multipart/form-data; boundary=%s' % boundary})
         response = conn.getresponse()
         if response.status == httplib.OK:
@@ -147,10 +179,10 @@ def sign_impl(sign_params, filepath):
             print data
         conn.close()
     except IOError, e:
-        print "File input/output problem: " + e.strerror
+        print "File input/output problem: %s" % (e.strerror)
     except httplib.HTTPException, e:
-        print "Connection problem: " + str(e)
-    cs_leave()
+        print "Connection problem: %s" % (e)
+    cs_leave(filepath)
     return res
 
 # Lists all available certificates from the signer server.
@@ -161,13 +193,15 @@ def sign_impl(sign_params, filepath):
 #       name       - (str) subject name
 #       hash       - (str) hash algorithm
 #       thumbprint - (str) thumbprint
+#       expiry     - (str) expiration date/time in the format '<year>-<month>-<day>T<hours>:<minutes>:<seconds>'
 def getcerts():
-    conn = httplib.HTTPConnection(signerAddr)
+    global cmdlineArgs
+    conn = httplib.HTTPConnection(signerAddr, timeout = cmdlineArgs.timeout)
     conn.request('GET', '/certlist')
     response = conn.getresponse()
     if response.status == httplib.OK:
         res = []
-        re_cert_line = re.compile('^(\S+)\s+(.*)\s+\(([a-z0-9/]+)\)$', re.I)
+        re_cert_line = re.compile(r'^(\S+)\s+(.*)\s+\(([a-z0-9/]+)\)\s+\[(\d+-\d+-\d+T\d+:\d+:\d+)[^\[\]]*\]$', re.I)
         for ln in response.read().split("\n"):
             if ln == '':
                 continue
@@ -178,7 +212,8 @@ def getcerts():
             res.append({
                 'name': m.group(2),
                 'hash': m.group(3),
-                'thumbprint': m.group(1)
+                'thumbprint': m.group(1),
+                'expiry': datetime.strptime(m.group(4), '%Y-%m-%dT%H:%M:%S')
             })
     else:
         # Something went wrong; print what server has to tell about this
@@ -195,6 +230,13 @@ def getcerts():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest = 'cmd')
+
+    parser.add_argument('--timeout', action = 'store', default = 300, type = int,
+                       help = 'Timeout (in seconds) for HTTP operations')
+    parser.add_argument('--skip-lock', action = 'store_true',
+                       help = 'NOT RECOMMENDED! Allow multiple processes to send requests in parallel.')
+    parser.add_argument('--debug', action = 'store_true',
+                       help = 'Print some debugging information')
 
     list_parser = subparsers.add_parser('list', help = 'List available certificates (thumbprint, name, hash algorithm)')
 
@@ -227,32 +269,36 @@ if __name__ == '__main__':
     sign_parser.add_argument('file', nargs = 1,
                              help = 'File to sign (will be replaced)')
 
-    args = parser.parse_args()
-    if args.cmd == 'list':
+    cmdlineArgs = parser.parse_args()
+    if cmdlineArgs.cmd == 'list':
         certs = getcerts()
         if certs:
             for c in certs:
-                print '%(thumbprint)s %(name)s (%(hash)s)' % c
+                c['expiry_fmt'] = c['expiry'].strftime('%d.%m.%Y %H:%M:%S UTC')
+                c['expired'] = ''
+                if c['expiry'] < datetime.utcnow():
+                    c['expired'] = '[X] '
+                print '%(expired)s%(thumbprint)s %(name)s (%(hash)s), valid till: %(expiry_fmt)s' % c
             res = True
         else:
             res = False
     else:
         # Configure the conditional default for hash1
-        if not getattr(args, 'hash1', None):
-            if getattr(args, 'tcert2', None):
-                args.hash1 = 'sha1'
+        if not getattr(cmdlineArgs, 'hash1', None):
+            if getattr(cmdlineArgs, 'tcert2', None):
+                cmdlineArgs.hash1 = 'sha1'
             else:
-                args.hash1 = 'sha2'
+                cmdlineArgs.hash1 = 'sha2'
         # Prepare parameters for sign()
         basic_params = []
         n = 1
         while True:
             s = {
-                'cert'   : getattr(args, 'tcert%d'  % n, None),
-                'passwd' : getattr(args, 'passwd%d' % n, None),
-                'cross'  : getattr(args, 'cross%d'  % n, False),
-                'hash'   : getattr(args, 'hash%d'   % n, None),
-                'args'   : getattr(args, 'args%d'   % n, None)
+                'cert'   : getattr(cmdlineArgs, 'tcert%d'  % n, None),
+                'passwd' : getattr(cmdlineArgs, 'passwd%d' % n, None),
+                'cross'  : getattr(cmdlineArgs, 'cross%d'  % n, False),
+                'hash'   : getattr(cmdlineArgs, 'hash%d'   % n, None),
+                'args'   : getattr(cmdlineArgs, 'args%d'   % n, None)
             }
             if not s['cert']:
                 break
@@ -264,6 +310,6 @@ if __name__ == '__main__':
             basic_params.append(s)
             n += 1
 
-        res = sign(basic_params, args.file[0])
+        res = sign(basic_params, cmdlineArgs.file[0])
 
     exit(0 if res else 1)
