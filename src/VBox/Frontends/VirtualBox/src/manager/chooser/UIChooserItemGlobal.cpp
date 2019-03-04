@@ -142,12 +142,22 @@ bool UIChooserItemGlobal::isToolsButtonArea(const QPoint &position, int iMarginM
 
 void UIChooserItemGlobal::setHeightHint(int iHint)
 {
-    /* Remember a new hint: */
-    m_iHeightHint = iHint;
+    /* Prepare variables: */
+    const int iMinorSpacing = data(GlobalItemData_MinorSpacing).toInt();
+
+    /* Remember a new hint adjusted according to indentations: */
+    m_iHeightHint = iHint - 2 * iMinorSpacing;
 
     /* Update geometry and the model layout: */
     updateGeometry();
     model()->updateLayout();
+
+    /* Force redraw of the chooser pane to get rid of residual artefacts */
+    UIChooserItem *pRootItem = parentItem();
+    while (pRootItem && !pRootItem->isRoot())
+        pRootItem = pRootItem->parentItem();
+    if (pRootItem)
+        pRootItem->update();
 }
 
 void UIChooserItemGlobal::retranslateUi()
@@ -442,6 +452,7 @@ QVariant UIChooserItemGlobal::data(int iKey) const
         case GlobalItemData_Margin:       return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 3 * 2;
         case GlobalItemData_Spacing:      return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 2;
         case GlobalItemData_ButtonMargin: return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 4;
+        case GlobalItemData_MinorSpacing: return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 5;
 
         /* Default: */
         default: break;
