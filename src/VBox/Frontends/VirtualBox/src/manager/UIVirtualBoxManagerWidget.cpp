@@ -197,6 +197,7 @@ void UIVirtualBoxManagerWidget::sltHandleContextMenuRequest(const QPoint &positi
         m_pToolBar->setToolButtonStyle(  pResult->isChecked()
                                        ? Qt::ToolButtonTextUnderIcon
                                        : Qt::ToolButtonIconOnly);
+        m_pToolBar->setMinimumHeight(m_iToolBarMinHeight);
     }
 }
 
@@ -353,6 +354,12 @@ void UIVirtualBoxManagerWidget::sltHandleToolsPaneIndexChange()
 
 void UIVirtualBoxManagerWidget::prepare()
 {
+    /* Calculate the minimum toolbar height.
+     * The height is attached to the Global Tools chooser item;
+     * we take its internal icon size plus some guessed margins, to make sure it doesn't look squished. */
+    m_iToolBarMinHeight = QApplication::style()->pixelMetric(QStyle::PM_LargeIconSize)
+                        + 2 * (QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 3);
+
     /* Configure palette: */
     setAutoFillBackground(true);
     QPalette pal = palette();
@@ -428,6 +435,7 @@ void UIVirtualBoxManagerWidget::prepareWidgets()
 #ifdef VBOX_WS_MAC
                         m_pToolBar->emulateMacToolbar();
 #endif
+                        m_pToolBar->setMinimumHeight(m_iToolBarMinHeight);
 
                         /* Add tool-bar into layout: */
                         pLayoutRight->addWidget(m_pToolBar);
@@ -571,6 +579,7 @@ void UIVirtualBoxManagerWidget::loadSettings()
         m_pToolBar->setToolButtonStyle(  gEDataManager->selectorWindowToolBarTextVisible()
                                        ? Qt::ToolButtonTextUnderIcon
                                        : Qt::ToolButtonIconOnly);
+        m_pToolBar->setMinimumHeight(m_iToolBarMinHeight);
     }
 
     /* Open tools last chosen in Tools-pane: */

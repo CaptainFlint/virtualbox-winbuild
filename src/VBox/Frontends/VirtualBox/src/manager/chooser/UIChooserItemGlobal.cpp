@@ -705,9 +705,7 @@ void UIChooserItemGlobal::paintFrame(QPainter *pPainter, const QRect &rectangle)
     pPainter->setPen(pen);
 
     /* Draw borders: */
-    pPainter->drawLine(rectangle.topLeft(),    rectangle.topRight()    + QPoint(1, 0));
-    pPainter->drawLine(rectangle.bottomLeft(), rectangle.bottomRight() + QPoint(1, 0));
-    pPainter->drawLine(rectangle.topLeft(),    rectangle.bottomLeft());
+    pPainter->drawRect(rectangle.adjusted(0, 0, -1, -1));
 
     /* Restore painter: */
     pPainter->restore();
@@ -797,14 +795,14 @@ void UIChooserItemGlobal::paintGlobalInfo(QPainter *pPainter, const QRect &recta
                                       iToolsPixmapY,
                                       m_toolsPixmap.width() / m_toolsPixmap.devicePixelRatio(),
                                       m_toolsPixmap.height() / m_toolsPixmap.devicePixelRatio());
-        buttonRectangle.adjust(- iButtonMargin, -iButtonMargin, iButtonMargin, iButtonMargin);
+        buttonRectangle.adjust(-iButtonMargin, -iButtonMargin, iButtonMargin, iButtonMargin);
         QGraphicsView *pView = model()->scene()->views().first();
         const QPointF sceneCursorPosition = pView->mapToScene(pView->mapFromGlobal(QCursor::pos()));
         const QPoint itemCursorPosition = mapFromScene(sceneCursorPosition).toPoint();
 
         /* Paint flat button: */
         if (   isHovered()
-            && isToolsButtonArea(itemCursorPosition, 4))
+            && isToolsButtonArea(itemCursorPosition, 1))
             paintFlatButton(/* Painter: */
                             pPainter,
                             /* Button rectangle: */

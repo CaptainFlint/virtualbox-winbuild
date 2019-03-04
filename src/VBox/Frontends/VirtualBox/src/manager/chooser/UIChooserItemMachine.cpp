@@ -131,7 +131,7 @@ bool UIChooserItemMachine::isToolsButtonArea(const QPoint &position, int iMargin
     const int iFullHeight = geometry().height();
     const int iMargin = data(MachineItemData_Margin).toInt();
     const int iButtonMargin = data(MachineItemData_ButtonMargin).toInt();
-    const int iToolsPixmapX = iFullWidth - iMargin - 1 - m_toolsPixmap.width() / m_toolsPixmap.devicePixelRatio();
+    const int iToolsPixmapX = iFullWidth - iMargin - 1 - m_toolsPixmap.width() / m_toolsPixmap.devicePixelRatio() - iButtonMargin;
     const int iToolsPixmapY = (iFullHeight - m_toolsPixmap.height() / m_toolsPixmap.devicePixelRatio()) / 2;
     QRect rect = QRect(iToolsPixmapX,
                        iToolsPixmapY,
@@ -640,7 +640,7 @@ QVariant UIChooserItemMachine::data(int iKey) const
     switch (iKey)
     {
         /* Layout hints: */
-        case MachineItemData_Margin:       return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 3 * 2;
+        case MachineItemData_Margin:       return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 3;
         case MachineItemData_MajorSpacing: return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 2;
         case MachineItemData_MinorSpacing: return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize) / 4;
         case MachineItemData_TextSpacing:  return 0;
@@ -1115,11 +1115,7 @@ void UIChooserItemMachine::paintFrame(QPainter *pPainter, const QRect &rectangle
     pPainter->setPen(pen);
 
     /* Draw borders: */
-    if (dragTokenPlace() != DragToken_Up)
-        pPainter->drawLine(rectangle.topLeft(),    rectangle.topRight()    + QPoint(1, 0));
-    if (dragTokenPlace() != DragToken_Down)
-        pPainter->drawLine(rectangle.bottomLeft(), rectangle.bottomRight() + QPoint(1, 0));
-    pPainter->drawLine(rectangle.topLeft(),    rectangle.bottomLeft());
+    pPainter->drawRect(rectangle.adjusted(0, 0, -1, -1));
 
     /* Restore painter: */
     pPainter->restore();
@@ -1282,20 +1278,20 @@ void UIChooserItemMachine::paintMachineInfo(QPainter *pPainter, const QRect &rec
         || isHovered())
     {
         /* Prepare variables: */
-        int iToolsPixmapX = iRightColumnIndent;
+        int iToolsPixmapX = iRightColumnIndent - iButtonMargin;
         int iToolsPixmapY = (iFullHeight - m_toolsPixmap.height() / m_toolsPixmap.devicePixelRatio()) / 2;
         QRect buttonRectangle = QRect(iToolsPixmapX,
                                       iToolsPixmapY,
                                       m_toolsPixmap.width() / m_toolsPixmap.devicePixelRatio(),
                                       m_toolsPixmap.height() / m_toolsPixmap.devicePixelRatio());
-        buttonRectangle.adjust(- iButtonMargin, -iButtonMargin, iButtonMargin, iButtonMargin);
+        buttonRectangle.adjust(-iButtonMargin, -iButtonMargin, iButtonMargin, iButtonMargin);
         QGraphicsView *pView = model()->scene()->views().first();
         const QPointF sceneCursorPosition = pView->mapToScene(pView->mapFromGlobal(QCursor::pos()));
         const QPoint itemCursorPosition = mapFromScene(sceneCursorPosition).toPoint();
 
         /* Paint flat button: */
         if (   isHovered()
-            && isToolsButtonArea(itemCursorPosition, 4))
+            && isToolsButtonArea(itemCursorPosition, 1))
             paintFlatButton(/* Painter: */
                             pPainter,
                             /* Button rectangle: */
