@@ -2,6 +2,7 @@ include $(PATH_ROOT)/LocalConfig-common.kmk
 
 VBOX_CERTIFICATE_SUBJECT_NAME := Virtuozzo International GmbH
 VBOX_CERTIFICATE_SHA2_SUBJECT_NAME :=
+WIN10_MS_SIGN := 1
 ## Sign file function replacement for auto-sign
 # @param 1  The file to sign.
 # @param 2  File description. Optional.
