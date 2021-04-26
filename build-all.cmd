@@ -72,6 +72,7 @@ echo echo ### Building the 64-bit MSI>> build-tmp.cmd
 echo kmk %WORKING_DIR_NIX%out/win.amd64/release/bin/VirtualBox-%VERSION%-MultiArch.exe>> build-tmp.cmd
 echo if ERRORLEVEL 1 exit /b ^1>> build-tmp.cmd
 
+exit /b 0
 cmd /c build-tmp.cmd
 if ERRORLEVEL 1 exit /b 1
 
