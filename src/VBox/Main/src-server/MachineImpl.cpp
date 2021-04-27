@@ -211,10 +211,10 @@ Machine::HWData::HWData()
     for (size_t i = 2; i < RT_ELEMENTS(mBootOrder); ++i)
         mBootOrder[i] = DeviceType_Null;
 
-    mClipboardMode                 = ClipboardMode_Bidirectional;
+    mClipboardMode                 = ClipboardMode_Disabled;
     mClipboardFileTransfersEnabled = FALSE;
 
-    mDnDMode = DnDMode_Bidirectional;
+    mDnDMode = DnDMode_Disabled;
 
     mFirmwareType = FirmwareType_BIOS;
     mKeyboardHIDType = KeyboardHIDType_PS2Keyboard;
