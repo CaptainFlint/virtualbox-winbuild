@@ -3428,9 +3428,9 @@ Hardware::Hardware() :
     paravirtProvider(ParavirtProvider_Legacy), // default for old VMs, for new ones it's ParavirtProvider_Default
     strParavirtDebug(""),
     fEmulatedUSBCardReader(false),
-    clipboardMode(ClipboardMode_Bidirectional),
+    clipboardMode(ClipboardMode_Disabled),
     fClipboardFileTransfersEnabled(false),
-    dndMode(DnDMode_Bidirectional),
+    dndMode(DnDMode_Disabled),
     ulMemoryBalloonSize(0),
     fPageFusionEnabled(false)
 {
