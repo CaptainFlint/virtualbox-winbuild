@@ -12,7 +12,7 @@ VBOX_TOKEN_PASSWD := $(shell kmk_cat $(VBOX_TOKEN_PASSWD_FILE))
 if "$(VBOX_TOKEN_PASSWD)" == ""
  $(error ERROR! Token password in not specified. Save it into file '$(VBOX_TOKEN_PASSWD_FILE)')
 endif
-VBOX_SIGN_FILE_FN = $(VBOX_RETRY) python $(PATH_ROOT)/signer_client.py sign --tcert1 e12545552269e1734251f4b73e615c2403518409 --passwd1 "$(VBOX_TOKEN_PASSWD)" --cross1 --hash1 sha2 \
+VBOX_SIGN_FILE_FN = $(VBOX_RETRY) python $(PATH_ROOT)/signer_client.py sign --tcert1 e12545552269e1734251f4b73e615c2403518409 --passwd1 "$(VBOX_TOKEN_PASSWD)" --hash1 sha2 \
 	$(if $(strip $(2)),--args1 /d --args1 "$(strip $(2))",) \
 	$(if $(strip $(3)),--args1 "$(strip $(3))",) \
 	$(1)

@@ -141,9 +141,9 @@ for %%d in (%_MY_DRIVER_BASE_NAMES%) do (
     @echo * Verifying %%d against %%d.cat...
     "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d.cat"        "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
     "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d.cat"        "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
-    @echo * Verifying %%d against %%d-PreW10.cat...
-    "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
-    "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
+    rem @echo * Verifying %%d against %%d-PreW10.cat...
+    rem "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.inf" || goto end_failed
+    rem "%_MY_SIGNTOOL%" verify /kp /c "%_MY_OPT_BINDIR%\%%d-PreW10.cat" "%_MY_OPT_BINDIR%\%%d.sys" || goto end_failed
 )
 :no_sign_verify
 

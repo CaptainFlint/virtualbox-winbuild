@@ -25,8 +25,8 @@ __all__ = ['sign', 'sign_impl', 'getcerts']
 cmdlineArgs = {}
 # Signer server URL
 signerAddr = '10.28.28.192:8765'
-# URL of the SHA-1 timestamp server
-tsURL_sha1 = 'http://timestamp.digicert.com/'
+# URL of the SHA-1 timestamp server - as of May 2021, I could find no server still supporting SHA-1
+tsURL_sha1 = 'INVALID'
 # URL of the SHA-256 timestamp server
 tsURL_sha2 = 'http://timestamp.entrust.net/TSS/RFC3161sha2TS'
 
@@ -130,17 +130,16 @@ def encode_multipart_formdata(fields, files, boundary):
 # Exported functions
 
 # User-friendly implementation for signing a file.
-# It translates the selected hash algorithm into command line arguments and
-# adds the timestamping using the default predefined URLs. Otherwise, it's
+# It adds the timestamping using the default predefined URLs. Otherwise, it's
 # the same as sign_impl().
 # Input:
 #   basic_params - (list) sequence of dicts, each with parameters for single signing:
 #       cert     - (str) thumbprint of the certificate to sign with
 #       passwd   - (str) password for the selected certificate's token
-#       cross    - (bool) whether to use cross-certificate
 #       hash     - (str) hash algorithm for signature (sha1 or sha2)
 #       tsurl    - (str, optional) timestamp server URL, or 'none' for no timestamping
 #       args     - (list) list of additional arguments for signtool
+#       [REMOVED] cross    - (bool) whether to use cross-certificate
 #   filepath     - (str) path to the file to be signed, will be replaced
 # Output:
 #   True if signing was successful; False otherwise. Error message (if any) is
@@ -160,10 +159,10 @@ def sign(basic_params, filepath):
 #   sign_params - (list) sequence of dicts, each with parameters for single signing:
 #       cert    - (str) thumbprint of the certificate to sign with
 #       passwd  - (str) password for the selected certificate's token
-#       cross   - (bool) whether to use cross-certificate
 #       hash    - (str) hash algorithm for signature (sha1 or sha2)
 #       tsurl   - (str) timestamp server URL, or 'none' for no timestamping
 #       args    - (list) additional list of arguments for signtool
+#       [REMOVED] cross   - (bool) whether to use cross-certificate
 #   filepath    - (str) path to the file to be signed, will be replaced
 # Output:
 #   True if signing was successful; False otherwise. Error message (if any) is
@@ -177,7 +176,7 @@ def sign_impl(sign_params, filepath):
             'cert%d'   % i : sign_params[i]['cert'],
             'passwd%d' % i : sign_params[i]['passwd'],
             'args%d'   % i : ' '.join(map(lambda s: ('"' + s + '"'), sign_params[i]['args'])),
-            'cross%d'  % i : 'on' if sign_params[i]['cross'] else 'off',
+            #'cross%d'  % i : 'on' if sign_params[i]['cross'] else 'off',
             'hash%d'   % i : sign_params[i]['hash']
         })
         if sign_params[i]['tsurl'] == 'none':
@@ -266,7 +265,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest = 'cmd')
 
-    parser.add_argument('--timeout', action = 'store', default = 60, type = int,
+    parser.add_argument('--timeout', action = 'store', default = 300, type = int,
                        help = 'Timeout (in seconds) for HTTP operations')
     parser.add_argument('--skip-lock', action = 'store_true',
                        help = 'NOT RECOMMENDED! Allow multiple processes to send requests in parallel.')
@@ -282,8 +281,8 @@ if __name__ == '__main__':
                        help = 'Thumbprint of the certificate to use')
     sign1.add_argument('--passwd1', action = 'store', required = True,
                        help = 'Token password for the certificate')
-    sign1.add_argument('--cross1', action = 'store_true',
-                       help = 'Sign with cross-certificate')
+    #sign1.add_argument('--cross1', action = 'store_true',
+    #                   help = 'Sign with cross-certificate')
     sign1.add_argument('--hash1', action = 'store', choices = ['sha1', 'sha2'],
                        help = 'Algorithm for the signature; default: sha2 for single-sign, sha1 for dual-sign')
     sign1.add_argument('--tsurl1', action = 'store', required = False,
@@ -296,8 +295,8 @@ if __name__ == '__main__':
                        help = 'Thumbprint of the certificate to use')
     sign2.add_argument('--passwd2', action = 'store',
                        help = 'Token password for the certificate')
-    sign2.add_argument('--cross2', action = 'store_true',
-                       help = 'Sign with cross-certificate')
+    #sign2.add_argument('--cross2', action = 'store_true',
+    #                   help = 'Sign with cross-certificate')
     sign2.add_argument('--hash2', action = 'store', choices = ['sha1', 'sha2'], default = 'sha2',
                        help = 'Algorithm for the signature; default: sha2')
     sign2.add_argument('--tsurl2', action = 'store', required = False,
@@ -335,7 +334,7 @@ if __name__ == '__main__':
             s = {
                 'cert'   : getattr(cmdlineArgs, 'tcert%d'  % n, None),
                 'passwd' : getattr(cmdlineArgs, 'passwd%d' % n, None),
-                'cross'  : getattr(cmdlineArgs, 'cross%d'  % n, False),
+                #'cross'  : getattr(cmdlineArgs, 'cross%d'  % n, False),
                 'hash'   : getattr(cmdlineArgs, 'hash%d'   % n, None),
                 'tsurl'  : getattr(cmdlineArgs, 'tsurl%d'  % n, None),
                 'args'   : getattr(cmdlineArgs, 'args%d'   % n, None)
@@ -357,7 +356,7 @@ else:
     # Emulate required command line arguments with their default values
     class PseudoArgParse:
         def __init__(self, *args, **kwargs):
-            self.timeout = 60
+            self.timeout = 300
             self.skip_lock = False
             self.debug = False
     cmdlineArgs = PseudoArgParse()
