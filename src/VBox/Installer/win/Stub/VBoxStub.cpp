@@ -642,7 +642,7 @@ static RTEXITCODE ProcessMsiPackage(const char *pszMsi, const char *pszMsiArgs, 
         if (RT_FAILURE(rc))
             return ShowError("RTStrToUtf16 failed on '%s': %Rrc", pszMsiLogFile, rc);
 
-        UINT uLogLevel = MsiEnableLogW(INSTALLLOGMODE_VERBOSE,
+        UINT uLogLevel = MsiEnableLogW(INSTALLLOGMODE_VERBOSE | INSTALLLOGMODE_EXTRADEBUG,
                                        pwszLogFile,
                                        INSTALLLOGATTRIBUTES_FLUSHEACHLINE);
         RTUtf16Free(pwszLogFile);
