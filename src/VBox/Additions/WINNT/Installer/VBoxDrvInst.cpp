@@ -275,6 +275,7 @@ int VBoxInstallDriver(const BOOL fInstall, const _TCHAR *pszDriverPath, BOOL fSi
                     dwFlags |= DRIVER_PACKAGE_LEGACY_MODE;
                 }
             }
+            dwFlags |= DRIVER_PACKAGE_LEGACY_MODE;
 
             if (fSilent)
             {
