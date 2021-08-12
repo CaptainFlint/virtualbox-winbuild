@@ -67,14 +67,14 @@ ifdef VBOX_SIGNING_MODE
   VBoxStub.cpp_DEFS += VBOX_WITH_VBOX_LEGACY_TS_CA
  endif
 
- $$(VBoxStub_0_OUTDIR)/VBoxStubPublicCert.h:  | $$(dir $$@) $(VBOX_RTSIGNTOOL) $(PATH_STAGE_SYS)/VBoxSup.sys
+ $$(VBoxStub_0_OUTDIR)/VBoxStubPublicCert.h:  | $$(dir $$@) $(VBOX_RTSIGNTOOL) $(PATH_STAGE_SYS)/VBoxRT.dll
 	$(RM) -f -- "$@" "$@.cer0" "$@.cer1" "$@.cer2" "$@.array"
 
-	$(VBOX_RTSIGNTOOL) extract-exe-signer-cert --signature-index 0 --exe "$(PATH_STAGE_SYS)/VBoxSup.sys" --output "$@.cer0" --der
+	$(VBOX_RTSIGNTOOL) extract-exe-signer-cert --signature-index 0 --exe "$(PATH_STAGE_SYS)/VBoxRT.dll" --output "$@.cer0" --der
 	$(VBOX_BIN2C) -ascii --append VBoxStubTrustedCert0 "$@.cer0" $@
 	$(APPEND) "$@.array" "    { g_abVBoxStubTrustedCert0, sizeof(g_abVBoxStubTrustedCert0) }, "
  if defined(VBOX_CERTIFICATE_SUBJECT_NAME) && defined(VBOX_CERTIFICATE_SHA2_SUBJECT_NAME)
-	$(VBOX_RTSIGNTOOL) extract-exe-signer-cert --signature-index 1 --exe "$(PATH_STAGE_SYS)/VBoxSup.sys" --output "$@.cer1" --der
+	$(VBOX_RTSIGNTOOL) extract-exe-signer-cert --signature-index 1 --exe "$(PATH_STAGE_SYS)/VBoxRT.dll" --output "$@.cer1" --der
 	$(VBOX_BIN2C) -ascii --append VBoxStubTrustedCert1 "$@.cer1" $@
 	$(APPEND) "$@.array" "    { g_abVBoxStubTrustedCert1, sizeof(g_abVBoxStubTrustedCert1) }, "
  endif

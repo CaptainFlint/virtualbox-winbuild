@@ -29,7 +29,7 @@
       <?define Property_Win64        = "yes" ?>
 
       <?if $(env.VBOX_SIGNING_MODE)!= none ?>
-          <?define Property_DriverLegacy = "no" ?>
+          <?define Property_DriverLegacy = "yes" ?>
       <?else ?>
           <?define Property_DriverLegacy = "yes" ?>
       <?endif ?>
