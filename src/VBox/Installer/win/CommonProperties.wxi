@@ -23,9 +23,17 @@
        means its Windows 10.
        Note! "HKLM\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuild" could
              probably be read here as well (CurrentVersion is "6.3" of course). -->
-  <Property Id="VBOX_IS_WINDOWS_10" >
-    <DirectorySearch Id="DirSearchForWindows10NtDll" Path="[SystemFolder]" >
-      <FileSearch Name="kernelbase.dll" MinVersion="6.3.10000.000" />
+  <!-- From my experiments, it's more like Windows 8.0 (version 6.2),
+       so Windows 8.1 will match too. An additional flag helps to distinguish them.
+       /by CaptainFlint/ -->
+  <Property Id="VBOX_IS_WINDOWS_81" >
+    <DirectorySearch Id="DirSearchForWindows81NtDll" Path="[SystemFolder]" >
+      <FileSearch Name="kernelbase.dll" MinVersion="6.3" MaxVersion="6.3.9999.999"  />
+    </DirectorySearch>
+  </Property>
+  <Property Id="VBOX_IS_WINDOWS_81_OR_10" >
+    <DirectorySearch Id="DirSearchForWindows81Or10NtDll" Path="[SystemFolder]" >
+      <FileSearch Name="kernelbase.dll" MinVersion="6.2.10000.000" />
     </DirectorySearch>
   </Property>
 
