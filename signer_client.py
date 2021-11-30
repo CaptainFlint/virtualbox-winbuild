@@ -111,7 +111,7 @@ def encode_multipart_formdata(fields, files, boundary):
     lines = []
     for (fieldname, value) in fields.iteritems():
         lines.append('--' + boundary)
-        lines.append('Content-Disposition: form-data; name="%s"' % fieldname)
+        lines.append('Content-Disposition: form-data; name="%s"' % (fieldname))
         lines.append('')
         lines.append(value)
     for (fieldname, filepath) in files.iteritems():
@@ -173,49 +173,49 @@ def sign_impl(sign_params, filepath):
     fields = {}
     for i in range(len(sign_params)):
         fields.update({
-            'cert%d'   % i : sign_params[i]['cert'],
-            'passwd%d' % i : sign_params[i]['passwd'],
-            'args%d'   % i : ' '.join(map(lambda s: ('"' + s + '"'), sign_params[i]['args'])),
-            #'cross%d'  % i : 'on' if sign_params[i]['cross'] else 'off',
-            'hash%d'   % i : sign_params[i]['hash']
+            'cert%d'   % (i) : sign_params[i]['cert'],
+            'passwd%d' % (i) : sign_params[i]['passwd'],
+            'args%d'   % (i) : ' '.join(map(lambda s: ('"' + s + '"'), sign_params[i]['args'])),
+            #'cross%d'  % (i) : 'on' if sign_params[i]['cross'] else 'off',
+            'hash%d'   % (i) : sign_params[i]['hash']
         })
         if sign_params[i]['tsurl'] == 'none':
             fields.update({
-                'tsopt%d' % i : 'none',
-                'tsurl%d' % i : ''
+                'tsopt%d' % (i) : 'none',
+                'tsurl%d' % (i) : ''
             })
         else:
             fields.update({
-                'tsopt%d' % i : 'custom',
-                'tsurl%d' % i : sign_params[i]['tsurl']
+                'tsopt%d' % (i) : 'custom',
+                'tsurl%d' % (i) : sign_params[i]['tsurl']
             })
     files = {'filedata': filepath}
 
-    res = False
+    res = {'result': False, 'messages': []}
     cs_enter(filepath)
     try:
         # Random boundary that will hardly appear in our data
         boundary = '----------' + uuid.uuid4().hex
         req_body = encode_multipart_formdata(fields, files, boundary)
         conn = httplib.HTTPConnection(signerAddr, timeout = cmdlineArgs.timeout)
-        conn.request('POST', '/', req_body, {'Content-Type': 'multipart/form-data; boundary=%s' % boundary})
+        conn.request('POST', '/', req_body, {'Content-Type': 'multipart/form-data; boundary=%s' % (boundary)})
         response = conn.getresponse()
         if response.status == httplib.OK:
             # File signed, save it under the same name overwriting the original
             with open(filepath, 'wb') as f:
                 f.write(response.read())
-            print 'File ' + filepath + ' was signed successfully.'
-            res = True
+            res['messages'].append('File %s was signed successfully.' % (filepath))
+            res['result'] = True
         else:
             # Something went wrong; print what server has to tell about this
             data = response.read()
-            print response.status, response.reason
-            print data
+            res['messages'].append('%s %s' % (response.status, response.reason))
+            res['messages'].append(data)
         conn.close()
     except IOError, e:
-        print "File input/output problem: %s" % (e.strerror)
+        res['messages'].append("File input/output problem: %s" % (e.strerror))
     except httplib.HTTPException, e:
-        print "Connection problem: %s" % (e)
+        res['messages'].append("Connection problem: %s" % (e))
     cs_leave(filepath)
     return res
 
@@ -234,16 +234,16 @@ def getcerts():
     conn.request('GET', '/certlist')
     response = conn.getresponse()
     if response.status == httplib.OK:
-        res = []
+        res = {'result': [], 'messages': []}
         re_cert_line = re.compile(r'^(\S+)\s+(.*)\s+\(([a-z0-9/]+)\)\s+\[(\d+-\d+-\d+T\d+:\d+:\d+)[^\[\]]*\]$', re.I)
         for ln in response.read().split("\n"):
             if ln == '':
                 continue
             m = re_cert_line.match(ln)
             if not m:
-                print "Failed to parse server output: '%s'" % ln
+                res['messages'].append("Failed to parse server output: '%s'" % (ln))
                 continue
-            res.append({
+            res['result'].append({
                 'name': m.group(2),
                 'hash': m.group(3),
                 'thumbprint': m.group(1),
@@ -251,9 +251,9 @@ def getcerts():
             })
     else:
         # Something went wrong; print what server has to tell about this
-        print 'Failed to obtain the list of certificates, server returned: %s %s' % (response.status, response.reason)
-        print response.read()
-        res = None
+        res['messages'].append('Failed to obtain the list of certificates, server returned: %s %s' % (response.status, response.reason))
+        res['messages'].append(response.read())
+        res['result'] = None
     conn.close()
     return res
 
@@ -309,17 +309,16 @@ if __name__ == '__main__':
 
     cmdlineArgs = parser.parse_args()
     if cmdlineArgs.cmd == 'list':
-        certs = getcerts()
-        if certs:
-            for c in certs:
+        res = getcerts()
+        for msg in res['messages']:
+            print msg
+        if res['result']:
+            for c in res['result']:
                 c['expiry_fmt'] = c['expiry'].strftime('%d.%m.%Y %H:%M:%S UTC')
                 c['expired'] = ''
                 if c['expiry'] < datetime.utcnow():
                     c['expired'] = '[X] '
-                print '%(expired)s%(thumbprint)s %(name)s (%(hash)s), valid till: %(expiry_fmt)s' % c
-            res = True
-        else:
-            res = False
+                print '%(expired)s%(thumbprint)s %(name)s (%(hash)s), valid till: %(expiry_fmt)s' % (c)
     else:
         # Configure the conditional default for hash1
         if not getattr(cmdlineArgs, 'hash1', None):
@@ -332,17 +331,17 @@ if __name__ == '__main__':
         n = 1
         while True:
             s = {
-                'cert'   : getattr(cmdlineArgs, 'tcert%d'  % n, None),
-                'passwd' : getattr(cmdlineArgs, 'passwd%d' % n, None),
-                #'cross'  : getattr(cmdlineArgs, 'cross%d'  % n, False),
-                'hash'   : getattr(cmdlineArgs, 'hash%d'   % n, None),
-                'tsurl'  : getattr(cmdlineArgs, 'tsurl%d'  % n, None),
-                'args'   : getattr(cmdlineArgs, 'args%d'   % n, None)
+                'cert'   : getattr(cmdlineArgs, 'tcert%d'  % (n), None),
+                'passwd' : getattr(cmdlineArgs, 'passwd%d' % (n), None),
+                #'cross'  : getattr(cmdlineArgs, 'cross%d'  % (n), False),
+                'hash'   : getattr(cmdlineArgs, 'hash%d'   % (n), None),
+                'tsurl'  : getattr(cmdlineArgs, 'tsurl%d'  % (n), None),
+                'args'   : getattr(cmdlineArgs, 'args%d'   % (n), None)
             }
             if not s['cert']:
                 break
             if not s['passwd']:
-                print 'Password for certificate No.%d cannot be empty.' % n
+                print 'Password for certificate No.%d cannot be empty.' % (n)
                 exit(1)
             if not s['args']:
                 s['args'] = []
@@ -350,8 +349,10 @@ if __name__ == '__main__':
             n += 1
 
         res = sign(basic_params, cmdlineArgs.file[0])
+        for msg in res['messages']:
+            print msg
 
-    exit(0 if res else 1)
+    exit(0 if res['result'] else 1)
 else:
     # Emulate required command line arguments with their default values
     class PseudoArgParse:
