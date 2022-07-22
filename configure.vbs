@@ -2359,16 +2359,16 @@ Sub Main
    if (strOptXml2 <> "") then
       CheckForXml2 strOptXml2
    end if
-   CheckForSsl strOptSsl, False
-   if g_strTargetArch = "amd64" then
-       ' 32-bit openssl required as well
-       CheckForSsl strOptSsl32, True
-   end if
-   CheckForCurl strOptCurl, False
-   if g_strTargetArch = "amd64" then
-       ' 32-bit Curl required as well
-       CheckForCurl strOptCurl32, True
-   end if
+'   CheckForSsl strOptSsl, False
+'   if g_strTargetArch = "amd64" then
+'       ' 32-bit openssl required as well
+'       CheckForSsl strOptSsl32, True
+'   end if
+'   CheckForCurl strOptCurl, False
+'   if g_strTargetArch = "amd64" then
+'       ' 32-bit Curl required as well
+'       CheckForCurl strOptCurl32, True
+'   end if
    CheckForQt strOptQt5
    if (strOptPython <> "") then
      CheckForPython strOptPython
