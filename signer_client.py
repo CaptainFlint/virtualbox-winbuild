@@ -24,7 +24,7 @@ __all__ = ['sign', 'sign_impl', 'getcerts']
 # Command line arguments
 cmdlineArgs = {}
 # Signer server URL
-signerAddr = '10.28.28.192:8765'
+signerAddr = 'signer.eng.sw.ru:8765'
 # URL of the SHA-1 timestamp server - as of May 2021, I could find no server still supporting SHA-1
 tsURL_sha1 = 'INVALID'
 # URL of the SHA-256 timestamp server
