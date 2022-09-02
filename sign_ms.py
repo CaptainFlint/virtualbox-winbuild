@@ -218,6 +218,7 @@ else:
 	print 'Error! Unsupported architecture: %s!' % (arch)
 	sys.exit(1)
 
+ssl._https_verify_certificates(False)
 ms_dashboard_client = MsDashboardAPI()
 
 attestation_sign_tasks = [{
